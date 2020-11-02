@@ -1,0 +1,164 @@
+   
+/*--------------------MENU DE NAVEGACION-------------------------*/
+
+.noscroll{ /*Clase creada para el Menu.js*/
+    overflow: hidden; /*para que el scroll no separe el menu del encabezado*/
+}
+
+header{    
+    width:100%; 
+    min-width: 320px;
+    margin:0px auto;  
+    position:fixed;  /*Para que quede fijo al scrollear*/
+    top:0;  /*Para posicionarlo arriba de todo*/
+}
+
+header nav{    
+    width:100%;
+    position:fixed;    
+    left:-100% /*Para que por defecto esté escondido*/
+    /*padding-top: 41px;*/ /*Para hacer animacion desde arriba*/
+    /*top: -100%; */
+}
+
+.enlaces{ /*o header nav ul*/
+    padding-left:0; /*Reinicio la config. por defecto del navegador*/
+    margin-top:0;
+    margin-bottom:0;
+    list-style:none;
+    background: rgb(247, 159, 159);   
+}
+
+.enlaces li{
+    flex: auto; /* 1 1 auto --> Significa elementos totalmente flexibles y ancho definido por contenido*/
+    border-bottom: 1px solid rgba(39, 82, 38, 0.5);       
+}
+
+li:last-child{
+    border:none;    
+}
+
+.enlaces li a{
+    color:#fff;
+    text-decoration: none;
+    line-height: 2.5;
+    display:block;
+    padding-left: 1em;
+}
+
+.enlaces li a:hover{
+    background: rgba(117, 194, 146, 0.993);
+}
+
+.enlaces li a span{
+    margin-right: 10px;
+}
+
+.menu_bar{
+    display:flex;
+    width:100%;             
+}
+
+.menu_bar .bt-menu{      
+    width:100%;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content:space-between;
+    padding:6px 20px;
+    background-color: rgb(247, 159, 159);
+    color:#fff;
+    text-decoration:none;
+    font-weight: bold;
+    font-size: 25px;       
+    box-sizing:border-box;    
+} 
+
+.menu_bar span{      
+    font-size:25px;     
+}
+
+/*----------------------ENCABEZADO-------------------------*/
+
+#encabezado{
+    width:100%;
+    height:80px;
+    min-width:320px;
+    /*max-width:600px;    */
+    margin:auto;      
+    /*padding-top:50px;*/
+    display:flex;
+}
+
+#titulo{
+    width:65%;
+    min-width: 208px;  
+    /*line-height:85px; */      
+    border-bottom:2px solid rgba(240,128,128,0.8);  
+    padding: 0px 5px; 
+    box-sizing:border-box; /*Para meterle padding sin que se me desconche*/
+    Display:flex;
+    justify-content: left;
+    align-items: center;
+}
+
+h1{
+    font-size: 20px;
+}
+
+#logo{
+    width:35%;
+    min-width:112px;
+    /*height:85px;   */        
+    border-bottom:2px solid rgba(240,128,128,0.8);   
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img{      
+    max-height:80px;
+    padding:3px; 
+}
+
+
+/*------------------------------------------------*/
+/*------------------MEDIA QUERIES-----------------*/
+/*------------------------------------------------*/
+
+
+/*-------------- Celu en Landscape ---------------*/
+
+@media screen and (min-width: 480px) {
+    
+} 
+
+/*-------------- Version Escritorio ---------------*/
+
+@media screen and (min-width: 768px) {
+    header nav{
+        left:0;
+    }    
+    
+    .enlaces{
+        display:flex; /*Creo caja flexible, los li serian flex items*/
+    }
+
+    .enlaces li{
+        text-align:center;
+        border-bottom: none;
+        border-right: 1px solid rgba(39, 82, 38, 0.5);
+        flex:auto;
+    }
+
+    .enlaces li a{
+        padding-left:0;        
+    }
+
+    li:last-child{
+        border:none;
+    }
+
+    .menu_bar{
+        display:none
+    }    
+}

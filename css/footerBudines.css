@@ -1,0 +1,86 @@
+footer{    
+    position:fixed;
+    bottom:0;
+    background: #fff;
+    color: #000;
+    width:100%;
+    text-align:center;
+}
+
+.flechas{   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    margin-top: 5px;   
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
+
+.flecha_atras{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flecha_atras img:hover{ 
+    opacity: 0.5;
+}
+
+.flecha_atras img:active{ 
+    opacity: 1;
+}
+
+.flecha_siguiente{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flecha_siguiente img:hover{ 
+    opacity: 0.5;
+}
+
+.flecha_siguiente img:active{ 
+    opacity: 1;
+}
+
+#copyright{
+    width:100%;
+    min-width: 320px;
+    margin-bottom: 5px; 
+    font-size:10px;
+    font-weight: bold;
+    text-align: center;   
+    display:none;
+}
+
+
+/*------------------------------------------------*/
+/*------------------MEDIA QUERIES-----------------*/
+/*------------------------------------------------*/
+
+
+/*-------------- Celu en Landscape ---------------*/
+
+@media screen and (min-width: 480px) {    
+    footer{        /*¿No deberia acomodarse al estar dentro del wrap?*/
+        max-width:480px;        
+    }
+    .flechas{        /*¿No deberia acomodarse al estar dentro del wrap?*/
+        max-width:480px;             
+    }
+} 
+
+/*-------------- Version Escritorio ---------------*/
+@media screen and (min-width: 768px) {
+    #copyright{
+        width:100%;
+        min-width: 320px;
+        margin-bottom: 5px; 
+        font-size:10px;
+        font-weight: bold;
+        text-align: center;   
+        display: block;
+    }
+}
