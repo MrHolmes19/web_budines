@@ -46,6 +46,12 @@ li:last-child{
     padding-left: 1em;
 }
 
+.enlaces li a.activo{
+    pointer-events: none;
+    color: black;
+    background: rgba(248, 248, 248, 0.5);
+}
+
 .enlaces li a:hover{
     background: rgba(117, 194, 146, 0.993);
 }

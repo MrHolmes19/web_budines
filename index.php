@@ -16,24 +16,10 @@
 </head>
 
 <body>
-    <header>
-        <div class="menu_bar">
-            <a href="#" class="bt-menu"><Span class="icon-menu"></Span> Menu</a>
-        </div>
-        <div id="menu">
-            <nav>
-                <ul class="enlaces">
-                    <li> <a href="#"> <span class="icon-cart"></span>Inicio </a> </li>
-                    <li> <a href="#"> <span class="icon-magic-wand"></span>Forma </a> </li>
-                    <li> <a href="#"> <span class="icon-pacman"></span>Sabor </a> </li>
-                    <li> <a href="#"> <span class="icon-fire"></span>Agregados </a> </li>
-                    <li> <a href="#"> <span class="icon-download"></span>Cobertura </a> </li>
-                    <li> <a href="#"> <span class="icon-clipboard"></span>Resumen </a> </li>
-                    <li> <a href="#"> <span class="icon-file-text2"></span>Datos</a> </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+<?php include("php/navbar.php") ?>
+
+
     <section id="wrap" class="wrap">
         <section id="encabezado">
             <div id="titulo">
