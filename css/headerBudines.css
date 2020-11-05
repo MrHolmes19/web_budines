@@ -1,7 +1,7 @@
    
 /*--------------------MENU DE NAVEGACION-------------------------*/
 
-.noscroll{ /*Clase creada para el Menu.js*/
+.noscroll{ /*Clase creada para menu.js*/
     overflow: hidden; /*para que el scroll no separe el menu del encabezado*/
 }
 
@@ -62,7 +62,7 @@ li:last-child{
 .menu_bar .bt-menu{      
     width:100%;
     display:flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /*Para que se vaya el icono a la der*/
     justify-content:space-between;
     padding:6px 20px;
     background-color: rgb(247, 159, 159);

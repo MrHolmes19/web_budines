@@ -280,7 +280,7 @@ button{
 
     .wrapConPopup{
         margin-left: 5%;       /*Mueve al costado de la pantalla para dar lugar a la ventana de imagenes*/
-        /*transform: translateX(-50%);
+        /*deberia ir un --> transform: translateX(-50%);
         */       
         transition: 2s ease all;    
     }

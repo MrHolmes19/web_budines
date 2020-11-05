@@ -1,45 +1,30 @@
-var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
+var btnAbrirPopup = document.getElementById('btn-abrir-popup'), /*Creo las variables*/
     overlay = document.getElementById('overlay'),
     popup = document.getElementById('popup'),
     btnCerrarPopup = document.getElementById('btn-cerrar-popup'),
     btnElegir = document.getElementById('btn-elegir'),
-    mediaQuery = window.matchMedia('(min-width: 1028px)'),
+    mediaQuery = window.matchMedia('(min-width: 1028px)'), /*Guarda la media query*/
     margenWrap = document.getElementById('wrap');
 
 
 btnAbrirPopup.addEventListener('click',function(){
     overlay.classList.add('active'); /*agrega la clase active a la de overlay*/
     popup.classList.add('active');   /*agrega la clase active a la de popup*/
-    if(mediaQuery.matches) {
-        margenWrap.classList.add('wrapConPopup');
-        
-        /*margenWrap.id = "WrapConPopup";
-        /*margenWrap.removeAttribute('margin');
-        margenWrap.setAttribute("style","transition:5s ease all;");
-        /*margenWrap.setAttribute("style","transform: translateX(-100%);");
-        */
-        /*margenWrap.setAttribute("style","margin-left:5%;");       
-        /*margenWrap.setAttribute("style","transition:5s ease all;");
-        */
-        /*margenWrap.style.transition = "margin-left 2s ease 2s";
-        */       
-
-    } else{
-       
+    if(mediaQuery.matches) {         /*Si se produce la media query min-width 1028*/
+        margenWrap.classList.add('wrapConPopup'); /*agrega la clase wrapConPopup que te tira el article para la izquierda*/
+    } else{       
     }
 });
-
 
 btnCerrarPopup.addEventListener('click',function(){
     overlay.classList.remove('active'); /*agrega la clase active a la de overlay*/
     popup.classList.remove('active');
-    /*margenWrap.setAttribute("style","margin:auto;");  /*Para que se centre el wrap en vista escritorio*/
-    margenWrap.classList.remove('wrapConPopup');
-
+    margenWrap.classList.remove('wrapConPopup'); /*remueve la clase wrapConPopup para que devuelva el article al medio*/
 });
 
 btnElegir.addEventListener('click',function(){  /*activa el radiobutton*/
-    document.querySelector('#radiobutton').checked = true;
+    document.querySelector('#radiobutton').checked = true; /*selecciona el check de ese sabor*/
     overlay.classList.remove('active');
-    popup.classList.remove('active');
+    popup.classList.remove('active');    
+    margenWrap.classList.remove('wrapConPopup'); /*remueve la clase wrapConPopup para que devuelva el article al medio*/
 });

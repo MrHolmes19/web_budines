@@ -1,12 +1,4 @@
-<?php
-$conexion = mysqli_connect(    /*funcion para conectarse a la bd. La guarda en una variable para utilizarla luego*/
-  'localhost',          /*servidor local*/
-  'root',             	/*usuario por defecto*/
-  '',               /*sin contraseña*/
-  'bd_budines'         /*nombre bd*/     
-);
-
-?>
+<?php include("php/conexion.php")?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +34,7 @@ $conexion = mysqli_connect(    /*funcion para conectarse a la bd. La guarda en u
             </nav>
         </div>
     </header>
-    <section id="wrap">
+    <section id="wrap" class="wrap">
         <section id="encabezado">
             <div id="titulo">
                 <h1>Sabor del budín</h1>
@@ -65,11 +57,11 @@ $conexion = mysqli_connect(    /*funcion para conectarse a la bd. La guarda en u
 
                 <tr>
                     <td class="descripcion">
-                        <input type="radio" name="sabores" class="radiobutton" value="saborx"> 
+                        <input type="radio" name="sabores" class="radiobutton" id="radiobutton" value="saborx"> 
                         <?php echo $mostrar['Producto'] ?>
                     </td>
                     <td class="precio"> <?php echo $mostrar['Precio'] ?> </td>
-                    <td class="boton"><button> Vista previa </button> </td>
+                    <td class="boton"><button class="btn-abrir-popup" id="btn-abrir-popup"> Vista previa </button> </td>
                 </tr>
                 <?php
                 }
@@ -117,17 +109,21 @@ $conexion = mysqli_connect(    /*funcion para conectarse a la bd. La guarda en u
                 <p> ©2020 LAGH. Todos los derechos reservados.</p>
             </div>
         </footer> 
-
-        <div class="overlay">
-        <div class="popup">
-        <a href=# id="btn-cerrar-popup" class="btn-cerrar-popup"> <i class="fas fa-times"> </i> </a>
-        <h2>Budin de Banana</h2>
-        <h3><h3>
     </section>
-
     
-    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href=# id="btn-cerrar-popup" class="btn-cerrar-popup"> <span class="icon-cross"></span> <i class="fas fa-times"> </i> </a>
+            <h4>Budin de Banana</h4>
+            <h5>El budin preferido por todos y que nunca falla</h5>
+            <img src="imagenes/sabores/Banana.jpg" alt="Budin de banana">
+            <input type="submit" class="btn-elegir" id="btn-elegir" value="Elegir este budín">
+        </div>
+    </div>    
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/popup.js"></script>
     <!-- -->
 </body>
 
