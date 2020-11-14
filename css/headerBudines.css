@@ -43,11 +43,11 @@ li:last-child{
     text-decoration: none;
     line-height: 2.5;
     display:block;
-    padding-left: 1em;
+    padding-left: 1em;    
 }
 
 .enlaces li a.activo{
-    pointer-events: none;
+    pointer-events: none; /*Para que no se pueda apretar*/
     color: black;
     background: rgba(248, 248, 248, 0.5);
 }

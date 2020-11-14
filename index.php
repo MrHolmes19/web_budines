@@ -17,9 +17,9 @@
 
 <body>
 
+<!----------------- Barra navegacion-------------------> 
 <?php include("php/navbar.php") ?>
-
-
+    <!----------------- Encabezado ------------------> 
     <section id="wrap" class="wrap">
         <section id="encabezado">
             <div id="titulo">
@@ -32,44 +32,46 @@
         </section>
         <article>
             <h2>Nombre, elegí el sabor de tu budín</h2>
+            
+            <!----------------- Tabla sabores clasicos-------------------> 
             <h3>Sabores clásicos</h3>
             <table id="clasicos">
                 <?php
-                $sql="SELECT * from sabores_clasicos";
-                $result=mysqli_query($conexion,$sql);
+                    $sql="SELECT * from sabores_clasicos";
+                    $result=mysqli_query($conexion,$sql);
 
-                while($mostrar=mysqli_fetch_array($result)){
-                    ?>                
+                    while($mostrar=mysqli_fetch_array($result)){
+                ?>                
 
                 <tr>
                     <td class="descripcion">
-                        <input type="radio" name="sabores" class="radiobutton" id="radiobutton" value="saborx"> 
+                        <input type="radio" name="sabores" class="radiobutton" id="<?php echo str_replace(' ', '_',$mostrar['Producto'])?>" value="saborx"> 
                         <?php echo $mostrar['Producto'] ?>
                     </td>
-                    <td class="precio"> <?php echo $mostrar['Precio'] ?> </td>
-                    <td class="boton"><button class="btn-abrir-popup" id="btn-abrir-popup"> Vista previa </button> </td>
+                    <td class="precio"> $ <?php echo $mostrar['Precio'] ?>.- </td>
+                    <td class="boton"><button onclick="abrirPopup('<?php echo $mostrar['Foto'] ?>','<?php echo $mostrar['Producto'] ?>')" class="btn-abrir-popup"> Vista previa </button> </td>
                 </tr>
                 <?php
                 }
                 ?>            
             </table>
-
+            <!----------------- Tabla sabores especiales-------------------> 
             <h3>Sabores Especiales</h3>
             <table id="especiales">
                 <?php
-                $sql="SELECT * from sabores_especiales";
-                $result=mysqli_query($conexion,$sql);
+                    $sql="SELECT * from sabores_especiales";
+                    $result=mysqli_query($conexion,$sql);
 
-                while($mostrar=mysqli_fetch_array($result)){
-                    ?>                
+                    while($mostrar=mysqli_fetch_array($result)){
+                ?>                
 
                 <tr>
                     <td class="descripcion">
-                        <input type="radio" name="sabores" class="radiobutton" value="saborx"> 
-                        <?php echo $mostrar['Producto'] ?>
+                        <input type="radio" name="sabores" class="radiobutton" id="<?php echo str_replace(' ', '_',$mostrar['Producto'])?>" value="saborx"> 
+                        <?php echo $mostrar['Producto']?>
                     </td>
-                    <td class="precio"> <?php echo $mostrar['Precio'] ?> </td>
-                    <td class="boton"><button> Vista previa </button> </td>
+                    <td class="precio"> $ <?php echo $mostrar['Precio'] ?>.- </td>
+                    <td class="boton"><button onclick="abrirPopup('<?php echo $mostrar['Foto'] ?>','<?php echo $mostrar['Producto'] ?>')" class="btn-abrir-popup"> Vista previa </button> </td>
                 </tr>
                 <?php
                 }
@@ -96,17 +98,18 @@
             </div>
         </footer> 
     </section>
-    
+    <!----------------- Ventana emergente------------------->    
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
             <a href=# id="btn-cerrar-popup" class="btn-cerrar-popup"> <span class="icon-cross"></span> <i class="fas fa-times"> </i> </a>
-            <h4>Budin de Banana</h4>
-            <h5>El budin preferido por todos y que nunca falla</h5>
-            <img src="imagenes/sabores/Banana.jpg" alt="Budin de banana">
+            <h4 id="titulo-popup">titulo</h4>
+            <h5>El budin preferido por todos y que nunca falla</h5>            
+            <img id="img-popup" src="" alt="Imagen del budin">
             <input type="submit" class="btn-elegir" id="btn-elegir" value="Elegir este budín">
         </div>
     </div>    
     
+    <!----------------- Javascript-------------------> 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>

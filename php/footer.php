@@ -20,7 +20,6 @@
 
     var indice = paginas.findIndex(x => x == href);
 
-
      var f_siguente = document.querySelector(".flecha_siguiente a");
      f_siguente.href= paginas[indice+1];
     

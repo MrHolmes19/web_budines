@@ -19,13 +19,13 @@
 
 <script>
 
-var pagina = document.URL;
-var array = pagina.split("/");
-var href = array[array.length - 1];
+var pagina = document.URL;    /*Lee el url de la pagina activa*/
+var array = pagina.split("/");  /*Separa la url por "/" */
+var href = array[array.length - 1]; /*toma el ultimo valor Long - 1 = 2 y empieza en 0, entonces es el tercer elemento "/" */
 
-var btn_activo = document.querySelector("a[href='"+ href +"']");
+var btn_activo = document.querySelector("a[href='"+ href +"']");  /*la variable guarda el enlace de la pagina que seleccione antes (La actual)*/
 
-btn_activo.setAttribute("class","activo");
+btn_activo.setAttribute("class","activo"); /* Pone la clase "activo" a ese enlace*/
 
 </script>
 
