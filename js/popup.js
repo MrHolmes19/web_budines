@@ -12,7 +12,9 @@ var btnAbrirPopup2 = document.getElementById('btn-abrir-popup'),
     //posicion_array = indexof(); //Reservada para cuando decidamos guardar datos
     
 // Funcion para abrir ventana emergente
-function abrirPopup(nombre_foto, titulo_foto){
+function abrirPopup(nombre_foto, titulo_foto, e){
+    e = e || window.event; //capturo el evento
+    e.preventDefault(); //evita que envie el formulario
     imagen.setAttribute('src','img_subidas/'+nombre_foto); //Modifica la url de la img para que tome la que se mando como atributo 
     //titulo.innerHTML = 'Budin de '+titulo_foto; //Cambia el titulo de la imagen (Funciona)
     titulo.textContent = 'Budin de '+titulo_foto; //Cambia el titulo de la imagen (Otra forma de hacerlo)
@@ -30,6 +32,7 @@ function abrirPopup(nombre_foto, titulo_foto){
         popup.classList.remove('active');    
         margenWrap.classList.remove('wrapConPopup'); //remueve la clase wrapConPopup para que devuelva el article al medio
     });
+    
 };
 
 // Funcion para cerrar ventana emergente
