@@ -1,4 +1,4 @@
-<?php include("php/conexion.php")?>
+<?php include("php/conexion.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,78 +17,87 @@
 
 <body>
 
-<!----------------- Barra navegacion-------------------> 
-<?php include("php/navbar.php") ?>
-    <!----------------- Encabezado ------------------> 
+    <!----------------- Barra navegacion------------------->
+    <?php include("php/navbar.php") ?>
+    <!----------------- Encabezado ------------------>
     <section id="wrap" class="wrap">
         <section id="encabezado">
             <div id="titulo">
                 <h1>Cobertura del budín</h1>
             </div>
             <div id="logo">
-                <img src="imagenes/logo.png" alt="logo de El Rincon de los budines"
-                    title="logo El Rincon de los budines">
+                <img src="imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
             </div>
         </section>
         <article>
             <h2>Nombre, elegí la cobertura de tu budín</h2>
-            
-            <!----------------- Tabla coberturas-------------------> 
+
+            <!----------------- Tabla coberturas------------------->
             <h3>Coberturas</h3>
-            <table id="clasicos">
-                <?php
-                    $sql="SELECT * from precioscoberturas";
-                    $result=mysqli_query($conexion,$sql);
+            <form action="php/guarda_eleccion.php" method="get">
+                <table id="clasicos">
+                    <?php
+                    $sql = "SELECT * from precioscoberturas";
+                    $result = mysqli_query($conexion, $sql);
 
-                    while($mostrar=mysqli_fetch_array($result)){
-                ?>                
+                    while ($mostrar = mysqli_fetch_array($result)) {
+                    ?>
 
-                <tr>
+                        <tr>
+                            <td class="descripcion">
+                                <label for="<?php echo str_replace(' ', '_', $mostrar['Producto']) ?>"><input type="radio" name="cobertura" class="radiobutton" id="<?php echo str_replace(' ', '_', $mostrar['Producto']) ?>" value="<?php echo $mostrar['Producto'] ?>">
+                                    <?php echo $mostrar['Producto'] ?> </label>
+                            </td>
+                            <td class="precio"> $ <?php echo $mostrar['Precio'] ?>.- </td>
+                            <td class="boton"><button onclick="abrirPopup('<?php echo $mostrar['Foto'] ?>','<?php echo $mostrar['Producto'] ?>', event)" class="btn-abrir-popup"> Vista previa </button> </td>
+                        </tr>
+                    <?php
+                    }
+                    mysqli_close($conexion);
+                    ?>
+                    <tr>
                     <td class="descripcion">
-                    <label for="<?php echo str_replace(' ', '_',$mostrar['Producto'])?>"><input type="radio" name="sabores" class="radiobutton" id="<?php echo str_replace(' ', '_',$mostrar['Producto'])?>" value="saborx"> 
-                        <?php echo $mostrar['Producto'] ?> </label>
+                        <label for="sinCobertura"> 
+                            <input type="radio" name="cobertura" class="radiobutton" id="sinCobertura" value="no" checked> Sin Cobertura</label>
                     </td>
-                    <td class="precio"> $ <?php echo $mostrar['Precio'] ?>.- </td>
-                    <td class="boton"><button onclick="abrirPopup('<?php echo $mostrar['Foto'] ?>','<?php echo $mostrar['Producto'] ?>', event)" class="btn-abrir-popup"> Vista previa </button> </td>
-                </tr>
-                <?php
-                }
-                ?>            
-            </table>
-            
-            <section class="nota">
-                *Se permite una sola cobertura
-            </section>
-            <div class="footer_blanco"> </div>
+                    <td class="precio"> $ 0.- </td>
+                    </tr>
+                </table>
+
+                <section class="nota">
+                    *Se permite una sola cobertura
+                </section>
+                <div class="footer_blanco"> </div>
         </article>
 
-        <footer>            
+        <footer>
             <div class="flechas">
                 <div class=flecha_atras>
-                    <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a> 
+                    <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
                 <div class=flecha_siguiente>
-                    <a href="#"><img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </a>
+                <button name="enviar"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
                 </div>
             </div>
 
             <div id="copyright">
                 <p> ©2020 LAGH. Todos los derechos reservados.</p>
             </div>
-        </footer> 
+        </footer>
+        </form>
     </section>
-    <!----------------- Ventana emergente------------------->    
+    <!----------------- Ventana emergente------------------->
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
             <a href=# id="btn-cerrar-popup" class="btn-cerrar-popup"> <span class="icon-cross"></span> <i class="fas fa-times"> </i> </a>
             <h4 id="titulo-popup">titulo</h4>
-            <h5>El budin preferido por todos y que nunca falla</h5>            
+            <h5>La cobertura preferida de Mirta Legrand</h5>
             <img id="img-popup" src="" alt="Imagen del budin">
             <input type="submit" class="btn-elegir" id="btn-elegir" value="Elegir este budín">
         </div>
-    </div>    
-    
-    <!----------------- Javascript-------------------> 
+    </div>
+
+    <!----------------- Javascript------------------->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>

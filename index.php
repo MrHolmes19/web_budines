@@ -34,7 +34,7 @@
 
             <!----------------- Tabla sabores clasicos------------------->
             <h3>Sabores clásicos</h3>
-            <form action="guarda_sabor.php" method="get">
+            <form action="php/guarda_eleccion.php" method="get">
                 <table id="clasicos">
                     <?php
                     $sql = "SELECT * from sabores_clasicos";
@@ -75,6 +75,7 @@
                         </tr>
                     <?php
                     }
+                    mysqli_close($conexion);
                     ?>
                 </table>
             
@@ -89,6 +90,7 @@
                 <div class=flecha_atras>
                     <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
+                <!----------probar con un submit------------>
                 <div class=flecha_siguiente>
                     <button name="enviar"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
                 </div>

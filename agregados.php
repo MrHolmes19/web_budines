@@ -35,6 +35,7 @@
             
             <!----------------- Tabla de Agregados-------------------> 
             <h3>Agregados</h3>
+            <form action="php/guarda_eleccion.php" method="get">
             <table id="agregados">
                 <?php
                     $sql="SELECT * from preciosagregados";
@@ -45,7 +46,7 @@
 
                 <tr>
                     <td class="descripcion">
-                        <label for="<?php echo str_replace(' ', '_',$mostrar['Producto'])?>"><input type="checkbox" name="agregados" class="radiobutton" id="<?php echo str_replace(' ', '_',$mostrar['Producto'])?>" value="saborx"> 
+                        <label for="<?php echo str_replace(' ', '_',$mostrar['Producto'])?>"><input type="checkbox" name="agregados[]" class="radiobutton" id="<?php echo str_replace(' ', '_',$mostrar['Producto'])?>" value="<?php echo $mostrar['Producto'] ?>"> 
                         <?php echo $mostrar['Producto'] ?> </label>
                     </td>
                     <td class="precio"> $ <?php echo $mostrar['Precio'] ?>.- </td>
@@ -53,6 +54,7 @@
                 </tr>
                 <?php
                 }
+                mysqli_close($conexion);
                 ?>            
             </table>
             
@@ -69,7 +71,7 @@
                     <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a> 
                 </div>
                 <div class=flecha_siguiente>
-                    <a href="#"><img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </a>
+                <button name="enviar"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
                 </div>
             </div>
 
@@ -77,6 +79,7 @@
                 <p> ©2020 LAGH. Todos los derechos reservados.</p>
             </div>
         </footer> 
+        </form>
     </section>
     <!----------------- Ventana emergente------------------->    
     <div class="overlay" id="overlay">

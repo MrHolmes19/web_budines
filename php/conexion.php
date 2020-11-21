@@ -27,5 +27,8 @@ $conexion = mysqli_connect(    //funcion para conectarse a la bd. La guarda en u
 
 
 <?php 
-session_start();
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 ?>
