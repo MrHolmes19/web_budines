@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="css/footerBudines.css">
     <link rel="stylesheet" href="fonts.css">
     <link rel="icon" href="Imagenes/icono.png" type="image/png">
+
 </head>
 
 <body>
 
     <!----------------- Barra navegacion------------------->
-    <?php include("php/navbar.php") ?>
+    <?php
+    $_SESSION["pestaña"] = 2;
+    include("php/navbar.php") ?>
     <!----------------- Encabezado ------------------>
     <section id="wrap" class="wrap">
         <section id="encabezado">
@@ -78,11 +81,11 @@
                     mysqli_close($conexion);
                     ?>
                 </table>
-            
-            <section class="nota">
-                *Se permite un solo sabor por pedido
-            </section>
-            <div class="footer_blanco"> </div>
+
+                <section class="nota">
+                    *Se permite un solo sabor por pedido
+                </section>
+                <div class="footer_blanco"> </div>
         </article>
 
         <footer>
@@ -90,9 +93,9 @@
                 <div class=flecha_atras>
                     <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
-                <!----------probar con un submit------------>
+
                 <div class=flecha_siguiente>
-                    <button name="enviar"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
+                    <button name="enviar" value="sabor" onclick="validacion(event)"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
                 </div>
             </div>
 
@@ -112,13 +115,23 @@
             <input type="submit" class="btn-elegir" id="btn-elegir" value="Elegir este budín">
         </div>
     </div>
-    <!----------------- PHP para capturar seleccion ------------------->
-
-
     <!----------------- Javascript------------------->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script><!--libreria para alertas-->
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>
+    <script>
+        function validacion(e) {
+            if (document.querySelector('input[name="sabor"]:checked') == null) {
+                //alert("elegi uno papa!");
+                Swal.fire('No seas hijo de puta y elegi uno!!');
+
+                e = e || window.event; //capturo el evento
+                e.preventDefault(); //evita que envie el formulario
+            }
+
+        };
+    </script>
     <!-- -->
 </body>
 

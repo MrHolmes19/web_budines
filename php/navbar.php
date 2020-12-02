@@ -27,5 +27,16 @@ var btn_activo = document.querySelector("a[href='"+ href +"']");  /*la variable 
 
 btn_activo.setAttribute("class","activo"); /* Pone la clase "activo" a ese enlace*/
 
+
+/*---------------------------bloquear pastañas no visitadas-------------------------------*/
+var pestañaMax = <?= $_SESSION["pestaña"]; ?>
+
+var enlaces = document.querySelectorAll("#menu .enlaces a");
+
+for(let i = 6; i > pestañaMax; i--){
+    enlaces[i].setAttribute("class","bloqueado");
+}
+
+
 </script>
 

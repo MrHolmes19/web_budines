@@ -19,8 +19,10 @@ include("php/traerPrecio.php"); ?>
 
 <body>
 
-    <?php include("php/navbar.php") ?>
-
+    <?php if ($_SESSION["pestaña"] < 5) {
+        $_SESSION["pestaña"] = 5;
+    }
+    include("php/navbar.php") ?>
 
 
     <section id="wrap" class="wrap">
@@ -58,7 +60,7 @@ include("php/traerPrecio.php"); ?>
                 if ($n > 2) {  ?>
                     <tr>
                         <td class="descripcion"> <?= $_SESSION["agregado3"] ?> </td>
-                        <td class="precio"> $<?= $precioAgregado2 ?> </td>
+                        <td class="precio"> $<?= $precioAgregado3 ?> </td>
                     </tr>
                 <?php }
                 if ($_SESSION["tieneCobertura"] == "SI" && $_SESSION["cobertura"] != "no") {    ?>
