@@ -1,4 +1,5 @@
-<?php include("php/conexion.php")?>
+<?php include("php/conexion.php");
+include("php/traerPrecio.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,7 @@
 
 <body>
 
-<?php include("php/navbar.php") ?>
+    <?php include("php/navbar.php") ?>
 
 
 
@@ -28,33 +29,49 @@
                 <h1>Resumen de tu pedido</h1>
             </div>
             <div id="logo">
-                <img src="imagenes/logo.png" alt="logo de El Rincon de los budines"
-                    title="logo El Rincon de los budines">
+                <img src="imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
             </div>
         </section>
         <article>
             <h2>Nombre, Has elegido:</h2>
             <table id="total">
                 <tr>
-                    <td class="descripcion"> Banana </td>
-                    <td class="precio"> $200 </td>          
-                </tr>           
-                <tr>
-                    <td class="descripcion"> Chips de chocolate </td>
-                    <td class="precio"> $30 </td>          
-                </tr>           
-                <tr>
-                    <td class="descripcion"> Almendras </td>
-                    <td class="precio"> $80 </td>          
-                </tr>           
-                <tr>
-                    <td class="descripcion"> Traza de chocolate </td>
-                    <td class="precio"> $85 </td>          
-                </tr>           
+                    <td class="descripcion"> <?= $_SESSION["sabor"] ?> </td>
+                    <td class="precio"> $<?= $precioSabor ?> </td>
+                </tr>
+
+                <?php
+                $n = $_SESSION["nAgregados"];
+
+                if ($n > 0) {  ?>
+                    <tr>
+                        <td class="descripcion"> <?= $_SESSION["agregado1"] ?> </td>
+                        <td class="precio"> $<?= $precioAgregado1 ?> </td>
+                    </tr>
+                <?php   }
+                if ($n > 1) {  ?>
+                    <tr>
+                        <td class="descripcion"> <?= $_SESSION["agregado2"] ?> </td>
+                        <td class="precio"> $<?= $precioAgregado2 ?> </td>
+                    </tr>
+                <?php   }
+                if ($n > 2) {  ?>
+                    <tr>
+                        <td class="descripcion"> <?= $_SESSION["agregado3"] ?> </td>
+                        <td class="precio"> $<?= $precioAgregado2 ?> </td>
+                    </tr>
+                <?php }
+                if ($_SESSION["tieneCobertura"] == "SI" && $_SESSION["cobertura"] != "no") {    ?>
+                    <tr>
+                        <td class="descripcion"> <?= $_SESSION["cobertura"] ?> </td>
+                        <td class="precio"> $<?= $precioCobertura ?> </td>
+                    </tr>
+
+                <?php   }    ?>
                 <tr>
                     <td class="descripcion"> Total: </td>
-                    <td class="precio"> $400 </td>          
-                </tr>           
+                    <td class="precio"> $<?= $total ?> </td>
+                </tr>
             </table>
 
 
@@ -62,13 +79,11 @@
         </article>
 
         <?php include("php/footer.php") ?>
-        
+
     </section>
 
-    
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/menu.js"></script>
-    <script src="js/popup.js"></script>
     <!-- -->
 </body>
 

@@ -37,12 +37,26 @@ footer{
     align-items: center;
 }
 
+.flecha_siguiente button{
+    background-color: transparent;
+    border: 0 solid transparent;
+}
+
+.flecha_siguiente button:active{
+    outline: none;
+}
+.flecha_siguiente button:focus{
+    outline: none;
+}
+
 .flecha_siguiente img:hover{ 
     opacity: 0.5;
 }
 
 .flecha_siguiente img:active{ 
     opacity: 1;
+    border: 0 solid transparent;
+
 }
 
 #copyright{
