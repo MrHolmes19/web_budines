@@ -33,7 +33,7 @@
             </div>
         </section>
         <article>
-            <h2>Nombre, elegí el sabor de tu budín</h2>
+            <h2><?= $_SESSION["nombre"] ?>, elegí el sabor de tu budín <?= $_SESSION["forma"]?></h2>
 
             <!----------------- Tabla sabores clasicos------------------->
             <h3>Sabores clásicos</h3>
@@ -120,11 +120,12 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script><!--libreria para alertas-->
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>
+    <script src="js/flechaAtras.js"></script>
     <script>
         function validacion(e) {
             if (document.querySelector('input[name="sabor"]:checked') == null) {
                 //alert("elegi uno papa!");
-                Swal.fire('No seas hijo de puta y elegi uno!!');
+                Swal.fire('tenes que elegir uno!!');
 
                 e = e || window.event; //capturo el evento
                 e.preventDefault(); //evita que envie el formulario

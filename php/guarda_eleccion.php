@@ -1,5 +1,22 @@
 <?php include("conexion.php");
 
+if ($_GET["enviar"] == "nombre") {
+
+    $nombre = $_GET["nombre"];
+    $_SESSION["nombre"] = $nombre;
+
+    header("Location: ../forma.php");
+
+}
+if ($_GET["enviar"] == "forma") {
+
+    $forma = $_GET["forma"];
+    $_SESSION["forma"] = $forma;
+
+    header("Location: ../sabor.php");
+
+}
+
 if ($_GET["enviar"] == "sabor") {
     if (isset($_GET["sabor"])) {
         $sabor = $_GET["sabor"];
@@ -25,7 +42,7 @@ if ($_GET["enviar"] == "sabor") {
             }
         }
     } else {
-        header("Location: ../index.php");
+        header("Location: ../sabor.php");
     }
 }
 
@@ -60,4 +77,12 @@ if (isset($_GET["cobertura"])) {
     $_SESSION["cobertura"] = $_GET["cobertura"];
 
     header("Location: ../total.php");
+}
+
+if ($_GET["enviar"] == "total") {
+
+    $_SESSION["precioTotal"] = $_GET["pTotal"];
+    $_SESSION["cantidad"] = $_GET["cant"];
+
+    header("Location: ../formulario.php");
 }

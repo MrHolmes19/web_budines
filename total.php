@@ -35,7 +35,7 @@ include("php/traerPrecio.php"); ?>
             </div>
         </section>
         <article>
-            <h2>Nombre, Has elegido:</h2>
+            <h2><?= $_SESSION["nombre"] ?>, Has elegido sabiamente:</h2>
             <table id="total">
                 <tr>
                     <td class="descripcion"> <?= $_SESSION["sabor"] ?> </td>
@@ -66,13 +66,21 @@ include("php/traerPrecio.php"); ?>
                 if ($_SESSION["tieneCobertura"] == "SI" && $_SESSION["cobertura"] != "no") {    ?>
                     <tr>
                         <td class="descripcion"> <?= $_SESSION["cobertura"] ?> </td>
-                        <td class="precio"> $<?= $precioCobertura ?> </td>
+                        <td class="precio">$<?= $precioCobertura ?></td>
                     </tr>
 
                 <?php   }    ?>
                 <tr>
+                    <td class="descripcion"> Cantidad: </td>
+                    <td class="cantidad">
+                            <button class="btn menos" onclick="btnMenos()">-</button>
+                            <input class="" min="1" max="3" name="cantidad" value="1" type="number" readonly>
+                            <button class="btn mas" onclick="btnMas()">+</button>
+                    </td>
+                </tr>
+                <tr>
                     <td class="descripcion"> Total: </td>
-                    <td class="precio"> $<?= $total ?> </td>
+                    <td class="precio" id="PrecioFinal">$<?= $total ?></td>
                 </tr>
             </table>
 
@@ -80,12 +88,27 @@ include("php/traerPrecio.php"); ?>
             <div class="footer_blanco"> </div>
         </article>
 
-        <?php include("php/footer.php") ?>
+        <footer>
+            <div class="flechas">
+                <div class=flecha_atras>
+                    <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
+                </div>
+                <div class=flecha_siguiente>
+                    <button name="enviar" value="agregados" onclick="seguir()"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
+                </div>
+            </div>
+
+            <div id="copyright">
+                <p> ©2020 LAGH. Todos los derechos reservados.</p>
+            </div>
+        </footer>
 
     </section>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/contador.js"></script>
+    <script src="js/flechaAtras.js"></script>
     <!-- -->
 </body>
 

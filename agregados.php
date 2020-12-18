@@ -33,7 +33,7 @@
             </div>
         </section>
         <article>
-            <h2>Nombre, elegí que agregados llevara tu budin de <?= $_SESSION["sabor"] ?></h2>
+            <h2><?= $_SESSION["nombre"] ?>, elegí que agregados llevara tu budin de <?= $_SESSION["sabor"] ?></h2>
 
             <!----------------- Tabla de Agregados------------------->
             <h3>Agregados</h3>
@@ -99,6 +99,7 @@
     <?php include("js/nMax.php") ?>
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>
+    <script src="js/flechaAtras.js"></script>
     <!-- -->
 </body>
 

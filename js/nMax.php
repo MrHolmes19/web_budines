@@ -12,4 +12,8 @@ $(document).ready(function () {
     })
 
 });
+
+if(max == 0){
+    $("input:checkbox").not(":checked").attr("disabled", true);
+}
 </script>

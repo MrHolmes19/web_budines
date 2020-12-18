@@ -1,240 +1,373 @@
 /*----------------------Estilos generales-------------------------*/
 
-*{
-    margin:0;   /*Reinicio la config. por defecto del navegador*/
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0; /*Reinicio la config. por defecto del navegador*/
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{    
-    font-family:sans-serif;
-    min-height: 100vh; /*Para que ocupe el alto del viewport*/
-    padding-top: 41px; /* Espacio para que el menu no tape el contenido*/
+body {
+  font-family: sans-serif;
+  min-height: 100vh; /*Para que ocupe el alto del viewport*/
+  padding-top: 41px; /* Espacio para que el menu no tape el contenido*/
 }
 
-.wrap{
-    min-width:320px;    
+.wrap {
+  min-width: 320px;
 }
 
 /*----------------------CUERPO DE LA PAGINA (ARTICLE)-------------------------*/
 
-article{
-    width:95%; 
-    margin:auto;
-    margin-bottom:90px;
+article {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 90px;
 }
 
-h2{
-    font-size: 16px;  
-    padding-top: 10px;
-    font-weight: lighter;
-    font-style: italic;
+h2 {
+  font-size: 16px;
+  padding-top: 10px;
+  font-weight: lighter;
+  font-style: italic;
+  margin-bottom: 10px;
 }
 
-h3{
-    font-size: 18px;  
-    padding: 10px 0px;
-    font-weight: bold;
+h3 {
+  font-size: 18px;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+
+/*-------------------Nombre----------------------*/
+article.nombre {
+  min-height: calc(100vh - 43px);
+  background-image: url("../imagenes/Fondos/Ventana2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nombre form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nombre h2{
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  max-width: 180px;
+  
+}
+
+.nombre form input,
+.nombre form button{
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  min-width: 150px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/*-----------------img. formas--------------------*/
+div.imagen {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.imagen a.forma {
+  width: 85vw;
+}
+
+.imagen .forma img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 10px;
+  max-height: 30vh;
+  margin-bottom: 0px;
+  border-radius: 10px;
+}
+
+.imagen .comentario {
+  max-height: 30vh;
+  margin-bottom: 20px;
+}
+
+.imagen .comentario h3 {
+  position: relative;
+  background: rgb(247, 159, 159);
+  color: white;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  text-shadow: 1px 1px 5px black;
 }
 
 /*--------------Lista de precios------------------*/
 
-table{
-    width: 100%;
-    font-size: 16px;
-    margin:auto;       
+table {
+  width: 100%;
+  font-size: 16px;
+  margin: auto;
 }
 
-table tr td{
-    padding:2px 0px;
+table tr td {
+  padding: 2px 0px;
 }
 
-table tr td div{
-    overflow: hidden;   
+table tr td div {
+  overflow: hidden;
 }
 
-.descripcion{
-    width:55%;   
+.descripcion {
+  width: 55%;
 }
 
-.precio{
-    width:20%;  
-    text-align: center;  
+.precio {
+  width: 20%;
+  text-align: center;
 }
 
-.boton{
-    width:25%;
-    text-align: center;     
+.boton {
+  width: 25%;
+  text-align: center;
 }
 
-button{
-    width:100%;
-    background-color:  rgba(247, 159, 159,0.8);
-    border-radius: 5px;
-    font-size:13px;   
+button {
+  width: 100%;
+  background-color: rgba(247, 159, 159, 0.8);
+  border-radius: 5px;
+  font-size: 13px;
 }
 
-.nota{
-    padding: 10px 0px;
-    font-size:15px;    
+.nota {
+  padding: 10px 0px;
+  font-size: 15px;
 }
+
+/*-----------------Total---------------------*/
+
+.cantidad{
+  display: flex;
+  flex-direction: row;
+}
+.cantidad input{
+  width: 50px;
+  text-align: center;
+}
+.cantidad button{
+  height: 30px;
+  width: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.cantidad button.menos{
+  border-radius: 45% 0 0 45%;
+}
+.cantidad button.mas{
+  border-radius: 0 45% 45% 0;
+}
+
+/*--------------Formulario Final------------------*/
+article form.datos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article form.datos input,
+article form.datos select,
+article form.datos textarea
+{
+  margin-bottom: 10px;
+  width: 100%;
+  padding-left: 8px;
+  font-size: 20px;
+  text-align: left;
+  border-radius: 12px;
+  border: 2px solid rgb(247, 159, 159);
+}
+
+article form.datos label{
+  width: 90%;
+  
+}
+
 
 
 /*--------------POP UP (VENTANA EMERGENTE)------------------*/
 
-.overlay{                           /*Clase para otorgar al fondo un apagado, al abrir el pop-up*/
-    background: rgba(0,0,0,.5);
-    position: fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;                        /*Para que ocupe toda la pantalla*/
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    visibility: hidden;             /*por defecto no se va a ver*/
+.overlay {
+  /*Clase para otorgar al fondo un apagado, al abrir el pop-up*/
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; /*Para que ocupe toda la pantalla*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden; /*por defecto no se va a ver*/
 }
 
-.overlay.active{
-    visibility: visible;  /*Cuando se coloca la clase active, se pone visible*/
+.overlay.active {
+  visibility: visible; /*Cuando se coloca la clase active, se pone visible*/
 }
 
-.popup{
-    background: #fff;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-    border-radius:5px;
-    padding: 10px;
-    text-align:center;
-    width:95%;  
-    opacity:0;
-    transform: scale(0.7);   /*Escala la ventana para generar un efecto animado donde la ventana se agranda/cierra la abrir/cerrar*/
-    transition: .5s ease all;     /*transicion para las propiedades*/
+.popup {
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 95%;
+  opacity: 0;
+  transform: scale(
+    0.7
+  ); /*Escala la ventana para generar un efecto animado donde la ventana se agranda/cierra la abrir/cerrar*/
+  transition: 0.5s ease all; /*transicion para las propiedades*/
 }
 
-.popup h4{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;   
-    opacity: 0;
+.popup h4 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: 0;
 }
 
-.popup h5{
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 10px;   
-    opacity: 0;
+.popup h5 {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  opacity: 0;
 }
-.popup .btn-cerrar-popup{
-    font-size: 12px;
-    line-height:12px;  
-    text-decoration: none; 
-    display: block;
-    text-align:right;
-    color: #BBBBBB;
-    transition: .3s ease all;
-}
-
-.popup .btn-cerrar-popup:hover{    
-    color: #000;
-
+.popup .btn-cerrar-popup {
+  font-size: 12px;
+  line-height: 12px;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  color: #bbbbbb;
+  transition: 0.3s ease all;
 }
 
-.popup img{
-    width:100%;
-    border-radius:3px;
-    margin-bottom: 10px; 
-    opacity:0;  
+.popup .btn-cerrar-popup:hover {
+  color: #000;
 }
 
-.popup .btn-elegir{
-    padding:0 20px;
-    height:30px;
-    line-height:30px;
-    border:none;
-    color: #000;
-    background-color:  rgb(247, 159, 159);
-    border-radius: 3px;
-    font-size: 16px;
-    cursor:pointer;
-    transition: .3s ease all;
-    opacity:0;
+.popup img {
+  width: 100%;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  opacity: 0;
 }
 
-.popup .btn-elegir:hover{
-    background-color:  rgba(247, 159, 159,0.5);;
+.popup .btn-elegir {
+  padding: 0 20px;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  color: #000;
+  background-color: rgb(247, 159, 159);
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  opacity: 0;
 }
 
-
+.popup .btn-elegir:hover {
+  background-color: rgba(247, 159, 159, 0.5);
+}
 
 /*--------------------ANIMACIONES---------------------*/
 
-.popup.active{
-    opacity:1;
-    transform: scale(1);
+.popup.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.popup.active h4{
-    animation: entradaTitulo .5s ease .3s forwards; /*Se le indica al h4 que tenga una animacion llamada entradaTitulo que dure .8s y que tenga un delay de comienzo de .5s. 
+.popup.active h4 {
+  animation: entradaTitulo 0.5s ease 0.3s forwards; /*Se le indica al h4 que tenga una animacion llamada entradaTitulo que dure .8s y que tenga un delay de comienzo de .5s. 
                                                     /*Forwards indica que el valor de "to" va a quedar permanente (por defecto vuelve al de la config. original de la etiqueta) */
 }
 
-.popup.active h5{
-    animation: entradaSubtitulo .5s ease .3s forwards;
+.popup.active h5 {
+  animation: entradaSubtitulo 0.5s ease 0.3s forwards;
 }
 
-.popup.active img{
-    animation: entradaImagen 1s ease 0.5s forwards;
+.popup.active img {
+  animation: entradaImagen 1s ease 0.5s forwards;
 }
 
-.popup.active input{
-    animation: entradaInput 1s ease 0.5s forwards;
+.popup.active input {
+  animation: entradaInput 1s ease 0.5s forwards;
 }
 
-@keyframes entradaTitulo{            /*Animacion*/
-    from{
-        transform: translateY(-25px);   /*posiciona el texto arriba 25px*/
-        opacity:0;
-    }
-    
-    to{
-        transform: translateY(0);    /*posiciona el texto en su lugar original*/
-        opacity:1;
-    }
+@keyframes entradaTitulo {
+  /*Animacion*/
+  from {
+    transform: translateY(-25px); /*posiciona el texto arriba 25px*/
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0); /*posiciona el texto en su lugar original*/
+    opacity: 1;
+  }
 }
 
-@keyframes entradaSubtitulo{    
-    from{
-        transform: translateY(25px);
-        opacity:0;
-    }
-    
-    to{
-        transform: translateY(0);
-        opacity:1;
-    }
+@keyframes entradaSubtitulo {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-@keyframes entradaImagen{   
-    from{        
-        opacity:0;
-    }
-    
-    to{      
-        opacity:1;
-    }
+@keyframes entradaImagen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
+@keyframes entradaInput {
+  from {
+    opacity: 0;
+  }
 
-@keyframes entradaInput{   
-    from{       
-        opacity:0;
-    }
-    
-    to{      
-        opacity:1;
-        /*transform: rotate(1turn);*/
-        transform: rotate3D(2.0,2.0,2.0,360deg);
-    }
+  to {
+    opacity: 1;
+    /*transform: rotate(1turn);*/
+    transform: rotate3D(2, 2, 2, 360deg);
+  }
 }
 
 /*------------------------------------------------*/
@@ -244,44 +377,45 @@ button{
 /*-------------- Celu en Landscape ---------------*/
 
 @media screen and (min-width: 480px) {
-    .wrap{     
-        max-width:480px;  
-        margin:auto;       
-        margin-left: calc((100% - 480px)/2); /*remplaza APROX el margin:auto, para poder hacer la transicion con la ventan popup*/ 
-        transition: 2s ease all;   
-    }   
+  .wrap {
+    max-width: 480px;
+    margin: auto;
+    margin-left: calc(
+      (100% - 480px) / 2
+    ); /*remplaza APROX el margin:auto, para poder hacer la transicion con la ventan popup*/
+    transition: 2s ease all;
+  }
 
-    .popup{
-        width: 456px;   
-    }
-} 
+  .popup {
+    width: 456px;
+  }
+}
+
+
 
 /*-------------- Version Escritorio ---------------*/
 
 @media screen and (min-width: 768px) {
-    
 }
 
-
 @media screen and (min-width: 1028px) {
-   
-    .overlay{                        
-        background: rgba(0,0,0,.0);
-        position: fixed;
-        top:0;
-        bottom:0;
-        left:50%;
-        right:0;               
-        display:flex;
-        align-items:center;
-        justify-content: center;
-        visibility: hidden;             
-    }     
+  .overlay {
+    background: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+  }
 
-    .wrapConPopup{
-        margin-left: 5%;       /*Mueve al costado de la pantalla para dar lugar a la ventana de imagenes*/
-        /*deberia ir un --> transform: translateX(-50%);
-        */       
-        transition: 2s ease all;    
-    }
+  .wrapConPopup {
+    margin-left: 5%; /*Mueve al costado de la pantalla para dar lugar a la ventana de imagenes*/
+    /*deberia ir un --> transform: translateX(-50%);
+        */
+    transition: 2s ease all;
+  }
 }

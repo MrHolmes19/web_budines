@@ -16,12 +16,10 @@
 
     <script> 
 
-    var paginas = ["index.php", "extras.php", "cobertura.php", "total.php"];
+    var paginas = ["login.php", "forma.php", "sabor.php", "extras.php", "cobertura.php", "total.php", "formulario.php"];
 
     var indice = paginas.findIndex(x => x == href);
 
-     var f_siguente = document.querySelector(".flecha_siguiente a");
-     f_siguente.href= paginas[indice+1];
     
      var f_siguente = document.querySelector(".flecha_atras a");
      f_siguente.href= paginas[indice-1];
