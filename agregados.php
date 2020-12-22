@@ -23,6 +23,9 @@
     }
     include("php/navbar.php") ?>
     <!----------------- Encabezado ------------------>
+    <!---Pagina para elegir los agregados, una tabla que se llena desde la bbdd, cada item se genera dinamicamente --->
+    <!--y tiene su boton de vista previa el cual llama a la funcion abrirpopup(de la pagina popup.js) --->
+    <!--la eleccion se manda por formulario, esta limitado el maximo a elegir con js(nMax.php) --->
     <section id="wrap" class="wrap">
         <section id="encabezado">
             <div id="titulo">
@@ -66,7 +69,7 @@
 
                 <div class="footer_blanco"> </div>
         </article>
-
+        <!----------------- Footer ------------------->
         <footer>
             <div class="flechas">
                 <div class=flecha_atras>

@@ -18,13 +18,16 @@ include("php/traerPrecio.php"); ?>
 </head>
 
 <body>
-
+<!----------------- Barra navegacion------------------->
     <?php if ($_SESSION["pestaña"] < 5) {
         $_SESSION["pestaña"] = 5;
     }
     include("php/navbar.php") ?>
 
-
+    <!----------------- Encabezado ------------------>
+    <!-- Pagina para visualizar el resumen del pedido, se traen las elecciones de la sesion y con esos datos el--->
+    <!-- archivo traerPrecio.php(include) busca en la bbdd los precios y guarda en variables para luego llenar la--->
+    <!-- tabla con esos datos. con un input y dos btn se puede seleccionar la cantidad(controlado por contador.js) --->
     <section id="wrap" class="wrap">
         <section id="encabezado">
             <div id="titulo">

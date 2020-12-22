@@ -23,6 +23,9 @@
     $_SESSION["pestaña"] = 2;
     include("php/navbar.php") ?>
     <!----------------- Encabezado ------------------>
+    <!---Pagina para elegir el sabor, son dos tablas que se llenan desde la bbdd, cada item se genera dinamicamente --->
+    <!--y tiene su boton de vista previa el cual llama a la funcion abrirpopup(de la pagina popup.js) --->
+    <!--la eleccion se manda por formulario y en caso de no elegir sale una alerta --->
     <section id="wrap" class="wrap">
         <section id="encabezado">
             <div id="titulo">
@@ -33,7 +36,7 @@
             </div>
         </section>
         <article>
-            <h2><?= $_SESSION["nombre"] ?>, elegí el sabor de tu budín <?= $_SESSION["forma"]?></h2>
+            <h2><?= $_SESSION["nombre"] ?>, elegí el sabor de tu budín <?= $_SESSION["forma"] ?></h2>
 
             <!----------------- Tabla sabores clasicos------------------->
             <h3>Sabores clásicos</h3>
@@ -87,7 +90,7 @@
                 </section>
                 <div class="footer_blanco"> </div>
         </article>
-
+        <!----------------- Footer ------------------->
         <footer>
             <div class="flechas">
                 <div class=flecha_atras>
@@ -117,14 +120,15 @@
     </div>
     <!----------------- Javascript------------------->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script><!--libreria para alertas-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!--libreria para alertas-->
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/flechaAtras.js"></script>
     <script>
         function validacion(e) {
             if (document.querySelector('input[name="sabor"]:checked') == null) {
-                //alert("elegi uno papa!");
+                //alerta de la libreria SweetAlert
                 Swal.fire('tenes que elegir uno!!');
 
                 e = e || window.event; //capturo el evento

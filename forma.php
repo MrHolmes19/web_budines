@@ -24,6 +24,7 @@
     }
     include("php/navbar.php") ?>
     <!----------------- Encabezado ------------------>
+    <!-- Pagina para elegir la forma, cada imagen esta adentro de un link que manda por get la eleccion --->
     <section id="wrap" class="wrap">
         <section id="encabezado">
             <div id="titulo">

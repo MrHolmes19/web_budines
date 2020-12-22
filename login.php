@@ -23,6 +23,7 @@
     $_SESSION["pestaña"] = 0;
     include("php/navbar.php") ?>
     <!----------------- Encabezado ------------------>
+    <!-- Pagina para ingresar el nombre, lo manda por formulario a guarda_eleccion.php --->
     <section id="wrap" class="wrap">
 
         <article class="nombre">
@@ -32,8 +33,6 @@
                 <input type="text" name="nombre">
                 <button name="enviar" value="nombre"> Siguente </button>
             </form>
-
-
 
             <div class="footer_blanco"> </div>
 

@@ -17,13 +17,13 @@
 </head>
 
 <body>
-
+    <!----------------- Barra navegacion------------------->
     <?php if ($_SESSION["pestaña"] < 6) {
         $_SESSION["pestaña"] = 6;
     }
     include("php/navbar.php") ?>
 
-
+    <!----------------- Encabezado ------------------>
     <section id="wrap" class="wrap">
         <section id="encabezado">
             <div id="titulo">
@@ -35,7 +35,7 @@
         </section>
         <article>
             <h2><?= $_SESSION["nombre"] ?>, ya casi tenes tu budin:</h2>
-
+            <!----------------- Formulario ------------------->
             <form action="php/enviarPedido.php" id="formulario" class="datos">
 
                 <label for="nombre"> Nombre*
@@ -60,7 +60,7 @@
             </form>
             <div class="footer_blanco"> </div>
         </article>
-
+        <!----------------- Footer ------------------->
         <footer>
             <div class="flechas">
                 <div class=flecha_atras>
@@ -75,17 +75,14 @@
                 <p> ©2020 LAGH. Todos los derechos reservados.</p>
             </div>
         </footer>
-
     </section>
-
+    <!----------------- Javascript------------------->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/fechas.js"></script>
     <script src="js/flechaAtras.js"></script>
     <script>
-        var btnMP = document.querySelector(".mercadopago-button");
-        var formaPago = document.querySelector("#formaPago");
-
+        //validar el envio del formulario
         function enviarFormulario() {
             let nombre = document.querySelector("#nombre").value;
             let telefono = document.querySelector("#telefono").value;
