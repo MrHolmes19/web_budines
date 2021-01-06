@@ -18,7 +18,10 @@
 <body>
 
     <!----------------- Barra navegacion------------------->
-    <?php include("php/navbar.php") ?>
+    <?php if ($_SESSION["pestaña"] < 4) {
+        $_SESSION["pestaña"] = 4;
+    }
+    include("php/navbar.php") ?>
     <!----------------- Encabezado ------------------>
     <section id="wrap" class="wrap">
         <section id="encabezado">
@@ -56,11 +59,11 @@
                     mysqli_close($conexion);
                     ?>
                     <tr>
-                    <td class="descripcion">
-                        <label for="sinCobertura"> 
-                            <input type="radio" name="cobertura" class="radiobutton" id="sinCobertura" value="no" checked> Sin Cobertura</label>
-                    </td>
-                    <td class="precio"> $ 0.- </td>
+                        <td class="descripcion">
+                            <label for="sinCobertura">
+                                <input type="radio" name="cobertura" class="radiobutton" id="sinCobertura" value="no" checked> Sin Cobertura</label>
+                        </td>
+                        <td class="precio"> $ 0.- </td>
                     </tr>
                 </table>
 
@@ -76,7 +79,7 @@
                     <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
                 <div class=flecha_siguiente>
-                <button name="enviar"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
+                    <button name="enviar"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
                 </div>
             </div>
 

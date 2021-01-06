@@ -1,38 +1,59 @@
 <?php include("conexion.php");
 
-if (isset($_GET["sabor"])) {
-    $sabor = $_GET["sabor"];
+if ($_GET["enviar"] == "sabor") {
+    if (isset($_GET["sabor"])) {
+        $sabor = $_GET["sabor"];
 
-    $sql = "select * from sabores_clasicos where Producto = '$sabor' union select * from sabores_especiales where Producto = '$sabor'";
-    $result = mysqli_query($conexion, $sql);
-    while ($mostrar = mysqli_fetch_array($result)) {
+        $sql = "select * from sabores_clasicos where Producto = '$sabor' union select * from sabores_especiales where Producto = '$sabor'";
+        $result = mysqli_query($conexion, $sql);
+        while ($mostrar = mysqli_fetch_array($result)) {
 
-        $_SESSION["sabor"] = $sabor;
-        $_SESSION["lim_agregados"] = $mostrar['LimAgregados'];
-        $_SESSION["tieneCobertura"] = $mostrar['Cobertura'];
+            $_SESSION["sabor"] = $sabor;
+            $_SESSION["lim_agregados"] = $mostrar['LimAgregados'];
+            $_SESSION["tieneCobertura"] = $mostrar['Cobertura'];
 
-        header("Location: ../agregados.php");
+            if ($_SESSION["lim_agregados"] > 0) {
+                header("Location: ../agregados.php");
+            } else {
+                if ($_SESSION["tieneCobertura"] == "SI") {
+
+                    header("Location: ../cobertura.php");
+                } else {
+                    header("Location: ../total.php");
+                }
+                $_SESSION["nAgregados"] = 0;
+            }
+        }
+    } else {
+        header("Location: ../index.php");
     }
 }
 
+if ($_GET["enviar"] == "agregados") {
+    if (isset($_GET["agregados"])) {
 
-if (isset($_GET["agregados"])) {
-
-    $_SESSION["nAgregados"] = sizeof($_GET["agregados"]);
+        $_SESSION["nAgregados"] = sizeof($_GET["agregados"]);
 
 
-    $i = 1;
+        $i = 1;
 
-    foreach ($_GET["agregados"] as $ag) {
+        foreach ($_GET["agregados"] as $ag) {
 
-        $_SESSION["agregado" . $i] = $ag;
+            $_SESSION["agregado" . $i] = $ag;
 
-        $i++;
+            $i++;
+        }
+    } else {
+        $_SESSION["nAgregados"] = 0;
     }
 
-    header("Location: ../cobertura.php");
-}
+    if ($_SESSION["tieneCobertura"] == "SI") {
 
+        header("Location: ../cobertura.php");
+    } else {
+        header("Location: ../total.php");
+    }
+}
 
 if (isset($_GET["cobertura"])) {
 
@@ -40,4 +61,3 @@ if (isset($_GET["cobertura"])) {
 
     header("Location: ../total.php");
 }
-

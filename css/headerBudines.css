@@ -51,6 +51,12 @@ li:last-child{
     color: black;
     background: rgba(248, 248, 248, 0.5);
 }
+.enlaces li a.bloqueado{
+    pointer-events: none; /*Para que no se pueda apretar*/
+    color: grey;
+    
+    /*background-color: white;*/
+}
 
 .enlaces li a:hover{
     background: rgba(117, 194, 146, 0.993);
