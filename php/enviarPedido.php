@@ -75,12 +75,14 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
         //die("query fallida");
         header("Location: ../error.php");
     }
-
-
+if($result){
+    echo "Query exitosa ". $nombre;
+}
+/*
     //manda mail cuando se hace un pedido, no funciona en heliohost ya que outlook(no se Gmail) lo tiene blockeado(ni al spam llegan).
     $asuntoMail = $nombre . " te ha pedido un budin";
-    $textoMail = $nombre . " ha realizado para el dia " . $fecha;
-    $destinatario = "monsalvo.h@hotmail.com";
+    $textoMail = $nombre . " ha realizado un pedido para el dia " . $fechaEntrega;
+    $destinatario = "lmarquez@mgl-ingenieria.com.ar";
 
     $header = "MIME-Version: 1.0\r\n";
     $header .= "Content-type: text/html; charset=iso-8859-1\r\n";
@@ -93,7 +95,9 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
         echo "error de mail";
         die;
     }
-
+*/
     //manda a pagina de despedida
     header("Location: ../despedida.php");
+
+    
 }
