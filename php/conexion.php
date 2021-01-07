@@ -1,4 +1,5 @@
 <?php
+
 //cambiar el valor de la variable baseDeDatos para elegir una u otra.
 $baseDeDatos = "local";
 $conexion;
@@ -20,6 +21,16 @@ if ($baseDeDatos == "local") {
     'root',                     //usuario por defecto
     '',                         //sin contraseña
     'bd_budinesweb'             //nombre bd  
+  );
+}
+
+if ($baseDeDatos == "local2") {
+
+  $conexion = mysqli_connect(    //funcion para conectarse a la bd. La guarda en una variable para utilizarla luego
+    'localhost',                 //servidor local
+    'root',                     //usuario por defecto
+    '',                         //sin contraseña
+    'bd_budines'                //nombre bd  
   );
 }
 

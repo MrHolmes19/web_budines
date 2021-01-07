@@ -1,0 +1,166 @@
+/*----------------------Estilos generales-------------------------*/
+
+*{
+    margin:0;   /*Reinicio la config. por defecto del navegador*/
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    width:98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    /*max-height: 100vh;*/    
+}
+
+section{
+    border:2px solid rgba(39, 82, 38, 0.8); 
+    background-color: rgba(39, 82, 38, 0.15); 
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+.contenido{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*------------------------- Titulo ---------------------------*/
+
+header{
+    margin: auto;
+    padding: 10px 0 10px 0;
+}
+
+header h1{
+    font-size: 20px;
+    text-align: center; 
+}
+
+
+/*--------------------- Lista desplegable ----------------------*/
+
+h2{
+    font-weight: lighter;
+    font-size: 16px;
+    text-align: left; 
+    padding: 10px 0 10px 0;
+}
+
+form{
+    margin-left:50px;  
+}
+
+.select{
+    width:150px;  
+    border-radius: 5px;     
+    text-align-last: center; /*No funciona text-align con etiqueta select*/
+    height: 23px;
+}
+
+select option{
+    text-align: center;     
+}
+
+form input{
+    width:100px;
+    background-color:  rgba(247, 159, 159,0.8);
+    border-radius: 5px;
+    font-size:13px;
+    line-height: 20px;   
+}
+
+/*------------------------- Tabla ---------------------------*/
+
+table caption{
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+}
+
+.contenedor-tabla{     /*Div que contiene la tabla*/
+    overflow: auto;    /*Scroll de la tabla*/
+    height:75vh;      /*Cambiar a algo que mida la pantalla de dispositivo*/
+}
+
+.contenedor-tabla::-webkit-scrollbar{
+    width:5px;
+    height:5px;
+}
+
+.contenedor-tabla::-webkit-scrollbar-thumb{
+    background-color:  rgba(247, 159, 159,0.8);
+    border-radius: 10px;
+}
+
+.contenedor-tabla::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+table{
+    width: 100%;
+    /*max-height: 450px;*/ 
+    font-size: 16px;
+    margin-bottom:10px;   
+    border-collapse: collapse;
+    overflow: auto;    
+}
+
+table tr th{
+    padding:2px 2px;
+    text-align: center;  /*Igual se centran solas*/
+    font-size: 16px;     /*por defecto viene 16 px*/
+    border: 1px solid #000;
+    background-color: rgba(39, 82, 38, 0.3);  
+}
+
+table tr td{
+    padding:2px 2px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+table tr:hover{
+    background-color: rgba(71, 136, 70, 0.3);    
+}
+
+table tr td div{
+    overflow: hidden; /*Que hacia esto?*/
+}
+
+.descripcion{     /*Cambiar al nombre de clase de cada columna*/
+    width:55%;   
+}
+
+.editar a{
+    text-decoration: none;
+    color:rgb(151, 112, 38);
+}
+
+.eliminar a{
+    text-decoration: none;
+    color: red;
+}
+
+/*------------------------- BOTONES ---------------------------*/
+
+.botones{    
+    flex-wrap: wrap;   
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.boton{
+    padding: 5px;
+}
+
+
+.botones input{   
+    min-width:140px;
+    height:30px;
+    background-color:  rgba(247, 159, 159,0.8);
+    border-radius: 5px;
+    font-size:13px;   
+}

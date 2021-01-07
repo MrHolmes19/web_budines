@@ -22,6 +22,7 @@
     <?php
     $_SESSION["pestaña"] = 2;
     include("php/navbar.php") ?>
+    
     <!----------------- Encabezado ------------------>
     <!---Pagina para elegir el sabor, son dos tablas que se llenan desde la bbdd, cada item se genera dinamicamente --->
     <!--y tiene su boton de vista previa el cual llama a la funcion abrirpopup(de la pagina popup.js) --->
@@ -48,7 +49,6 @@
 
                     while ($mostrar = mysqli_fetch_array($result)) {
                     ?>
-
                         <tr>
                             <td class="descripcion">
                                 <label for="<?php echo str_replace(' ', '_', $mostrar['Producto']) ?>"><input type="radio" name="sabor" class="radiobutton" id="<?php echo str_replace(' ', '_', $mostrar['Producto']) ?>" value="<?php echo $mostrar['Producto'] ?>">
