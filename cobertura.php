@@ -23,6 +23,9 @@
     }
     include("php/navbar.php") ?>
     <!----------------- Encabezado ------------------>
+    <!---Pagina para elegir la cobertura, una tabla que se llena desde la bbdd, cada item se genera dinamicamente --->
+    <!--y tiene su boton de vista previa el cual llama a la funcion abrirpopup(de la pagina popup.js) --->
+    <!--la eleccion se manda por formulario, al final se agrega un item que por defecto viene seleccionado (sin cobertura) --->
     <section id="wrap" class="wrap">
         <section id="encabezado">
             <div id="titulo">
@@ -33,7 +36,7 @@
             </div>
         </section>
         <article>
-            <h2>Nombre, elegí la cobertura de tu budín</h2>
+            <h2><?= $_SESSION["nombre"] ?>, elegí la cobertura de tu budín</h2>
 
             <!----------------- Tabla coberturas------------------->
             <h3>Coberturas</h3>
@@ -104,6 +107,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>
+    <script src="js/flechaAtras.js"></script>
+    <?php include("js/noCobertura.php") ?>
     <!-- -->
 </body>
 

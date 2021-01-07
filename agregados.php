@@ -23,6 +23,9 @@
     }
     include("php/navbar.php") ?>
     <!----------------- Encabezado ------------------>
+    <!---Pagina para elegir los agregados, una tabla que se llena desde la bbdd, cada item se genera dinamicamente --->
+    <!--y tiene su boton de vista previa el cual llama a la funcion abrirpopup(de la pagina popup.js) --->
+    <!--la eleccion se manda por formulario, esta limitado el maximo a elegir con js(nMax.php) --->
     <section id="wrap" class="wrap">
         <section id="encabezado">
             <div id="titulo">
@@ -33,7 +36,7 @@
             </div>
         </section>
         <article>
-            <h2>Nombre, elegí que agregados llevara tu budin de <?= $_SESSION["sabor"] ?></h2>
+            <h2><?= $_SESSION["nombre"] ?>, elegí que agregados llevara tu budin de <?= $_SESSION["sabor"] ?></h2>
 
             <!----------------- Tabla de Agregados------------------->
             <h3>Agregados</h3>
@@ -66,7 +69,7 @@
 
                 <div class="footer_blanco"> </div>
         </article>
-
+        <!----------------- Footer ------------------->
         <footer>
             <div class="flechas">
                 <div class=flecha_atras>
@@ -99,6 +102,7 @@
     <?php include("js/nMax.php") ?>
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>
+    <script src="js/flechaAtras.js"></script>
     <!-- -->
 </body>
 
