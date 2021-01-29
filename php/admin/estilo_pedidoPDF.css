@@ -1,0 +1,17 @@
+body {
+  background-color: white;
+}
+
+table {
+  border: 1px solid black;
+  text-align: center;
+
+}
+
+th {
+  text-align: right;
+}
+
+td {
+  border: 1px solid black;
+}

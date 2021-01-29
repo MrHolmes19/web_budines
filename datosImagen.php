@@ -34,8 +34,6 @@ if(mysqli_connect_errno()){
     exit();
 }
 
-mysqli_select_db($conexion, 'bd_budines') or die ("No se encuentra la Base de Datos");
-mysqli_set_charset($conexion, "utf8");
 
 $sql="UPDATE sabores_clasicos SET Foto='$nombre_imagen' WHERE ID='3'";
 $resultado=mysqli_query($conexion,$sql);
