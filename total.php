@@ -19,8 +19,8 @@ include("php/traerPrecio.php"); ?>
 
 <body>
 <!----------------- Barra navegacion------------------->
-    <?php if ($_SESSION["pestaña"] < 5) {
-        $_SESSION["pestaña"] = 5;
+    <?php if ($_SESSION["pestaña"] < 6) {
+        $_SESSION["pestaña"] = 6;
     }
     include("php/navbar.php") ?>
 

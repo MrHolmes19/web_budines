@@ -18,10 +18,12 @@
 
 <body>
     <!----------------- Barra navegacion------------------->
-    <?php if ($_SESSION["pestaña"] < 6) {
-        $_SESSION["pestaña"] = 6;
+    <?php if ($_SESSION["pestaña"] < 7) {
+        $_SESSION["pestaña"] = 7;
     }
     include("php/navbar.php") ?>
+
+
 
     <!----------------- Encabezado ------------------>
     <section id="wrap" class="wrap">
@@ -41,13 +43,13 @@
                 <label for="nombre"> Nombre*
                     <input type="text" name="nombre" id="nombre" placeholder="Ej.: Juan" value="<?= $_SESSION["nombre"] ?>" required> </label>
                 <label for="nombre"> Telefono*
-                    <input type="tel" name="telefono" id="telefono" placeholder="Ej.: 1234-5678" required> </label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Ej.: 1234-5678" required value="<?php if(isset($_SESSION["telefono"])) echo $_SESSION["telefono"]; ?>"> </label>
                 <label for="nombre"> Email*
-                    <input type="email" name="email" id="email" placeholder="Ej.: juan@perez.com" required> </label>
+                    <input type="email" name="email" id="email" placeholder="Ej.: juan@perez.com" required value="<?php if(isset($_SESSION["email"])) echo $_SESSION["email"]; ?>"> </label>
                 <label for="nombre"> Direccion*
-                    <input type="text" name="direccion" id="direccion" placeholder="Ej.: calle 123 - localidad" required> </label>
+                    <input type="text" name="direccion" id="direccion" placeholder="Ej.: calle 123 - localidad" required value="<?php if(isset($_SESSION["direccion"])) echo $_SESSION["direccion"]; ?>"> </label>
                 <label for="nombre"> Fecha de entrega*
-                    <input type="date" id="fechaEntrega" name="fechaEntrega" value="" min="" max="" required> </label>
+                    <input type="date" id="fechaEntrega" name="fechaEntrega" value="" min="" max="" required value="<?php if(isset($_SESSION["fechaEntrega"])) echo $_SESSION["fechaEntrega"]; ?>"> </label>
                 <label for="nombre"> Forma de pago
                     <select name="formaPago" id="formaPago">
                         <option value="Efectivo">Efectivo</option>
@@ -77,7 +79,7 @@
         </footer>
     </section>
     <!----------------- Javascript------------------->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/fechas.js"></script>
     <script src="js/flechaAtras.js"></script>

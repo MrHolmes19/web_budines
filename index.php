@@ -16,7 +16,7 @@
     <section id="wrap" class="wrap">
       <article class="nombre">
         <h1>El rincon de los budines</h1>
-        <img src="imagenes/otros/thumbnail.PNG" alt="" />
+
         <h3>"Los budines mas ricos para cada momento de la vida"</h3>
 
         <a href="login.php">Quiero mi budin!!</a>

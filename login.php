@@ -20,7 +20,7 @@
 
     <!----------------- Barra navegacion------------------->
     <?php
-    $_SESSION["pestaña"] = 0;
+    $_SESSION["pestaña"] = 1;
     include("php/navbar.php") ?>
     <!----------------- Encabezado ------------------>
     <!-- Pagina para ingresar el nombre, lo manda por formulario a guarda_eleccion.php --->
@@ -46,7 +46,7 @@
     </section>
 
     <!----------------- Javascript------------------->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/menu.js"></script>
 
 

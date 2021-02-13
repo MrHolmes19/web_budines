@@ -18,8 +18,8 @@
 <body>
 
     <!----------------- Barra navegacion------------------->
-    <?php if ($_SESSION["pestaña"] < 4) {
-        $_SESSION["pestaña"] = 4;
+    <?php if ($_SESSION["pestaña"] < 5) {
+        $_SESSION["pestaña"] = 5;
     }
     include("php/navbar.php") ?>
     <!----------------- Encabezado ------------------>
@@ -104,7 +104,7 @@
     </div>
 
     <!----------------- Javascript------------------->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/flechaAtras.js"></script>

@@ -5,6 +5,8 @@
         <div id="menu">
             <nav>
                 <ul class="enlaces">
+
+                    <li> <a href="index.php"> <span class="icon"></span>Salir </a> </li>
                     <li> <a href="login.php"> <span class="icon-cart"></span>Inicio </a> </li>
                     <li> <a href="forma.php"> <span class="icon-magic-wand"></span>Forma </a> </li>
                     <li> <a href="sabor.php"> <span class="icon-pacman"></span>Sabor </a> </li>
@@ -33,7 +35,7 @@ var pestañaMax = <?= $_SESSION["pestaña"]; ?>
 
 var enlaces = document.querySelectorAll("#menu .enlaces a");
 
-for(let i = 6; i > pestañaMax; i--){
+for(let i = 7; i > pestañaMax; i--){
     enlaces[i].setAttribute("class","bloqueado");
 }
 

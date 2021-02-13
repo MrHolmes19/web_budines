@@ -20,7 +20,7 @@
 
     <!----------------- Barra navegacion------------------->
     <?php
-    $_SESSION["pestaña"] = 2;
+    $_SESSION["pestaña"] = 3;
     include("php/navbar.php") ?>
     
     <!----------------- Encabezado ------------------>
@@ -119,7 +119,7 @@
         </div>
     </div>
     <!----------------- Javascript------------------->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <!--libreria para alertas-->
     <script src="js/menu.js"></script>

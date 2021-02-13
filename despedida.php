@@ -24,7 +24,9 @@
             <h2>Compra exitosa!</h2>
             <h2>Que disfrutes tu budin</h2>
             <h2>Gracias por elegirnos!</h2>
-
+            <button>Volver al inicio</button>
+            <button onclick="window.location.replace('forma.php')">Pedir otro budin</button>
+            <button>Imprimir comprobante</button>
         </article>
 
         <footer>

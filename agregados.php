@@ -18,8 +18,8 @@
 <body>
 
     <!----------------- Barra navegacion------------------->
-    <?php if ($_SESSION["pestaña"] < 3) {
-        $_SESSION["pestaña"] = 3;
+    <?php if ($_SESSION["pestaña"] < 4) {
+        $_SESSION["pestaña"] = 4;
     }
     include("php/navbar.php") ?>
     <!----------------- Encabezado ------------------>
@@ -98,7 +98,7 @@
     </div>
 
     <!----------------- Javascript------------------->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <?php include("js/nMax.php") ?>
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>

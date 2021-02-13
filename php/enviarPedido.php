@@ -61,7 +61,7 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
     $precioUnitario = $precioTotal / $cantidad;
 
     //creo fecha actual
-    $fechaPedido = date("d-m-yy");
+    $fechaPedido = date("d-m-Y");//la Y en mayuscula para tener el año en formato de 4 digitos
 
     //mando variables a mysql
     $query = "insert into pedidos(ID, fechapedido, fecha, nombre, sabor, forma, extra1, extra2, extra3, cobertura,
