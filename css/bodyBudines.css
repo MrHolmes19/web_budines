@@ -20,12 +20,14 @@ body {
 
 article {
   width: 95%;
+  height:68vh;
+  overflow:auto;
   margin: auto;
-  margin-bottom: 90px;
 }
 
 article.forma{
-  margin-bottom: 0px;
+  height:80vh;
+  margin-bottom:10px;
 }
 
 h2 {
@@ -106,7 +108,7 @@ div.imagen {
 
 .imagen .comentario {
   max-height: 30vh;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .imagen .comentario h3 {
@@ -200,6 +202,7 @@ article form.datos{
 article form.datos input,
 article form.datos select,
 article form.datos textarea
+
 {
   margin-bottom: 10px;
   width: 100%;
@@ -208,13 +211,14 @@ article form.datos textarea
   text-align: left;
   border-radius: 12px;
   border: 2px solid rgb(247, 159, 159);
+  resize:none;
 }
+
 
 article form.datos label{
   width: 90%;
   
 }
-
 
 
 /*--------------POP UP (VENTANA EMERGENTE)------------------*/
@@ -395,7 +399,25 @@ article form.datos label{
   }
 }
 
+/*Para que entre el contenido en los celulares con pantalla mas chica*/
+@media screen and (max-height: 630px) {
+  
+  article.forma {
+    height:75vh;
+  }
 
+  .imagen .comentario {
+    transform: scale(0.9);    
+  }
+
+  div.imagen {
+    min-height:330px;
+  } 
+
+  .imagen .comentario {
+    max-height:25vh; 
+  }
+}
 
 /*-------------- Version Escritorio ---------------*/
 
