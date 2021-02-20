@@ -24,6 +24,10 @@ article {
   margin-bottom: 90px;
 }
 
+article.forma{
+  margin-bottom: 0px;
+}
+
 h2 {
   font-size: 16px;
   padding-top: 10px;

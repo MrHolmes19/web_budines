@@ -34,7 +34,7 @@
                 <img src="imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
             </div>
         </section>
-        <article>
+        <article class="forma">
             <h2><?= $_SESSION["nombre"] ?>, elegí la forma de tu budín</h2>
 
 

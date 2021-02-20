@@ -1,5 +1,9 @@
 <?php
 
+if (!isset($_SESSION["alerta"])) {
+    $_SESSION["alerta"] = false;
+  }
+
 $alerta = $_SESSION["alerta"];
 
 if ($alerta) { ?>

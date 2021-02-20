@@ -76,7 +76,8 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
         header("Location: ../error.php");
     }
 if($result){
-    echo "Query exitosa ". $nombre;
+    //echo "Query exitosa ". $nombre;
+    $id = mysqli_insert_id($conexion);
 }
 /*
     //manda mail cuando se hace un pedido, no funciona en heliohost ya que outlook(no se Gmail) lo tiene blockeado(ni al spam llegan).
@@ -97,7 +98,7 @@ if($result){
     }
 */
     //manda a pagina de despedida
-    header("Location: ../despedida.php");
+    header("Location: ../despedida.php?id=".$id);
 
     
 }

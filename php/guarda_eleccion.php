@@ -76,13 +76,16 @@ if ($_GET["enviar"] == "agregados") {
 }
 
 //si viene de cobertura lo guarda en session y va a total
-if (isset($_GET["cobertura"])) {
+if ($_GET["enviar"] == "cobertura") {
 
-    $_SESSION["cobertura"] = $_GET["cobertura"];
+    if (isset($_GET["cobertura"])) {
 
-    header("Location: ../total.php");
+        $_SESSION["cobertura"] = $_GET["cobertura"];
+    } else{
+        $_SESSION["cobertura"] = "no";
+    }
+        header("Location: ../total.php");
 }
-
 //si viene de total guarda la catidad y el precioTotal en session y va al formulario
 if ($_GET["enviar"] == "total") {
 

@@ -18,7 +18,6 @@
 if (isset($_GET["tabla"])) {
     $tabla = $_GET["tabla"];
 }
-$row = traerFila($id, $tabla);
 ?>
 
 <body id="cuerpoEditar">
@@ -30,24 +29,23 @@ $row = traerFila($id, $tabla);
         <div class="contenido2">
             <h2>Edita tu producto:</h2>
             <!-----Inputs----->
-            <form action="edicion.php" id="formulario1" method="POST" enctype="multipart/form-data">
+            <form action="agregarProducto.php" id="formulario1" method="POST" enctype="multipart/form-data">
                 <div id="formulario">
                     <div id="valores">
-                        <input type="hidden" name="id" value="<?= $row['ID'] ?>">
                         <input type="hidden" name="tabla" value="<?= $tabla ?>">
 
                         <label for="producto">Producto
-                            <input type="text" name="producto" id="producto" value="<?= $row['Producto'] ?>"></label>
+                            <input type="text" name="producto" id="producto" value="" required></label>
 
                         <label for="precio">Precio
-                            <input type="text" name="precio" id="precio" value="<?= $row['Precio'] ?>"></label>
+                            <input type="text" name="precio" id="precio" value="" required></label>
 
 
                         <?php
                         if ($tabla == "sabores_clasicos" or $tabla == "sabores_especiales") { ?>
 
                             <label for="agregadosmax">Maximo de agregados
-                                <input type="number" name="agregadosmax" id="agregadosmax" value="<?= $row['LimAgregados'] ?>" min="0" max="3"></label>
+                                <input type="number" name="agregadosmax" id="agregadosmax" value="1" min="0" max="3" required></label>
 
                             <label for="">Cobertura
                                 <div class="radio">
@@ -55,9 +53,6 @@ $row = traerFila($id, $tabla);
                                     <label for="coberNo">No<input type="radio" name="cobertura" id="coberNo" value="NO"></label>
                                 </div>
                             </label>
-                            <script>
-                                var cobertura = '<?= $row['Cobertura'] ?>';
-                            </script>
 
                         <?php
                         } ?>
@@ -67,9 +62,6 @@ $row = traerFila($id, $tabla);
                                 <label for="dispNo">No<input type="radio" name="disponible" id="dispNo" value="NO"></label>
                             </div>
                         </label>
-                        <script>
-                            var disponible = '<?= $row['Disponible'] ?>';
-                        </script>
 
                     </div>
                     <div id="img-producto"><img id="vistaPrevia" src="../../img_subidas/<?= $row['Foto'] ?>" alt="">
@@ -80,14 +72,14 @@ $row = traerFila($id, $tabla);
             <!-----Botones----->
             <div class="botones" id="botones">
                 <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-reportepdf" value="Cancelar" onclick="window.location.replace('../../administrador.php')"> </div>
-                <div class="boton"> <input type="submit" form="formulario1" name="editar" class="btn-reportepdf" id="btn-reporteecxel" value="Guardar cambios"> </div>
+                <div class="boton"> <input type="submit" form="formulario1" name="agregar" class="btn-reportepdf" id="btn-reporteecxel" value="Agregar Producto"> </div>
 
             </div>
 
         </div>
     </section>
     <!----------------- Javascript------------------->
-    <script src="../../js/radioB_editar.js"></script>
+
     <!-- -->
 
 </body>

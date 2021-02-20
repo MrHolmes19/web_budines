@@ -17,14 +17,19 @@ $row = traerFila($id, "pedidos");
 
 <body>
 
-
+    <?php
+    $path = '../../imagenes/logopg.jpg';
+    $type = pathinfo($path, PATHINFO_EXTENSION);
+    $data = file_get_contents($path);
+    $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+    ?>
 
 
     <table>
-        <!--------- la imagen no se muestra!
+
         <tr>
-            <td colspan="2"> <img src="http://localhost/web_budines/imagenes/logopg.jpg" alt=""> </td>
-        </tr> ------>
+            <td colspan="2"> <img src="<?php echo $base64 ?>" alt=""> </td>
+        </tr>
         <tr>
             <th> ID del pedido </th>
             <td> <?= $id ?> </td>
@@ -108,6 +113,10 @@ $row = traerFila($id, "pedidos");
 
         td {
             border: 1px solid black;
+        }
+
+        img {
+            width: 300px;
         }
     </style>
 </body>

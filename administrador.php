@@ -22,16 +22,16 @@
         <div class="contenido">
             <h2>Elegí que tabla querés visualizar o modificar</h1>
                 <!-----Lista desplegable----->
-                <form action="" method="POST">
-                    <select class="select" name="tablas">
+                <form action="" method="POST" id="form">
+                    <select class="select" name="tablas" onchange="mandarForm()" id="select">
                         <option value="0">--- Seleccionar ---</option>
-                        <option value="1">Sabores clasicos</option>
-                        <option value="2">Sabores especiales</option>
+                        <option value="1" >Sabores clasicos</option>
+                        <option value="2" >Sabores especiales</option>
                         <option value="3">Agregados</option>
                         <option value="4">Coberturas</option>
                         <option value="5">Pedidos</option>
                     </select>
-                    <input type="submit" name="formTabla" value="Traer tabla">
+                    <input type="hidden" name="formTabla" value="Traer tabla" id="btn-form">
                 </form>
                 <?php
                 if (isset($_POST["formTabla"])) {
@@ -111,7 +111,7 @@
 
                 <!-----Botones con funcionalidades----->
                 <div class="botones" id="botones">
-                    <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-reportepdf" value="Nuevo Producto" onclick="window.open('php/admin/nuevoProducto.php?tabla=<?php echo $tabla_seleccionada ?>')"> </div>
+                    <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-nuevo" value="Nuevo Producto" onclick="window.location.replace('php/admin/nuevoProducto.php?tabla=<?php echo $tabla_seleccionada ?>')"> </div>
                     <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-reportepdf" value="Reporte PDF" onclick="window.open('php/admin/imprimirTablaPDF.php?tabla=<?php echo $tabla_seleccionada ?>', '_blank')"> </div>
                     <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-reporteecxel" onclick="tableToExcel('dinamica')" value="Reporte Excel"> </div>
                     <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-modificar" value="Administrar Fotos" onclick="window.open('php/admin/archivos.php')"> </div>
@@ -125,6 +125,7 @@
     <!----------------- Javascript------------------->
     <script src="js/tabla_a_excel.js"></script>
     <script src="js/eliminar.js"></script>
+    <script src="js/listaDesplegable.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <!-- -->
 
