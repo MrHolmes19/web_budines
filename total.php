@@ -41,7 +41,7 @@ include("php/traerPrecio.php"); ?>
             <h2><?= $_SESSION["nombre"] ?>, Has elegido sabiamente:</h2>
             <table id="total">
                 <tr>
-                    <td class="descripcion"> <?= $_SESSION["sabor"] ?> </td>
+                    <td class="descripcion">Budin de: <?= $_SESSION["sabor"] ?> </td>
                     <td class="precio"> $<?= $precioSabor ?> </td>
                 </tr>
 
@@ -50,31 +50,31 @@ include("php/traerPrecio.php"); ?>
 
                 if ($n > 0) {  ?>
                     <tr>
-                        <td class="descripcion"> <?= $_SESSION["agregado1"] ?> </td>
+                        <td class="descripcion">Con agregado de: <?= $_SESSION["agregado1"] ?> </td>
                         <td class="precio"> $<?= $precioAgregado1 ?> </td>
                     </tr>
                 <?php   }
                 if ($n > 1) {  ?>
                     <tr>
-                        <td class="descripcion"> <?= $_SESSION["agregado2"] ?> </td>
+                        <td class="descripcion">Con agregado de: <?= $_SESSION["agregado2"] ?> </td>
                         <td class="precio"> $<?= $precioAgregado2 ?> </td>
                     </tr>
                 <?php   }
                 if ($n > 2) {  ?>
                     <tr>
-                        <td class="descripcion"> <?= $_SESSION["agregado3"] ?> </td>
+                        <td class="descripcion">Con agregado de: <?= $_SESSION["agregado3"] ?> </td>
                         <td class="precio"> $<?= $precioAgregado3 ?> </td>
                     </tr>
                 <?php }
                 if ($_SESSION["tieneCobertura"] == "SI" && $_SESSION["cobertura"] != "no") {    ?>
                     <tr>
-                        <td class="descripcion"> <?= $_SESSION["cobertura"] ?> </td>
+                        <td class="descripcion">Con cobertura de: <?= $_SESSION["cobertura"] ?> </td>
                         <td class="precio">$<?= $precioCobertura ?></td>
                     </tr>
 
                 <?php   }    ?>
                 <tr>
-                    <td class="descripcion"> Cantidad: </td>
+                    <td class="descripcion"><strong> Cantidad:</strong> </td>
                     <td class="cantidad">
                             <button class="btn menos" onclick="btnMenos()">-</button>
                             <input class="" min="1" max="3" name="cantidad" value="1" type="number" readonly>
@@ -82,8 +82,8 @@ include("php/traerPrecio.php"); ?>
                     </td>
                 </tr>
                 <tr>
-                    <td class="descripcion"> Total: </td>
-                    <td class="precio" id="PrecioFinal">$<?= $total ?></td>
+                    <td class="descripcion"><strong> Total: </strong></td>
+                    <td class="precio" id="PrecioFinal"><strong>$ <?= $total ?> </strong></td>
                 </tr>
             </table>
 

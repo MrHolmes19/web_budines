@@ -34,8 +34,6 @@
                 <button name="enviar" value="nombre"> Siguente </button>
             </form>
 
-            <div class="footer_blanco"> </div>
-
         </article>
 
         <footer>

@@ -68,9 +68,18 @@ article.nombre {
   font-size: 20px;
   font-weight: bold;
   font-style: normal;
-  max-width: 180px;
-  
+  max-width: 200px;
+  text-align: center;
+  opacity: 0;
 }
+
+.nombre h3{
+  opacity: 0;
+} 
+
+.nombre img.warning{
+  opacity: 0;
+} 
 
 .nombre form input,
 .nombre form button{
@@ -83,6 +92,11 @@ article.nombre {
   letter-spacing: 1px;
   text-align: center;
 }
+
+.nombre button, .nombre input{
+  opacity: 0;
+}
+
 
 /*-----------------img. formas--------------------*/
 div.imagen {
@@ -170,14 +184,33 @@ button {
 
 /*-----------------Total---------------------*/
 
+table#total{
+  border-collapse: collapse;
+  border-spacing: 0px 20px; 
+  
+}
+
+table#total tr{
+  border-bottom: 0.5px solid rgb(247,159,159);
+  line-height: 50px; 
+  
+}
+
 .cantidad{
   display: flex;
   flex-direction: row;
+  margin:auto;
+  height:50px;
+  justify-content:center;
+  align-items:center;
 }
+
 .cantidad input{
   width: 50px;
-  text-align: center;
+  text-align: center; 
+  height:30px; 
 }
+
 .cantidad button{
   height: 30px;
   width: 30px;
@@ -325,13 +358,15 @@ article .despedida button{
 
 /*--------------------ANIMACIONES---------------------*/
 
+/*----------Animaciones de Pop Up------------*/
+
 .popup.active {
   opacity: 1;
   transform: scale(1);
 }
 
 .popup.active h4 {
-  animation: entradaTitulo 0.5s ease 0.3s forwards; /*Se le indica al h4 que tenga una animacion llamada entradaTitulo que dure .8s y que tenga un delay de comienzo de .5s. 
+  animation: entradaTitulo 0.5s ease 0.3s forwards; /*Se le indica al h4 que tenga una animacion llamada entradaTitulo que dure .3s y que tenga un delay de comienzo de .5s. 
                                                     /*Forwards indica que el valor de "to" va a quedar permanente (por defecto vuelve al de la config. original de la etiqueta) */
 }
 
@@ -394,6 +429,89 @@ article .despedida button{
   }
 }
 
+/*----------Animaciones de comentarios y botones------------*/
+
+.nombre h2 {
+  animation: Fiesta 0.5s ease 0.3s forwards; /*Idem anterior*/
+  z-index:10;
+}
+
+@keyframes Fiesta {
+  from {
+    transform: scale(5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.nombre h3.disfrutes {
+  animation: FiestaDerecha 1s ease 0.7s forwards;
+}
+
+@keyframes FiestaDerecha {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.nombre h3.gracias {
+  animation: FiestaIzquierda 1s ease 0.7s forwards;
+}
+
+@keyframes FiestaIzquierda {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+
+.nombre button, .nombre input {
+  animation: Transparencia 1.5s ease 1s forwards;
+}
+
+@keyframes Transparencia {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.nombre img.warning {
+  animation: Error 1s ease 0.1s forwards;
+}
+
+@keyframes Error {
+  from {
+    
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate3D(2, 2, 2, 360deg);
+   
+    opacity: 1;
+  }
+}
+
 /*------------------------------------------------*/
 /*------------------MEDIA QUERIES-----------------*/
 /*------------------------------------------------*/
@@ -408,6 +526,15 @@ article .despedida button{
       (100% - 480px) / 2
     ); /*remplaza APROX el margin:auto, para poder hacer la transicion con la ventan popup*/
     transition: 2s ease all;
+  }
+
+  .wrap2 {             /*Se hace un Wrap 2 para que la ventana no haga una transicion*/
+    max-width: 480px;
+    margin: auto;
+    margin-left: calc(
+      (100% - 480px) / 2
+    ); /*remplaza APROX el margin:auto, para poder hacer la transicion con la ventan popup*/
+    
   }
 
   .popup {

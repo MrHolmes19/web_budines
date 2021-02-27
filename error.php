@@ -23,13 +23,13 @@
 
 <body>
     <!----------------- Encabezado ------------------>
-    <section id="wrap" class="wrap">
+    <section id="wrap" class="wrap2">
 
         <article class="nombre">
             <h2>Algo salio mal!</h2>
-            <img src="https://img.icons8.com/officel/80/000000/error.png" />
+            <img class="warning" src="https://img.icons8.com/officel/80/000000/error.png" />
             <div class="error">
-                <h3> <?= $error ?> </h3>
+                <h2> <?= $error ?> </h2>
                 <button onclick="window.location.replace('index.php')">Volver al inicio</button>
                 <button onclick="window.location.replace('forma.php')">Pedir otro budin</button>
             </div>

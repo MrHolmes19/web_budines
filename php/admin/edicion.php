@@ -37,7 +37,7 @@ if (isset($_POST["editar"])) {
 
     //compara el nombre de imagen anterior y imagen nueva y borra la anterior si son distintas
     if (strcmp($fotoAnterior, $$nombre_imagen) !== 0){
-        unlink('../../img_subidas/' . $fotoAnterior);
+        unlink('../../img_subidas/' . $fotoAnterior); /*Unlink es un metodo para borrar archivos*/
     }
 
 
