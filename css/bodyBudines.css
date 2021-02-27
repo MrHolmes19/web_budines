@@ -220,6 +220,22 @@ article form.datos label{
   
 }
 
+/*--------------pagina error y despedida------------------*/
+article .error,
+article .despedida{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 190px;
+  max-width: 210px;
+}
+
+article .error button,
+article .despedida button{
+  margin-bottom: 7px;
+  width: 98%;
+  font-size: 1.15em;
+}
 
 /*--------------POP UP (VENTANA EMERGENTE)------------------*/
 

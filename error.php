@@ -14,15 +14,25 @@
 
 </head>
 
+<?php if (isset($_GET["error"])) {
+    $error = $_GET["error"];
+} else {
+    $error = "Error inesperado";
+}
+?>
+
 <body>
     <!----------------- Encabezado ------------------>
     <section id="wrap" class="wrap">
 
         <article class="nombre">
             <h2>Algo salio mal!</h2>
-            <img src="https://img.icons8.com/officel/80/000000/error.png"/>
-            <h2>Error:</h2>
-
+            <img src="https://img.icons8.com/officel/80/000000/error.png" />
+            <div class="error">
+                <h3> <?= $error ?> </h3>
+                <button onclick="window.location.replace('index.php')">Volver al inicio</button>
+                <button onclick="window.location.replace('forma.php')">Pedir otro budin</button>
+            </div>
         </article>
 
         <footer>

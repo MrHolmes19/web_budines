@@ -27,8 +27,8 @@ $preference = new MercadoPago\Preference();
 //paginas de retorno
 $preference->back_urls = array(
   "success" => "http://localhost/web_budines/php/enviarPedido.php",
-  "failure" => "http://localhost/web_budines/error.php",
-  "pending" => "http://localhost/web_budines/error.php"
+  "failure" => "http://localhost/web_budines/error.php?error=error al procesar pago",
+  "pending" => "http://localhost/web_budines/error.php?error=Pago pendiente"
 );
 $preference->auto_return = "approved";
 

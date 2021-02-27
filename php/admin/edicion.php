@@ -7,6 +7,7 @@ if (isset($_POST["editar"])) {
     $producto = $_POST["producto"];
     $precio = $_POST["precio"];
     $disponible = $_POST["disponible"];
+    $fotoAnterior = $_POST["fotoAnterior"];
 
 
     /*----------------- Codigo para efectuar el guardado de la imagen cargada en cargar_bd.php-----------------*/
@@ -32,6 +33,11 @@ if (isset($_POST["editar"])) {
         }
     } else{
         echo "Tamaño demasiado grande. Reduzca el tamaño de la imagen a 1 MB máximo";
+    }
+
+    //compara el nombre de imagen anterior y imagen nueva y borra la anterior si son distintas
+    if (strcmp($fotoAnterior, $$nombre_imagen) !== 0){
+        unlink('../../img_subidas/' . $fotoAnterior);
     }
 
 

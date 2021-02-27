@@ -61,7 +61,7 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
     $precioUnitario = $precioTotal / $cantidad;
 
     //creo fecha actual
-    $fechaPedido = date("d-m-Y");//la Y en mayuscula para tener el año en formato de 4 digitos
+    $fechaPedido = date("d-m-Y"); //la Y en mayuscula para tener el año en formato de 4 digitos
 
     //mando variables a mysql
     $query = "insert into pedidos(ID, fechapedido, fecha, nombre, sabor, forma, extra1, extra2, extra3, cobertura,
@@ -73,13 +73,13 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
     $result = mysqli_query($conexion, $query);
     if (!$result) {
         //die("query fallida");
-        header("Location: ../error.php");
+        header("Location: ../error.php?error=error al cargar pedido");
     }
-if($result){
-    //echo "Query exitosa ". $nombre;
-    $id = mysqli_insert_id($conexion);
-}
-/*
+    if ($result) {
+        //echo "Query exitosa ". $nombre;
+        $id = mysqli_insert_id($conexion); //me devulve con que id guardo el pedido, esto lo mando a la pag. despedida para imprimir el comprobante
+    }
+    /*
     //manda mail cuando se hace un pedido, no funciona en heliohost ya que outlook(no se Gmail) lo tiene blockeado(ni al spam llegan).
     $asuntoMail = $nombre . " te ha pedido un budin";
     $textoMail = $nombre . " ha realizado un pedido para el dia " . $fechaEntrega;
@@ -98,7 +98,8 @@ if($result){
     }
 */
     //manda a pagina de despedida
-    header("Location: ../despedida.php?id=".$id);
 
-    
+    if ($result) {
+        header("Location: ../despedida.php?id=" . $id);
+    }
 }

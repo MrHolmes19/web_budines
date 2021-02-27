@@ -75,6 +75,7 @@ $row = traerFila($id, $tabla);
                     </div>
                     <div id="img-producto"><img id="vistaPrevia" src="../../img_subidas/<?= $row['Foto'] ?>" alt="">
                         <input type="file" name="imagen" size="20" onchange="document.getElementById('vistaPrevia').src = window.URL.createObjectURL(this.files[0])" accept="image/*">
+                        <input type="hidden" name="fotoAnterior" value="<?= $row['Foto'] ?>">
                     </div>
                 </div>
             </form>

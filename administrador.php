@@ -126,7 +126,7 @@
     <script src="js/tabla_a_excel.js"></script>
     <script src="js/eliminar.js"></script>
     <script src="js/listaDesplegable.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/sweetalert2.js"></script>
     <!-- -->
 
 </body>

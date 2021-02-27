@@ -18,11 +18,11 @@
 
 <body>
 
-<?php
+    <?php
 
-$id = $_GET["id"];
+    $id = $_GET["id"];
 
-?>
+    ?>
     <!----------------- Encabezado ------------------>
     <section id="wrap" class="wrap">
 
@@ -30,9 +30,11 @@ $id = $_GET["id"];
             <h2>Compra exitosa!</h2>
             <h2>Que disfrutes tu budin</h2>
             <h2>Gracias por elegirnos!</h2>
-            <button onclick="window.location.replace('index.php')">Volver al inicio</button>
-            <button onclick="window.location.replace('forma.php')">Pedir otro budin</button>
-            <button onclick="window.open('php/admin/imprimirPedidoPDF.php?id=<?= $id ?>')">Imprimir comprobante</button>
+            <div class="despedida">
+                <button onclick="window.location.replace('index.php')">Volver al inicio</button>
+                <button onclick="window.location.replace('forma.php')">Pedir otro budin</button>
+                <button onclick="window.open('php/admin/imprimirPedidoPDF.php?id=<?= $id ?>')">Imprimir comprobante</button>
+            </div>
         </article>
 
         <footer>

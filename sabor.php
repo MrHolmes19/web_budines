@@ -120,7 +120,7 @@
     </div>
     <!----------------- Javascript------------------->
     <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/sweetalert2.js"></script>
     <!--libreria para alertas-->
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>

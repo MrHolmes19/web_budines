@@ -38,3 +38,7 @@ if ($baseDeDatos == "local2") {
 if (!isset($_SESSION)) {
   session_start();
 }
+
+if(!$conexion){
+  header("Location: error.php?error=error al conectar con Base De Datos");
+}
