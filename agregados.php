@@ -103,6 +103,7 @@
     <script src="js/menu.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/flechaAtras.js"></script>
+    <script src="js/footer.js"></script>
     <!-- -->
 </body>
 

@@ -123,6 +123,7 @@
     <script src="js/sweetalert2.js"></script>
     <!--libreria para alertas-->
     <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/flechaAtras.js"></script>
     <script>

@@ -46,12 +46,13 @@ btnCerrarPopup.addEventListener('click',function(){
 window.onload=function() /* Dispara el evento cuando se cargó toda la pagina*/
 {
     var ocultarPopup=document.getElementById('overlay');
-    document.onclick=function(div)     /*Funciona cuando se le dá click*/
+    document.onclick=function(e)     /*Funciona cuando se le dá click*/
     {
-        if(div.target.id =='overlay' && overlay.classList.contains('active'))  /**/
+        if((e.target.className =='overlay active' || e.target.className =='') && overlay.classList.contains('active'))  /*verifica que tenga la clase overlay active o que no tenga clase. Tambien se puede poner e.target.id =='overlay' pero en version mayor a 1028px no cerraria al haber achicado al 50% con left:50%*/
         {
             overlay.classList.remove('active');   /*Cierra/oculta la ventana popup al ya no tener la clase active*/
-            popup.classList.remove('active'); /*Se puede quitar*/            
+            popup.classList.remove('active'); /*Se puede quitar*/   
+            margenWrap.classList.remove('wrapConPopup'); //remueve la clase wrapConPopup para que devuelva el article al medio         
         }
     };
 };

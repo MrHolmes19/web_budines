@@ -74,15 +74,17 @@
             </div>
 
             <div id="copyright">
-                <p> ©2020 LAGH. Todos los derechos reservados.</p>
+                <p>-</p>
             </div>
         </footer>
     </section>
     <!----------------- Javascript------------------->
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/fechas.js"></script>
     <script src="js/flechaAtras.js"></script>
+
     <script>
         //validar el envio del formulario
         function enviarFormulario() {
