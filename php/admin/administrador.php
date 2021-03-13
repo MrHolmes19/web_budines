@@ -114,9 +114,10 @@
 
                     <?php if($tabla_seleccionada!="Pedidos"){?>
                         <div class="boton"> <input type="submit" class="" id="btn-nuevo" value="Nuevo Producto" onclick="window.location.replace('nuevoProducto.php?tabla=<?php echo $tabla_seleccionada ?>')"> </div>
-                    <?php } ?>
+                    <?php } if($tabla_seleccionada=="Pedidos"){ ?>
                     <div class="boton"> <input type="submit" class="" id="btn-reportepdf" value="Reporte PDF" onclick="window.open('imprimirTablaPDF.php?tabla=<?php echo $tabla_seleccionada ?>', '_blank')"> </div>
                     <div class="boton"> <input type="submit" class="" id="btn-reporteecxel" onclick="tableToExcel('dinamica')" value="Reporte Excel"> </div>
+                    <?php } ?>
                     <div class="boton"> <input type="submit" class="" id="btn-modificar" value="Administrar Fotos" onclick="window.open('archivos.php')"> </div>
                     <div class="boton"> <input type="submit" class="" id="btn-actualizar" value="Salir" onclick="window.location.replace('../../index.html')"></div>
 

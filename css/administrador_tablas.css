@@ -185,6 +185,7 @@ table tr td div {
   align-items: flex-start;
   height: 75vh;
   margin-bottom: 2px;
+  overflow:auto;
 }
 
 #formulario1 {
@@ -287,13 +288,42 @@ table tr td div {
 /*--------------mediaQuerys--------------------*/
 
 @media screen and (max-width: 480px) {
+  .contenedor-tabla {
+    height: 65vh;
+  }
+  
   #listaEditable {
     width: 95%;
     min-width: 325px;
     height: 89vh;
   }
+  
   #formulario {
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
+    overflow:auto;
+    height: 70vh;
+    justify-content: flex-start;
+  }
+  #formulario.productos { 
+    height: 75vh;    
+  }
+
+  #formulario.productos #img-producto { 
+    width:85vw;   
+  }
+
+  #formulario.productos #vistaPrevia { 
+    height:18vh;
+    width:70vw;    
+  }
+
+  #formulario.productos input { 
+    width:90%;
+    font-size:12px;    
+  }
+  
+  #formulario.productos label.opciones { 
+    flex-direction:row;      
   }
 }

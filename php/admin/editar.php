@@ -32,7 +32,7 @@ $row = traerFila($id, $tabla);
             <h2>Edita tu producto:</h2>
             <!-----Inputs----->
             <form action="edicion.php" id="formulario1" method="POST" enctype="multipart/form-data">
-                <div id="formulario">
+                <div id="formulario" class="productos">
                     <div id="valores">
                         <input type="hidden" name="id" value="<?= $row['ID'] ?>">
                         <input type="hidden" name="tabla" value="<?= $tabla ?>">
@@ -50,7 +50,7 @@ $row = traerFila($id, $tabla);
                             <label for="agregadosmax">Maximo de agregados
                                 <input type="number" name="agregadosmax" id="agregadosmax" value="<?= $row['LimAgregados'] ?>" min="0" max="3"></label>
 
-                            <label for="">Cobertura
+                            <label class="opciones">Cobertura
                                 <div class="radio">
                                     <label for="coberSi">Si<input type="radio" name="cobertura" id="coberSi" value="SI"></label>
                                     <label for="coberNo">No<input type="radio" name="cobertura" id="coberNo" value="NO"></label>
@@ -62,7 +62,7 @@ $row = traerFila($id, $tabla);
 
                         <?php
                         } ?>
-                        <label for="">Disponible
+                        <label class="opciones">Disponible
                             <div class="radio">
                                 <label for="dispSi">Si<input type="radio" name="disponible" id="dispSi" value="SI"></label>
                                 <label for="dispNo">No<input type="radio" name="disponible" id="dispNo" value="NO"></label>
