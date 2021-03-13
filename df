@@ -1,0 +1,136 @@
+[33mcommit 498b286ab3eeca80001551d40345c0615de6cc36[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sensei <monsalvo.h@hotmail.com>
+Date:   Sat Feb 27 15:29:10 2021 -0300
+
+    arreglo de errores 27/02/21
+
+[33mcommit 579daea4e76672c599970824a0bbd55ddd56daba[m
+Author: Sensei <monsalvo.h@hotmail.com>
+Date:   Sat Feb 20 18:36:24 2021 -0300
+
+    arreglos
+
+[33mcommit 7a2e7efa09a45d2c733e94f379cc54b774e89797[m
+Author: Sensei <monsalvo.h@hotmail.com>
+Date:   Sat Feb 20 16:04:20 2021 -0300
+
+    update 20-02-2021
+
+[33mcommit 61ae9f66a7afcf4b57b1d35b86e50ae9b37eee90[m
+Author: Sensei <monsalvo.h@hotmail.com>
+Date:   Sat Feb 13 18:39:57 2021 -0300
+
+    agregamos botones: volver a perdir y salida en menu.
+
+[33mcommit 6b99416f316a20a1ce5ab7736b6482f032fef78c[m
+Author: Sensei <monsalvo.h@hotmail.com>
+Date:   Fri Jan 29 09:35:46 2021 -0300
+
+    administrador editar, eliminar y corregidos algunos fallos
+
+[33mcommit a6623e39e006569b865c20114bd10dd21918b64b[m
+Merge: d9d041a 98969cf
+Author: Sensei <monsalvo.h@hotmail.com>
+Date:   Thu Jan 7 09:16:08 2021 -0300
+
+    Merge branch 'master' of https://github.com/MrHolmes19/web_budines
+
+[33mcommit d9d041aa5e000d563d52854614abc44d268b5dee[m
+Author: Sensei <monsalvo.h@hotmail.com>
+Date:   Thu Jan 7 09:15:54 2021 -0300
+
+    pequeños cambios
+
+[33mcommit 98969cf6f6bbdd0b146359a721b22a424b09cb60[m
+Merge: 8605b57 4465a44
+Author: Leandro <lnmarquez19@gmail.com>
+Date:   Wed Jan 6 21:40:50 2021 -0300
+
+    Pagina administrador 2
+
+[33mcommit 8605b57714078fb23187edd80b7c97e6e3ded390[m
+Merge: 03d1912 bbc936a
+Author: Leandro <lnmarquez19@gmail.com>
+Date:   Wed Jan 6 20:48:17 2021 -0300
+
+    pagina administrador
+
+[33mcommit 4465a44a83441ee1c462252d8d1c0aebfec0eaa9[m
+Author: Sensei <monsalvo.h@hotmail.com>
+Date:   Tue Dec 22 11:07:59 2020 -0300
+
+    comente y ordene un poco el codigo
+
+[33mcommit ed45d9afe990105b16181deb8d31bf4b1904853e[m
+Author: Sensei <monsalvo.h@hotmail.com>
+Date:   Fri Dec 18 11:33:28 2020 -0300
+
+    agregado de paginas restantes y mercado pago
+
+[33mcommit 03d1912d419537c1b7661227d4cf304676525793[m
+Merge: 7202c57 9ca5c52
+Author: Leandro <lnmarquez19@gmail.com>
+Date:   Thu Dec 3 19:24:55 2020 -0300
+
+    interfaz de administrador con CSS lista
+
+[33mcommit bbc936a95d9804080f8867816aed98f1d77ae1fa[m
+Author: Hernan <monsalvo.h@hotmail.com>
+Date:   Wed Dec 2 14:04:58 2020 -0300
+
+    Arreglados algunos errores y modificado el estilo de las alertas
+
+[33mcommit 7202c572dec0bc1ff383f695c273050d42598a6a[m
+Author: Leandro <lnmarquez19@gmail.com>
+Date:   Sat Nov 21 20:17:15 2020 -0300
+
+    antes de pullear lo del sensei
+
+[33mcommit 9ca5c52309cd631e8c9b6dd6df6b822f18af8fec[m
+Author: Hernan <monsalvo.h@hotmail.com>
+Date:   Sat Nov 21 03:32:11 2020 -0300
+
+    Tomar elecciones y calcular total
+
+[33mcommit 5eee7e5af5383397df9fa8be6c299a01311dac3f[m
+Author: Hernan <monsalvo.h@hotmail.com>
+Date:   Mon Nov 16 18:17:13 2020 -0300
+
+    Nuevas paginas: Agregados y cobertura - guardar eleccion de sabor - implementado limite de agregados
+
+[33mcommit 518cfbe621e77d865b520fa7ce2c90853960c838[m
+Author: Leandro <lnmarquez19@gmail.com>
+Date:   Sat Nov 14 20:17:52 2020 -0300
+
+    Vistas previas con conexion a base de datos global
+
+[33mcommit d44c419be66ddab5efed6ffacec9983e8cfb494a[m
+Author: Hernan <monsalvo.h@hotmail.com>
+Date:   Thu Nov 5 02:37:46 2020 -0300
+
+    Footer y navbar en archivo aparte + boton actual bloqueado
+
+[33mcommit 29da6cbe899887d4ce0cd1b93d9a299e023bf719[m
+Merge: 6dd2e2e 018b890
+Author: Leandro <lnmarquez19@gmail.com>
+Date:   Thu Nov 5 00:00:41 2020 -0300
+
+    Merge branch 'master' of https://github.com/MrHolmes19/web_budines into master
+
+[33mcommit 6dd2e2e51df5f8a024c691aab61e9078bb92e2b0[m
+Author: Leandro <lnmarquez19@gmail.com>
+Date:   Wed Nov 4 23:47:15 2020 -0300
+
+    actualice el archivo index.php. Listo para trabajar
+
+[33mcommit 018b8903e09c9f1db318ab88dcd63d2ce70e8b1a[m
+Author: Hernan-Monsalvo <71579260+Hernan-Monsalvo@users.noreply.github.com>
+Date:   Sun Nov 1 23:10:10 2020 -0300
+
+    Create README.md
+
+[33mcommit 0f59ba8fa1b637eb0c8d3365abe8cbc0642dd2ee[m
+Author: Leandro <lnmarquez19@gmail.com>
+Date:   Sun Nov 1 22:55:30 2020 -0300
+
+    Primer version de la web budines
