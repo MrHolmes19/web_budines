@@ -22,7 +22,7 @@ if (isset($_POST["editar"])) {
         if($tipo_imagen="image/jpg" || $tipo_imagen="image/jpeg" || $tipo_imagen="image/png"){
     
     //Se le indica la ruta donde se guardará la imagen en servidor
-    $carpeta_destino=$_SERVER ['DOCUMENT_ROOT'].'/web_budines/img_subidas/'; //server es otra variable superglobal.
+    $carpeta_destino=$_SERVER ['DOCUMENT_ROOT'].'/web_budines/imagenes/img_subidas/'; //server es otra variable superglobal.
     
     //Se mueve la imagen desde el directorio temporal al directorio escogido
     move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta_destino.$nombre_imagen); //tmp_name es la para colocar el nombre de la carpeta de guardado temporal
@@ -37,7 +37,7 @@ if (isset($_POST["editar"])) {
 
     //compara el nombre de imagen anterior y imagen nueva y borra la anterior si son distintas
     if (strcmp($fotoAnterior, $$nombre_imagen) !== 0){
-        unlink('../../img_subidas/' . $fotoAnterior); /*Unlink es un metodo para borrar archivos*/
+        unlink('../../imagenes/img_subidas/' . $fotoAnterior); /*Unlink es un metodo para borrar archivos*/
     }
 
 
@@ -67,6 +67,6 @@ if (isset($_POST["editar"])) {
         $_SESSION["mensaje"] = "Elemento editado con exito";
     }
 
-    header("Location: ../../administrador.php");
+    header("Location: administrador.php");
 
 }

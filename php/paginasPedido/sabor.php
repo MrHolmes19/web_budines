@@ -1,4 +1,4 @@
-<?php include("php/conexion.php") ?>
+<?php include("../conexion.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rincon de los budines - Elección del sabor</title>
 
-    <link rel="stylesheet" href="css/headerBudines.css">
-    <link rel="stylesheet" href="css/bodyBudines.css">
-    <link rel="stylesheet" href="css/footerBudines.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="icon" href="Imagenes/icono.png" type="image/png">
+    <link rel="stylesheet" href="../../css/headerBudines.css">
+    <link rel="stylesheet" href="../../css/bodyBudines.css">
+    <link rel="stylesheet" href="../../css/footerBudines.css">
+    <link rel="stylesheet" href="../../css/animaciones.css">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
 
 </head>
 
@@ -21,7 +22,7 @@
     <!----------------- Barra navegacion------------------->
     <?php
     $_SESSION["pestaña"] = 3;
-    include("php/navbar.php") ?>
+    include("navbar.php") ?>
     
     <!----------------- Encabezado ------------------>
     <!---Pagina para elegir el sabor, son dos tablas que se llenan desde la bbdd, cada item se genera dinamicamente --->
@@ -33,7 +34,7 @@
                 <h1>Sabor del budín</h1>
             </div>
             <div id="logo">
-                <img src="imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
+                <img src="../../imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
             </div>
         </section>
         <article>
@@ -41,7 +42,7 @@
 
             <!----------------- Tabla sabores clasicos------------------->
             <h3>Sabores clásicos</h3>
-            <form action="php/guarda_eleccion.php" method="get">
+            <form action="../guarda_eleccion.php" method="get">
                 <table id="clasicos">
                     <?php
                     $sql = "SELECT * from sabores_clasicos";
@@ -94,11 +95,11 @@
         <footer>
             <div class="flechas">
                 <div class=flecha_atras>
-                    <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
+                    <a href="#"> <img src="../../imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
 
                 <div class=flecha_siguiente>
-                    <button name="enviar" value="sabor" onclick="validacion(event)"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
+                    <button name="enviar" value="sabor" onclick="validacion(event)"> <img src="../../imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
                 </div>
             </div>
 
@@ -111,7 +112,7 @@
     <!----------------- Ventana emergente------------------->
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
-            <a href=# id="btn-cerrar-popup" class="btn-cerrar-popup"> <span class="icon-cross"></span> <i class="fas fa-times"> </i> </a>
+            <a href='#' id="btn-cerrar-popup" class="btn-cerrar-popup"> <span class="icon-cross"></span> <i class="fas fa-times"> </i> </a>
             <h4 id="titulo-popup">titulo</h4>
             <h5>El budin preferido por todos y que nunca falla</h5>
             <img id="img-popup" src="" alt="Imagen del budin">
@@ -119,18 +120,18 @@
         </div>
     </div>
     <!----------------- Javascript------------------->
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/sweetalert2.js"></script>
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <script src="../../js/sweetalert2.js"></script>
     <!--libreria para alertas-->
-    <script src="js/menu.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/popup.js"></script>
-    <script src="js/flechaAtras.js"></script>
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/footer.js"></script>
+    <script src="../../js/popup.js"></script>
+    <script src="../../js/flechaAtras.js"></script>
     <script>
         function validacion(e) {
             if (document.querySelector('input[name="sabor"]:checked') == null) {
                 //alerta de la libreria SweetAlert
-                Swal.fire('tenes que elegir uno!!');
+                Swal.fire('Por favor, elegí un sabor :)');
 
                 e = e || window.event; //capturo el evento
                 e.preventDefault(); //evita que envie el formulario

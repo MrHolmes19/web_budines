@@ -16,11 +16,11 @@ if (isset($_POST["agregar"])) {
     $tamaño_imagen=$_FILES ['imagen']['size']; //Tamaño de la imagen
     
     //Se colocan las limitaciones de los archivos que se suben
-    if($tamaño_imagen<=1000000){    // = a 1 mb
+    if($tamaño_imagen<=2000000){    // = a 2 mb
         if($tipo_imagen="image/jpg" || $tipo_imagen="image/jpeg" || $tipo_imagen="image/png"){
     
     //Se le indica la ruta donde se guardará la imagen en servidor
-    $carpeta_destino=$_SERVER ['DOCUMENT_ROOT'].'/web_budines/img_subidas/'; //server es otra variable superglobal.
+    $carpeta_destino=$_SERVER ['DOCUMENT_ROOT'].'/web_budines/imagenes/img_subidas/'; //server es otra variable superglobal.
     
     //Se mueve la imagen desde el directorio temporal al directorio escogido
     move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta_destino.$nombre_imagen); //tmp_name es la para colocar el nombre de la carpeta de guardado temporal
@@ -30,7 +30,7 @@ if (isset($_POST["agregar"])) {
             echo "No se permite este tipo de archivo. Suba imagenes .JPEG, .JPG o .PNG";
         }
     } else{
-        echo "Tamaño demasiado grande. Reduzca el tamaño de la imagen a 1 MB máximo";
+        echo "Tamaño demasiado grande. Reduzca el tamaño de la imagen a 2 MB máximo";
     }
 
 
@@ -59,7 +59,7 @@ if (isset($_POST["agregar"])) {
         $_SESSION["mensaje"] = "Elemento agregado con exito";
     }
 
-    header("Location: ../../administrador.php");
+    header("Location: administrador.php");
 
 }
 

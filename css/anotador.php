@@ -14,7 +14,7 @@ if(isset($conn)){      /*Condicional. Si existe el objeto de conexion */
 
 ?> /*sintaxis de php*/
 
--- EN EL HTML (Index.php) --
+-- EN EL HTML (Index.html) --
 
 2) Trae Archivo para requerir la conexion
 
@@ -46,7 +46,7 @@ if(isset($_POST[¿save_task])){ /*Si existe a traves del metodo Post el valor sa
    die("Query Failed");  /*terminar la aplicacion*/
   }
   echo 'saved';  /*Si existe, avisa que guardó - ELIMINAR, SOLO PRUEBA*/
-  header("Location:index.php"); /*Redirecciona a la pantalla inicial*/
+  header("Location:index.html"); /*Redirecciona a la pantalla inicial*/
 }
 
 6) incluye db para conexion a base de datos

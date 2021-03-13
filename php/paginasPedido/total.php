@@ -1,5 +1,5 @@
-<?php include("php/conexion.php");
-include("php/traerPrecio.php"); ?>
+<?php include("../conexion.php");
+include("../traerPrecio.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,11 +9,12 @@ include("php/traerPrecio.php"); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rincon de los budines - Resumen del pedido</title>
 
-    <link rel="stylesheet" href="css/headerBudines.css">
-    <link rel="stylesheet" href="css/bodyBudines.css">
-    <link rel="stylesheet" href="css/footerBudines.css">
+    <link rel="stylesheet" href="../../css/headerBudines.css">
+    <link rel="stylesheet" href="../../css/bodyBudines.css">
+    <link rel="stylesheet" href="../../css/footerBudines.css">
+    <link rel="stylesheet" href="../../css/animaciones.css">
     <link rel="stylesheet" href="fonts.css">
-    <link rel="icon" href="../Imagenes/icono.png" type="image/png">
+    <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
 
 </head>
 
@@ -22,7 +23,7 @@ include("php/traerPrecio.php"); ?>
     <?php if ($_SESSION["pestaña"] < 6) {
         $_SESSION["pestaña"] = 6;
     }
-    include("php/navbar.php") ?>
+    include("navbar.php") ?>
 
     <!----------------- Encabezado ------------------>
     <!-- Pagina para visualizar el resumen del pedido, se traen las elecciones de la sesion y con esos datos el--->
@@ -34,7 +35,7 @@ include("php/traerPrecio.php"); ?>
                 <h1>Resumen de tu pedido</h1>
             </div>
             <div id="logo">
-                <img src="imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
+                <img src="../../imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
             </div>
         </section>
         <article>
@@ -94,10 +95,10 @@ include("php/traerPrecio.php"); ?>
         <footer>
             <div class="flechas">
                 <div class=flecha_atras>
-                    <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
+                    <a href="#"> <img src="../../imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
                 <div class=flecha_siguiente>
-                    <button name="enviar" value="agregados" onclick="seguir()"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
+                    <button name="enviar" value="agregados" onclick="seguir()"> <img src="../../imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
                 </div>
             </div>
 
@@ -108,11 +109,11 @@ include("php/traerPrecio.php"); ?>
 
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/contador.js"></script>
-    <script src="js/flechaAtras.js"></script>
-    <script src="js/footer.js"></script>
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/contador.js"></script>
+    <script src="../../js/flechaAtras.js"></script>
+    <script src="../../js/footer.js"></script>
     <!-- -->
 </body>
 

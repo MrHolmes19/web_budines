@@ -1,0 +1,196 @@
+/*-------------------------Animaciones de Pop Up------------------------*/
+
+.popup .btn-elegir {
+  opacity: 0;
+}
+
+.popup img {
+  opacity: 0;
+}
+
+.popup h4 {
+  opacity: 0;
+}
+
+.popup h5 {
+  opacity: 0;
+}
+
+.popup.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup {
+    opacity: 0;
+    transform: scale(
+      0.7
+    ); /*Escala la ventana para generar un efecto animado donde la ventana se agranda/cierra la abrir/cerrar*/
+    transition: 0.5s ease all; /*transicion para las propiedades*/
+}
+
+.popup.active h4 {
+  animation: entradaTitulo 0.5s ease 0.3s forwards; /*Se le indica al h4 que tenga una animacion llamada entradaTitulo que dure .3s y que tenga un delay de comienzo de .5s. 
+                                                      /*Forwards indica que el valor de "to" va a quedar permanente (por defecto vuelve al de la config. original de la etiqueta) */
+}
+
+.popup.active h5 {
+  animation: entradaSubtitulo 0.5s ease 0.3s forwards;
+}
+
+.popup.active img {
+  animation: entradaImagen 1s ease 0.5s forwards;
+}
+
+.popup.active input {
+  animation: entradaInput 1s ease 0.5s forwards;
+}
+
+@keyframes entradaTitulo {
+  /*Animacion*/
+  from {
+    transform: translateY(-25px); /*posiciona el texto arriba 25px*/
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0); /*posiciona el texto en su lugar original*/
+    opacity: 1;
+  }
+}
+
+@keyframes entradaSubtitulo {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entradaImagen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes entradaInput {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    /*transform: rotate(1turn);*/
+    transform: rotate3D(2, 2, 2, 360deg);
+  }
+}
+
+/*------------------------------- Animaciones de comentarios y botones---------------------------------*/
+
+.tituloDespedida {
+  animation: Fiesta 0.5s ease 0.3s forwards; /*Idem anterior*/
+  z-index: 10;
+  opacity: 0;
+}
+
+.nombre h3{
+    opacity: 0;
+} 
+
+.despedida{
+    opacity: 0;
+}
+
+.formLogin{
+    opacity: 0;
+}
+
+.nombre img.warning{
+    opacity: 0;
+} 
+
+@keyframes Fiesta {
+  from {
+    transform: scale(5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.nombre h3.disfrutes {
+  animation: FiestaDerecha 1s ease 0.7s forwards;
+}
+
+@keyframes FiestaDerecha {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.nombre h3.gracias {
+  animation: FiestaIzquierda 1s ease 0.7s forwards;
+}
+
+@keyframes FiestaIzquierda {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.despedida {
+  animation: Transparencia 1.5s ease 1s forwards;
+}
+
+.formLogin {
+    animation: Transparencia 2s ease 0s forwards;
+  }
+
+@keyframes Transparencia {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.nombre img.warning {
+  animation: Error 1s ease 0.1s forwards;
+}
+
+@keyframes Error {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate3D(2, 2, 2, 360deg);
+
+    opacity: 1;
+  }
+}

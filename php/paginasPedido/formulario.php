@@ -1,4 +1,4 @@
-<?php include("php/conexion.php"); ?>
+<?php include("../conexion.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rincon de los budines - Datos de entrega</title>
 
-    <link rel="stylesheet" href="css/headerBudines.css">
-    <link rel="stylesheet" href="css/bodyBudines.css">
-    <link rel="stylesheet" href="css/footerBudines.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="icon" href="../Imagenes/icono.png" type="image/png">
+    <link rel="stylesheet" href="../../css/headerBudines.css">
+    <link rel="stylesheet" href="../../css/bodyBudines.css">
+    <link rel="stylesheet" href="../../css/footerBudines.css">
+    <link rel="stylesheet" href="../../css/animaciones.css">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
 
 </head>
 
@@ -21,7 +22,7 @@
     <?php if ($_SESSION["pestaña"] < 7) {
         $_SESSION["pestaña"] = 7;
     }
-    include("php/navbar.php") ?>
+    include("navbar.php") ?>
 
 
 
@@ -32,13 +33,13 @@
                 <h1>Datos de envio</h1>
             </div>
             <div id="logo">
-                <img src="imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
+                <img src="../../imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
             </div>
         </section>
         <article>
             <h2><?= $_SESSION["nombre"] ?>, ya casi tenes tu budin:</h2>
             <!----------------- Formulario ------------------->
-            <form action="php/enviarPedido.php" id="formulario" class="datos">
+            <form action="../enviarPedido.php" id="formulario" class="datos">
 
                 <label for="nombre"> Nombre*
                     <input type="text" name="nombre" id="nombre" placeholder="Ej.: Juan" value="<?= $_SESSION["nombre"] ?>" required> </label>
@@ -66,10 +67,10 @@
         <footer>
             <div class="flechas">
                 <div class=flecha_atras>
-                    <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
+                    <a href="#"> <img src="../../imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
                 <div class=flecha_siguiente>
-                    <button type="submit" onclick="enviarFormulario()" form="formulario" name="enviar" value="final"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
+                    <button type="submit" onclick="enviarFormulario()" form="formulario" name="enviar" value="final"> <img src="../../imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
                 </div>
             </div>
 
@@ -79,11 +80,11 @@
         </footer>
     </section>
     <!----------------- Javascript------------------->
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/fechas.js"></script>
-    <script src="js/flechaAtras.js"></script>
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <script src="../../js/footer.js"></script>
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/fechas.js"></script>
+    <script src="../../js/flechaAtras.js"></script>
 
     <script>
         //validar el envio del formulario

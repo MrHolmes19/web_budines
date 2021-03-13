@@ -99,7 +99,7 @@ $row = traerFila($id, $tabla);
             </form>
             <!-----Botones----->
             <div class="botones" id="botones">
-                <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-reportepdf" value="Cancelar" onclick="window.location.replace('../../administrador.php')"> </div>
+                <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-reportepdf" value="Cancelar" onclick="window.location.replace('administrador.php')"> </div>
                 <div class="boton"> <input type="submit" class="btn-reportepdf" value="PDF" onclick="window.open('imprimirPedidoPDF.php?id=<?= $id ?>', '_blank')"> </div>
                 <div class="boton"> <input type="submit" form="formulario1" name="editar" class="btn-reportepdf" id="btn-reporteecxel" value="Guardar cambios"> </div>
 

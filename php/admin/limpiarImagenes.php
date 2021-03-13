@@ -8,7 +8,7 @@ $borrar = explode("/", $fotos);
 
 foreach ($borrar as $img) {
     if ($img != "") {
-        unlink('../../img_subidas/' . $img);
+        unlink('../../imagenes/img_subidas/' . $img);
     }
 }
 

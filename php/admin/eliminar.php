@@ -16,6 +16,6 @@ $_SESSION["alertaTipo"] = "eliminar";
 $_SESSION["mensaje"] = "Elemento eliminado con exito";
 
 
-header("Location: ../../administrador.php");
+header("Location: administrador.php");
 
 }

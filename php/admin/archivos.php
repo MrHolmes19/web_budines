@@ -1,15 +1,15 @@
 <?php
 
 $lista = null;
-$dir = opendir("../../img_subidas");
+$dir = opendir("../../imagenes/img_subidas");
 $img[] = null;
 $link[] = null;
 while ($elem = readdir($dir)) {
     if ($elem != '.' && $elem != '..') {
-        if (is_dir("../../img_subidas/" . $elem)) {
-            $lista .= "<li><a href='../../img_subidas/$elem' target='_blank'>$elem/ </a><a href='#'>X</a></li>";
+        if (is_dir("../../imagenes/img_subidas/" . $elem)) {
+            $lista .= "<li><a href='../../imagenes/img_subidas/$elem' target='_blank'>$elem/ </a><a href='#'>X</a></li>";
         } else {
-            $lista .= "<li><a href='../../img_subidas/$elem' target='_blank'>$elem </a><a href='#'>X</a></li>";
+            $lista .= "<li><a href='../../imagenes/img_subidas/$elem' target='_blank'>$elem </a><a href='#'>X</a></li>";
             $img[] = $elem;
         }
     }
@@ -42,7 +42,7 @@ foreach ($img as $im) {
 $fotosSinUso = array_diff($img, $feu);
 $fotosSinUsoGET = null;
 /*
-unlink('../../img_subidas/pendientes.txt');
+unlink('../../imagenes/img_subidas/pendientes.txt');
 */
 
 

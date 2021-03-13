@@ -1,4 +1,4 @@
-<?php include("php/conexion.php") ?>
+<?php include("../conexion.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rincon de los budines - Elección de forma</title>
 
-    <link rel="stylesheet" href="css/headerBudines.css">
-    <link rel="stylesheet" href="css/bodyBudines.css">
-    <link rel="stylesheet" href="css/footerBudines.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="icon" href="Imagenes/icono.png" type="image/png">
+    <link rel="stylesheet" href="../../css/headerBudines.css">
+    <link rel="stylesheet" href="../../css/bodyBudines.css">
+    <link rel="stylesheet" href="../../css/footerBudines.css">
+    <link rel="stylesheet" href="../../css/animaciones.css">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
 
 </head>
 
@@ -22,7 +23,7 @@
     <?php if ($_SESSION["pestaña"] < 2) {
         $_SESSION["pestaña"] = 2;
     }
-    include("php/navbar.php") ?>
+    include("navbar.php") ?>
     <!----------------- Encabezado ------------------>
     <!-- Pagina para elegir la forma, cada imagen esta adentro de un link que manda por get la eleccion --->
     <section id="wrap" class="wrap">
@@ -31,7 +32,7 @@
                 <h1>Forma del budín</h1>
             </div>
             <div id="logo">
-                <img src="imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
+                <img src="../../imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
             </div>
         </section>
         <article class="forma">
@@ -40,13 +41,13 @@
 
                 <div class="imagen">
                 <div class="comentario">
-                    <a href="php/guarda_eleccion.php?forma=rectangular&enviar=forma" class="forma">
-                    <img src="imagenes/formas/formarectangular.jpg" alt=""></a>
+                    <a href="../guarda_eleccion.php?forma=rectangular&enviar=forma" class="forma">
+                    <img src="../../imagenes/formas/formarectangular.jpg" alt=""></a>
                     <h3>Rectangular, si sos mas clasic@</h3> </div>
 
                     <div class="comentario">
-                    <a href="php/guarda_eleccion.php?forma=circular&enviar=forma" class="forma">
-                    <img src="imagenes/formas/formacircular.jpg" alt=""></a>
+                    <a href="../guarda_eleccion.php?forma=circular&enviar=forma" class="forma">
+                    <img src="../../imagenes/formas/formacircular.jpg" alt=""></a>
                     <h3>Redondo, si te sentis atrevid@</h3> </div>
                 </div>
                 

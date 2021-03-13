@@ -6,7 +6,7 @@
             <nav>
                 <ul class="enlaces">
 
-                    <li> <a href="index.php"> <span class="icon"></span>Salir </a> </li>
+                    <li> <a href="../../index.html"> <span class="icon"></span>Salir </a> </li>
                     <li> <a href="login.php"> <span class="icon-cart"></span>Inicio </a> </li>
                     <li> <a href="forma.php"> <span class="icon-magic-wand"></span>Forma </a> </li>
                     <li> <a href="sabor.php"> <span class="icon-pacman"></span>Sabor </a> </li>

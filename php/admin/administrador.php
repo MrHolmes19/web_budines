@@ -1,4 +1,4 @@
-<?php include("php/conexion.php") ?>
+<?php include("../conexion.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rincon de los budines - Administrador de tablas</title>
 
-    <link rel="stylesheet" href="css/administrador_tablas.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="icon" href="Imagenes/icono.png" type="image/png">
+    <link rel="stylesheet" href="../../css/administrador_tablas.css">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
 </head>
 
 <body>
@@ -95,9 +95,9 @@
 
                                     if ($tabla_seleccionada == "Pedidos") {
                                     ?>
-                                        <td class="editar"><a href="php/admin/editarPedido.php?id=<?= $mostrar[$titulosTabla[0]] ?>&tabla=<?= $tabla_seleccionada ?>" id="btn-editar-fila" class="btn-editar-fila"> <span class="icon-pencil"></span> <i class="fas fa-times"> </i> </a></td>
+                                        <td class="editar"><a href="editarPedido.php?id=<?= $mostrar[$titulosTabla[0]] ?>&tabla=<?= $tabla_seleccionada ?>" id="btn-editar-fila" class="btn-editar-fila"> <span class="icon-pencil"></span> <i class="fas fa-times"> </i> </a></td>
                                     <?php } else { ?>
-                                        <td class="editar"><a href="php/admin/editar.php?id=<?= $mostrar[$titulosTabla[0]] ?>&tabla=<?= $tabla_seleccionada ?>" id="btn-editar-fila" class="btn-editar-fila"> <span class="icon-pencil"></span> <i class="fas fa-times"> </i> </a></td>
+                                        <td class="editar"><a href="editar.php?id=<?= $mostrar[$titulosTabla[0]] ?>&tabla=<?= $tabla_seleccionada ?>" id="btn-editar-fila" class="btn-editar-fila"> <span class="icon-pencil"></span> <i class="fas fa-times"> </i> </a></td>
                                     <?php } ?>
                                     <td class="eliminar"><a href="#!" onclick="eliminar('<?= $mostrar[$titulosTabla[0]] ?>', '<?= $mostrar[$titulosTabla[1]] ?>', '<?= $tabla_seleccionada ?>')" id="btn-eliminar-fila" class="btn-eliminar-fila"> <span class="icon-cross"></span> <i class="fas fa-times"> </i> </a></td>
                                 </tr>
@@ -111,22 +111,25 @@
 
                 <!-----Botones con funcionalidades----->
                 <div class="botones" id="botones">
-                    <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-nuevo" value="Nuevo Producto" onclick="window.location.replace('php/admin/nuevoProducto.php?tabla=<?php echo $tabla_seleccionada ?>')"> </div>
-                    <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-reportepdf" value="Reporte PDF" onclick="window.open('php/admin/imprimirTablaPDF.php?tabla=<?php echo $tabla_seleccionada ?>', '_blank')"> </div>
-                    <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-reporteecxel" onclick="tableToExcel('dinamica')" value="Reporte Excel"> </div>
-                    <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-modificar" value="Administrar Fotos" onclick="window.open('php/admin/archivos.php')"> </div>
-                    <div class="boton"> <input type="submit" class="btn-reportepdf" id="btn-actualizar" value="Actualizar precios"> </div>
+
+                    <?php if($tabla_seleccionada!="Pedidos"){?>
+                        <div class="boton"> <input type="submit" class="" id="btn-nuevo" value="Nuevo Producto" onclick="window.location.replace('nuevoProducto.php?tabla=<?php echo $tabla_seleccionada ?>')"> </div>
+                    <?php } ?>
+                    <div class="boton"> <input type="submit" class="" id="btn-reportepdf" value="Reporte PDF" onclick="window.open('imprimirTablaPDF.php?tabla=<?php echo $tabla_seleccionada ?>', '_blank')"> </div>
+                    <div class="boton"> <input type="submit" class="" id="btn-reporteecxel" onclick="tableToExcel('dinamica')" value="Reporte Excel"> </div>
+                    <div class="boton"> <input type="submit" class="" id="btn-modificar" value="Administrar Fotos" onclick="window.open('archivos.php')"> </div>
+                    <div class="boton"> <input type="submit" class="" id="btn-actualizar" value="Salir" onclick="window.location.replace('../../index.html')"></div>
 
                 </div>
 
         </div>
     </section>
-    <?php include("php/admin/toast.php") ?>
+    <?php include("toast.php") ?>
     <!----------------- Javascript------------------->
-    <script src="js/tabla_a_excel.js"></script>
-    <script src="js/eliminar.js"></script>
-    <script src="js/listaDesplegable.js"></script>
-    <script src="js/sweetalert2.js"></script>
+    <script src="../../js/tabla_a_excel.js"></script>
+    <script src="../../js/eliminar.js"></script>
+    <script src="../../js/listaDesplegable.js"></script>
+    <script src="../../js/sweetalert2.js"></script>
     <!-- -->
 
 </body>

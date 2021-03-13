@@ -1,4 +1,4 @@
-<?php include("php/conexion.php"); ?>
+<?php include("../conexion.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rincon de los budines - Elección de los agregados</title>
 
-    <link rel="stylesheet" href="css/headerBudines.css">
-    <link rel="stylesheet" href="css/bodyBudines.css">
-    <link rel="stylesheet" href="css/footerBudines.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="icon" href="Imagenes/icono.png" type="image/png">
+    <link rel="stylesheet" href="../../css/headerBudines.css">
+    <link rel="stylesheet" href="../../css/bodyBudines.css">
+    <link rel="stylesheet" href="../../css/footerBudines.css">
+    <link rel="stylesheet" href="../../css/animaciones.css">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
     <?php if ($_SESSION["pestaña"] < 4) {
         $_SESSION["pestaña"] = 4;
     }
-    include("php/navbar.php") ?>
+    include("navbar.php") ?>
     <!----------------- Encabezado ------------------>
     <!---Pagina para elegir los agregados, una tabla que se llena desde la bbdd, cada item se genera dinamicamente --->
     <!--y tiene su boton de vista previa el cual llama a la funcion abrirpopup(de la pagina popup.js) --->
@@ -32,7 +33,7 @@
                 <h1>Agregados del budín</h1>
             </div>
             <div id="logo">
-                <img src="imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
+                <img src="../../imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
             </div>
         </section>
         <article>
@@ -40,7 +41,7 @@
 
             <!----------------- Tabla de Agregados------------------->
             <h3>Agregados</h3>
-            <form action="php/guarda_eleccion.php" method="get">
+            <form action="../guarda_eleccion.php" method="get">
                 <table id="agregados">
                     <?php
                     $sql = "SELECT * from preciosagregados";
@@ -73,10 +74,10 @@
         <footer>
             <div class="flechas">
                 <div class=flecha_atras>
-                    <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
+                    <a href="#"> <img src="../../imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
                 <div class=flecha_siguiente>
-                    <button name="enviar" value="agregados"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
+                    <button name="enviar" value="agregados"> <img src="../../imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
                 </div>
             </div>
 
@@ -98,12 +99,12 @@
     </div>
 
     <!----------------- Javascript------------------->
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <?php include("js/nMax.php") ?>
-    <script src="js/menu.js"></script>
-    <script src="js/popup.js"></script>
-    <script src="js/flechaAtras.js"></script>
-    <script src="js/footer.js"></script>
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <?php include("../../js/nMax.php") ?>
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/popup.js"></script>
+    <script src="../../js/flechaAtras.js"></script>
+    <script src="../../js/footer.js"></script>
     <!-- -->
 </body>
 

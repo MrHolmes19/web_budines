@@ -15,7 +15,7 @@ var btnAbrirPopup2 = document.getElementById('btn-abrir-popup'),
 function abrirPopup(nombre_foto, titulo_foto, e){
     e = e || window.event; //capturo el evento
     e.preventDefault(); //evita que envie el formulario
-    imagen.setAttribute('src','img_subidas/'+nombre_foto); //Modifica la url de la img para que tome la que se mando como atributo 
+    imagen.setAttribute('src','../../imagenes/img_subidas/'+nombre_foto); //Modifica la url de la img para que tome la que se mando como atributo 
     //titulo.innerHTML = 'Budin de '+titulo_foto; //Cambia el titulo de la imagen (Funciona)
     titulo.textContent = 'Budin de '+titulo_foto; //Cambia el titulo de la imagen (Otra forma de hacerlo)
     overlay.classList.add('active'); //agrega la clase active a la de overlay

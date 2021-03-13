@@ -1,4 +1,4 @@
-<?php include("php/conexion.php") ?>
+<?php include("../conexion.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rincon de los budines - Elección de la cobertura</title>
 
-    <link rel="stylesheet" href="css/headerBudines.css">
-    <link rel="stylesheet" href="css/bodyBudines.css">
-    <link rel="stylesheet" href="css/footerBudines.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="icon" href="Imagenes/icono.png" type="image/png">
+    <link rel="stylesheet" href="../../css/headerBudines.css">
+    <link rel="stylesheet" href="../../css/bodyBudines.css">
+    <link rel="stylesheet" href="../../css/footerBudines.css">
+    <link rel="stylesheet" href="../../css/animaciones.css">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
     <?php if ($_SESSION["pestaña"] < 5) {
         $_SESSION["pestaña"] = 5;
     }
-    include("php/navbar.php") ?>
+    include("navbar.php") ?>
     <!----------------- Encabezado ------------------>
     <!---Pagina para elegir la cobertura, una tabla que se llena desde la bbdd, cada item se genera dinamicamente --->
     <!--y tiene su boton de vista previa el cual llama a la funcion abrirpopup(de la pagina popup.js) --->
@@ -32,15 +33,15 @@
                 <h1>Cobertura del budín</h1>
             </div>
             <div id="logo">
-                <img src="imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
+                <img src="../../imagenes/logo.png" alt="logo de El Rincon de los budines" title="logo El Rincon de los budines">
             </div>
         </section>
         <article>
             <h2><?= $_SESSION["nombre"] ?>, elegí la cobertura de tu budín</h2>
 
-            <!----------------- Tabla coberturas------------------->
+            <!----------------- Tabla coberturas---------------------->
             <h3>Coberturas</h3>
-            <form action="php/guarda_eleccion.php" method="get">
+            <form action="../guarda_eleccion.php" method="get">
                 <table id="clasicos">
                     <?php
                     $sql = "SELECT * from precioscoberturas";
@@ -79,10 +80,10 @@
         <footer>
             <div class="flechas">
                 <div class=flecha_atras>
-                    <a href="#"> <img src="imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
+                    <a href="#"> <img src="../../imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
                 <div class=flecha_siguiente>
-                    <button name="enviar" value="cobertura"> <img src="imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
+                    <button name="enviar" value="cobertura"> <img src="../../imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
                 </div>
             </div>
 
@@ -95,7 +96,7 @@
     <!----------------- Ventana emergente------------------->
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
-            <a href=# id="btn-cerrar-popup" class="btn-cerrar-popup"> <span class="icon-cross"></span> <i class="fas fa-times"> </i> </a>
+            <a href='#' id="btn-cerrar-popup" class="btn-cerrar-popup"> <span class="icon-cross"></span> <i class="fas fa-times"> </i> </a>
             <h4 id="titulo-popup">titulo</h4>
             <h5>La cobertura preferida de Mirta Legrand</h5>
             <img id="img-popup" src="" alt="Imagen del budin">
@@ -104,12 +105,12 @@
     </div>
 
     <!----------------- Javascript------------------->
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/popup.js"></script>
-    <script src="js/flechaAtras.js"></script>
-    <script src="js/footer.js"></script>
-    <?php include("js/noCobertura.php") ?>
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/popup.js"></script>
+    <script src="../../js/flechaAtras.js"></script>
+    <script src="../../js/footer.js"></script>
+    <?php include("../../js/noCobertura.php") ?>
     <!-- -->
 </body>
 

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rincon de los budines - Error</title>
 
-    <link rel="stylesheet" href="css/headerBudines.css">
-    <link rel="stylesheet" href="css/bodyBudines.css">
-    <link rel="stylesheet" href="css/footerBudines.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="icon" href="Imagenes/icono.png" type="image/png">
+    <link rel="stylesheet" href="../../css/headerBudines.css">
+    <link rel="stylesheet" href="../../css/bodyBudines.css">
+    <link rel="stylesheet" href="../../css/footerBudines.css">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
 
 </head>
 
@@ -27,10 +27,10 @@
 
         <article class="nombre">
             <h2>Algo salio mal!</h2>
-            <img class="warning" src="https://img.icons8.com/officel/80/000000/error.png" />
+            <img class="warning" src="imagenes/error.png" />
             <div class="error">
                 <h2> <?= $error ?> </h2>
-                <button onclick="window.location.replace('index.php')">Volver al inicio</button>
+                <button onclick="window.location.replace('index.html')">Volver al inicio</button>
                 <button onclick="window.location.replace('forma.php')">Pedir otro budin</button>
             </div>
         </article>

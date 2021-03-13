@@ -1,4 +1,4 @@
-<?php include("php/conexion.php") ?>
+<?php include("../conexion.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rincon de los budines - Bienvenida</title>
 
-    <link rel="stylesheet" href="css/headerBudines.css">
-    <link rel="stylesheet" href="css/bodyBudines.css">
-    <link rel="stylesheet" href="css/footerBudines.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="icon" href="Imagenes/icono.png" type="image/png">
+    <link rel="stylesheet" href="../../css/headerBudines.css">
+    <link rel="stylesheet" href="../../css/bodyBudines.css">
+    <link rel="stylesheet" href="../../css/footerBudines.css">
+    <link rel="stylesheet" href="../../css/animaciones.css">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
 
 </head>
 
@@ -21,15 +22,16 @@
     <!----------------- Barra navegacion------------------->
     <?php
     $_SESSION["pestaña"] = 1;
-    include("php/navbar.php") ?>
+    include("navbar.php") ?>
     <!----------------- Encabezado ------------------>
     <!-- Pagina para ingresar el nombre, lo manda por formulario a guarda_eleccion.php --->
     <section id="wrap" class="wrap">
 
         <article class="nombre">
 
-            <h2>Antes de empezar, decime tu nombre</h2>
-            <form action="php/guarda_eleccion.php">
+            
+            <form class="formLogin" action="../guarda_eleccion.php">
+                <h2>Antes de empezar, decime tu nombre</h2>
                 <input type="text" name="nombre">
                 <button name="enviar" value="nombre"> Siguente </button>
             </form>

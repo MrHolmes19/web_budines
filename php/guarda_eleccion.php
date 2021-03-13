@@ -1,4 +1,4 @@
-<?php include("conexion.php");
+../../<?php include("conexion.php");
 
 //si viene de nombre lo guarda en session y va a forma
 if ($_GET["enviar"] == "nombre") {
@@ -6,7 +6,7 @@ if ($_GET["enviar"] == "nombre") {
     $nombre = $_GET["nombre"];
     $_SESSION["nombre"] = $nombre;
 
-    header("Location: ../forma.php");
+    header("Location: paginasPedido/forma.php");
 }
 
 //si viene de forma lo guarda en session y va a sabor
@@ -15,7 +15,7 @@ if ($_GET["enviar"] == "forma") {
     $forma = $_GET["forma"];
     $_SESSION["forma"] = $forma;
 
-    header("Location: ../sabor.php");
+    header("Location: paginasPedido/sabor.php");
 }
 
 //si viene de nombre lo guarda en session, busca cuantos extras puede llevar ese sabor y si lleva o no cobertura, luego redirige.
@@ -32,23 +32,23 @@ if ($_GET["enviar"] == "sabor") {
             $_SESSION["tieneCobertura"] = $mostrar['Cobertura'];
 
             if ($_SESSION["lim_agregados"] > 0) {
-                header("Location: ../agregados.php");
+                header("Location: paginasPedido/agregados.php");
             } else {
                 if ($_SESSION["tieneCobertura"] == "SI") {
 
-                    header("Location: ../cobertura.php");
+                    header("Location: paginasPedido/cobertura.php");
                 } else {
-                    header("Location: ../total.php");
+                    header("Location: paginasPedido/total.php");
                 }
                 $_SESSION["nAgregados"] = 0;
             }
         }
     } else {
-        header("Location: ../sabor.php");
+        header("Location: paginasPedido/sabor.php");
     }
 }
 
-//si viene de agegados guarda cada uno y el n total y va a cobertura(si lleva, si no a total).
+//si viene de agregados guarda cada uno y el n total y va a cobertura(si lleva, si no a total).
 if ($_GET["enviar"] == "agregados") {
     if (isset($_GET["agregados"])) {
 
@@ -69,9 +69,9 @@ if ($_GET["enviar"] == "agregados") {
 
     if ($_SESSION["tieneCobertura"] == "SI") {
 
-        header("Location: ../cobertura.php");
+        header("Location: paginasPedido/cobertura.php");
     } else {
-        header("Location: ../total.php");
+        header("Location: paginasPedido/total.php");
     }
 }
 
@@ -84,7 +84,7 @@ if ($_GET["enviar"] == "cobertura") {
     } else{
         $_SESSION["cobertura"] = "no";
     }
-        header("Location: ../total.php");
+        header("Location: paginasPedido/total.php");
 }
 //si viene de total guarda la catidad y el precioTotal en session y va al formulario
 if ($_GET["enviar"] == "total") {
@@ -92,5 +92,5 @@ if ($_GET["enviar"] == "total") {
     $_SESSION["precioTotal"] = $_GET["pTotal"];
     $_SESSION["cantidad"] = $_GET["cant"];
 
-    header("Location: ../formulario.php");
+    header("Location: paginasPedido/formulario.php");
 }

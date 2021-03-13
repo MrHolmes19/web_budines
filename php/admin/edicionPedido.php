@@ -45,7 +45,7 @@ if (isset($_POST["editar"])) {
         $_SESSION["mensaje"] = "Pedido editado con exito";
     }
 
-    header("Location: ../../administrador.php");
+    header("Location: administrador.php");
 
     
 }

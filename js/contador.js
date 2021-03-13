@@ -1,6 +1,6 @@
 //funciones para el input de cantidad de budines
 var inputCantidad = document.querySelector(".cantidad input");
-var precioFinal = document.querySelector("#PrecioFinal");
+var precioFinal = document.querySelector("#PrecioFinal strong");
 var precioUnitario = precioFinal.innerHTML;
 
 function btnMenos() {
@@ -11,7 +11,7 @@ function btnMenos() {
   precioFinal.innerHTML = "$"+(parseInt(sub)*inputCantidad.value); //multiplico cantidad por precio y le agrego el $
 }
 
-function btnMas() {
+function btnMas() { 
   if (inputCantidad.value < 3) { //maximo 3 budines
     inputCantidad.value++;       //suma 1
   }
@@ -22,5 +22,5 @@ function btnMas() {
 //manda a guarda_eleccion los datos
 function seguir(){
     var Precio = precioFinal.innerHTML.substr(1);
-    window.location.replace("php/guarda_eleccion.php?cant="+ inputCantidad.value +"&pTotal="+ Precio +"&enviar=total", " ");
+    window.location.replace("../guarda_eleccion.php?cant="+ inputCantidad.value +"&pTotal="+ Precio +"&enviar=total", " ");
 }
