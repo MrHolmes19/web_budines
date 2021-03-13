@@ -1,6 +1,6 @@
 //funciones para el input de cantidad de budines
 var inputCantidad = document.querySelector(".cantidad input");
-var precioFinal = document.querySelector("#PrecioFinal");
+var precioFinal = document.querySelector("#PrecioFinal strong"); //Se pone "Strong" para seleccionar dentro de la etiqueta
 var precioUnitario = precioFinal.innerHTML;
 
 function btnMenos() {

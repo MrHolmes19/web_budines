@@ -83,7 +83,7 @@ include("php/traerPrecio.php"); ?>
                 </tr>
                 <tr>
                     <td class="descripcion"><strong> Total: </strong></td>
-                    <td class="precio" id="PrecioFinal"><strong>$ <?= $total ?> </strong></td>
+                    <td class="precio" id="PrecioFinal"><strong>$<?= $total ?></strong></td>
                 </tr>
             </table>
 
