@@ -107,7 +107,7 @@ table {
 }
 
 table tr.fijo {
-/*   position: fixed;
+  /*   position: fixed;
   top: 150px; */
 }
 
@@ -285,3 +285,15 @@ table tr td div {
 }
 
 /*--------------mediaQuerys--------------------*/
+
+@media screen and (max-width: 480px) {
+  #listaEditable {
+    width: 95%;
+    min-width: 325px;
+    height: 89vh;
+  }
+  #formulario {
+    flex-direction: column;
+    align-items: center;
+  }
+}
