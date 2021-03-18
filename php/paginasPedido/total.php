@@ -108,7 +108,8 @@ include("../traerPrecio.php"); ?>
         </footer>
 
     </section>
-
+    
+    <!----------------- Javascript------------------->
     <script src="../../js/jquery-3.5.1.min.js"></script>
     <script src="../../js/menu.js"></script>
     <script src="../../js/contador.js"></script>

@@ -173,14 +173,12 @@ button {
 
 table#total{
   border-collapse: collapse;
-  border-spacing: 0px 20px; 
-  
+  border-spacing: 0px 20px;   
 }
 
 table#total tr{
   border-bottom: 0.5px solid rgb(247,159,159);
-  line-height: 50px; 
-  
+  line-height: 38px;   
 }
 
 .cantidad{
@@ -204,9 +202,11 @@ table#total tr{
   font-size: 1.2rem;
   font-weight: bold;
 }
+
 .cantidad button.menos{
   border-radius: 45% 0 0 45%;
 }
+
 .cantidad button.mas{
   border-radius: 0 45% 45% 0;
 }
@@ -236,8 +236,7 @@ article form.datos textarea
 
 
 article form.datos label{
-  width: 90%;
-  
+  width: 90%;  
 }
 
 /*--------------pagina error y despedida------------------*/
@@ -341,7 +340,13 @@ article .despedida button{
   /*------------------MEDIA QUERIES-----------------*/
   /*------------------------------------------------*/
   
-  /*-------------- Celu en Landscape ---------------*/
+  
+  /*-------------- Evitar Celu en Landscape ---------------*/
+  
+
+  
+  /*--------------  Celu en Landscape ---------------*/
+
   
   @media screen and (min-width: 480px) {
     .wrap {
@@ -358,14 +363,14 @@ article .despedida button{
       margin: auto;
       margin-left: calc(
         (100% - 480px) / 2
-      ); /*remplaza APROX el margin:auto, para poder hacer la transicion con la ventan popup*/
-      
+      ); /*remplaza APROX el margin:auto, para poder hacer la transicion con la ventan popup*/      
     }
   
     .popup {
       width: 456px;
     }
   }
+  
   
   /*Para que entre el contenido en los celulares con pantalla mas chica*/
   @media screen and (max-height: 630px) {
