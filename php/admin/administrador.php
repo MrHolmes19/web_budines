@@ -1,4 +1,9 @@
-<?php include("../conexion.php") ?>
+<?php include("../conexion.php");
+if (!isset($_SESSION["admin"])) {
+    header("Location: ../../index.html");
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +30,8 @@
                 <form action="" method="POST" id="form">
                     <select class="select" name="tablas" onchange="mandarForm()" id="select">
                         <option value="0">--- Seleccionar ---</option>
-                        <option value="1" >Sabores clasicos</option>
-                        <option value="2" >Sabores especiales</option>
+                        <option value="1">Sabores clasicos</option>
+                        <option value="2">Sabores especiales</option>
                         <option value="3">Agregados</option>
                         <option value="4">Coberturas</option>
                         <option value="5">Pedidos</option>
@@ -73,38 +78,38 @@
                         $Ncolumnas = count($titulosTabla);
                         ?>
 
-                               <tr class="fijo">
-                                    <?php
-                                    for ($i = 0; $i < $Ncolumnas; $i++) {
-                                        echo "<th>" . $titulosTabla[$i] . "</th>";
-                                    }
-                                    ?>
-
-                                    <th colspan="2">Acciones</th>
-                              </tr>
-
-
+                        <tr class="fijo">
                             <?php
-                            while ($mostrar = mysqli_fetch_array($result)) {
-                            ?>
-                                <tr>
-                                    <?php
-                                    for ($j = 0; $j < $Ncolumnas; $j++) {
-                                        echo "<td>" . $mostrar[$titulosTabla[$j]] . "</td>";
-                                    }
-
-                                    if ($tabla_seleccionada == "Pedidos") {
-                                    ?>
-                                        <td class="editar"><a href="editarPedido.php?id=<?= $mostrar[$titulosTabla[0]] ?>&tabla=<?= $tabla_seleccionada ?>" id="btn-editar-fila" class="btn-editar-fila"> <span class="icon-pencil"></span> <i class="fas fa-times"> </i> </a></td>
-                                    <?php } else { ?>
-                                        <td class="editar"><a href="editar.php?id=<?= $mostrar[$titulosTabla[0]] ?>&tabla=<?= $tabla_seleccionada ?>" id="btn-editar-fila" class="btn-editar-fila"> <span class="icon-pencil"></span> <i class="fas fa-times"> </i> </a></td>
-                                    <?php } ?>
-                                    <td class="eliminar"><a href="#!" onclick="eliminar('<?= $mostrar[$titulosTabla[0]] ?>', '<?= $mostrar[$titulosTabla[1]] ?>', '<?= $tabla_seleccionada ?>')" id="btn-eliminar-fila" class="btn-eliminar-fila"> <span class="icon-cross"></span> <i class="fas fa-times"> </i> </a></td>
-                                </tr>
-                            <?php
+                            for ($i = 0; $i < $Ncolumnas; $i++) {
+                                echo "<th>" . $titulosTabla[$i] . "</th>";
                             }
                             ?>
-    
+
+                            <th colspan="2">Acciones</th>
+                        </tr>
+
+
+                        <?php
+                        while ($mostrar = mysqli_fetch_array($result)) {
+                        ?>
+                            <tr>
+                                <?php
+                                for ($j = 0; $j < $Ncolumnas; $j++) {
+                                    echo "<td>" . $mostrar[$titulosTabla[$j]] . "</td>";
+                                }
+
+                                if ($tabla_seleccionada == "Pedidos") {
+                                ?>
+                                    <td class="editar"><a href="editarPedido.php?id=<?= $mostrar[$titulosTabla[0]] ?>&tabla=<?= $tabla_seleccionada ?>" id="btn-editar-fila" class="btn-editar-fila"> <span class="icon-pencil"></span> <i class="fas fa-times"> </i> </a></td>
+                                <?php } else { ?>
+                                    <td class="editar"><a href="editar.php?id=<?= $mostrar[$titulosTabla[0]] ?>&tabla=<?= $tabla_seleccionada ?>" id="btn-editar-fila" class="btn-editar-fila"> <span class="icon-pencil"></span> <i class="fas fa-times"> </i> </a></td>
+                                <?php } ?>
+                                <td class="eliminar"><a href="#!" onclick="eliminar('<?= $mostrar[$titulosTabla[0]] ?>', '<?= $mostrar[$titulosTabla[1]] ?>', '<?= $tabla_seleccionada ?>')" id="btn-eliminar-fila" class="btn-eliminar-fila"> <span class="icon-cross"></span> <i class="fas fa-times"> </i> </a></td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+
                     </table>
                 </div>
 
@@ -112,14 +117,15 @@
                 <!-----Botones con funcionalidades----->
                 <div class="botones" id="botones">
 
-                    <?php if($tabla_seleccionada!="Pedidos"){?>
+                    <?php if ($tabla_seleccionada != "Pedidos") { ?>
                         <div class="boton"> <input type="submit" class="" id="btn-nuevo" value="Nuevo Producto" onclick="window.location.replace('nuevoProducto.php?tabla=<?php echo $tabla_seleccionada ?>')"> </div>
-                    <?php } if($tabla_seleccionada=="Pedidos"){ ?>
-                    <div class="boton"> <input type="submit" class="" id="btn-reportepdf" value="Reporte PDF" onclick="window.open('imprimirTablaPDF.php?tabla=<?php echo $tabla_seleccionada ?>', '_blank')"> </div>
-                    <div class="boton"> <input type="submit" class="" id="btn-reporteecxel" onclick="tableToExcel('dinamica')" value="Reporte Excel"> </div>
+                    <?php }
+                    if ($tabla_seleccionada == "Pedidos") { ?>
+                        <div class="boton"> <input type="submit" class="" id="btn-reportepdf" value="Reporte PDF" onclick="window.open('imprimirTablaPDF.php?tabla=<?php echo $tabla_seleccionada ?>', '_blank')"> </div>
+                        <div class="boton"> <input type="submit" class="" id="btn-reporteecxel" onclick="tableToExcel('dinamica')" value="Reporte Excel"> </div>
                     <?php } ?>
                     <div class="boton"> <input type="submit" class="" id="btn-modificar" value="Administrar Fotos" onclick="window.open('archivos.php')"> </div>
-                    <div class="boton"> <input type="submit" class="" id="btn-actualizar" value="Salir" onclick="window.location.replace('../../index.html')"></div>
+                    <div class="boton"> <input type="submit" class="" id="btn-actualizar" value="Salir" onclick="window.location.replace('login.php?logout=true')"></div>
 
                 </div>
 
