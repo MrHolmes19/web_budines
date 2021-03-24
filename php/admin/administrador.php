@@ -16,6 +16,7 @@ if (!isset($_SESSION["admin"])) {
     <link rel="stylesheet" href="../../css/administrador_tablas.css">
     <link rel="stylesheet" href="../../fonts.css">
     <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
+    
 </head>
 
 <body>

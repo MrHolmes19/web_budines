@@ -5,7 +5,7 @@ if (isset($_POST["login"])) {
     $user = $_POST["user"];
     $pass = $_POST["pass"];
 
-    echo $user . $pass;
+    //echo $user . $pass;
 
     $md5user = md5($user);
     $md5pass = md5($pass);

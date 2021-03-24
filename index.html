@@ -317,61 +317,25 @@
         <div class="btn-admin">
           <div class="relleno"></div>
           <p>Copyright © 2021 LAGH. Todos los derechos reservados</p>
-          <button onclick="ventanaLogin()">Entrar como administrador</button>
+          <button id="Admin" onclick="ventanaLogin()">Entrar como administrador</button>
 
           <!-----------login admin----------->
 
           <div id="loginAdmin" class="escondido">
             <form action="php/admin/login.php" method="post">
-              <h2>Usuario:</h2>
+              <h3 class="h3-login">Usuario:</h3>
               <input type="text" name="user" id="user" value="budines" />
-              <h2>Contraseña:</h2>
+              <h3 class="h3-login">Contraseña:</h3>
               <input type="password" name="pass" id="pass" value="password" />
-              <input type="submit" name="login" id="login" />
+              <input type="submit" name="login" id="login" value="Acceder"/>
             </form>
           </div>
+
         </div>
       </div>
     </section>
     <!--Fin Footer-->
 
-    <style>
-      #loginAdmin {
-        position: absolute;
-        transition: all 0.5s ease-out;
-        z-index: 20;
-      }
-      .escondido {
-        top: -4%;
-        left: 60%;
-        animation: GiroLoco 0.5s ease 0s forwards;
-        border-radius: 50%;
-        background-color: white;
-      }
-
-      .visible {
-        bottom: 15%;
-        right: 30%;
-        animation: Transparencia 1s ease 0s forwards;
-        border-radius: 5%;
-        background-color: grey;
-        border: 3px solid #ee7ba1;
-        box-shadow: 0 0 5px black;
-      }
-
-      #loginAdmin form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-      }
-
-      #loginAdmin input {
-        margin: 10px;
-        font-size: 14px;
-      }
-
-    </style>
 
     <script>
       var btnAdmin = document.getElementById("Admin");
@@ -380,8 +344,11 @@
       function ventanaLogin() {
         if (loginAdmin.className == "escondido") {
           loginAdmin.className = "visible";
+          btnAdmin.innerHTML = "CERRAR ↓"
+
         } else {
           loginAdmin.className = "escondido";
+          btnAdmin.innerHTML = "Entrar como administrador"
         }
       }
     </script>
