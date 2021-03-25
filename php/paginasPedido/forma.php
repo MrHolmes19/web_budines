@@ -61,7 +61,7 @@
         </article>
 
         <footer>
-        <div id="copyright">
+            <div id="copyright">
                 <p> ©2020 LAGH. Todos los derechos reservados.</p>
             </div>
         </footer>

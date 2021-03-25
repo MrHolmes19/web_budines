@@ -212,6 +212,7 @@ table#total tr{
 }
 
 /*--------------Formulario Final------------------*/
+
 article form.datos{
   display: flex;
   flex-direction: column;
@@ -240,6 +241,7 @@ article form.datos label{
 }
 
 /*--------------pagina error y despedida------------------*/
+
 article .error,
 article .despedida{
   display: flex;
@@ -341,11 +343,35 @@ article .despedida button{
   /*------------------------------------------------*/
   
   
-  /*-------------- Evitar Celu en Landscape ---------------*/
-  
+  /*-------------- Celu en Landscape ---------------*/
 
   
-  /*--------------  Celu en Landscape ---------------*/
+  @media only screen and (min-width: 426px) and (max-height: 426px) and (orientation:landscape) {
+    
+    article.forma{
+      height:70vh;
+    }
+
+    div.imagen {
+      flex-direction: row;
+      min-height: 120px;
+    }
+
+    div.imagen .comentario {
+      padding: 0 10px;
+    }
+
+    .imagen .comentario h3 {
+      bottom: 10px;
+      padding: 0 10px;
+    }
+
+    .nota {
+      margin-top: 40px;
+      font-size: 12px;
+    }
+
+  } 
 
   
   @media screen and (min-width: 480px) {
@@ -373,7 +399,7 @@ article .despedida button{
   
   
   /*Para que entre el contenido en los celulares con pantalla mas chica*/
-  @media screen and (max-height: 630px) {
+  /*@media screen and (max-height: 630px) {
     
     article.forma {
       height:75vh;
@@ -391,7 +417,8 @@ article .despedida button{
       max-height:25vh; 
     }
   }
-  
+  */
+
   /*-------------- Version Escritorio ---------------*/
   
   @media screen and (min-width: 768px) {
