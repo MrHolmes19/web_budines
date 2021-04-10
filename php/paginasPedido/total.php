@@ -13,7 +13,7 @@ include("../traerPrecio.php"); ?>
     <link rel="stylesheet" href="../../css/bodyBudines.css">
     <link rel="stylesheet" href="../../css/footerBudines.css">
     <link rel="stylesheet" href="../../css/animaciones.css">
-    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="../../fonts.css">
     <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
 
 </head>

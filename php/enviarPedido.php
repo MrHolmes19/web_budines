@@ -100,6 +100,7 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
     //manda a pagina de despedida
 
     if ($result) {
-        header("Location: paginasPedido/despedida.php?id=" . $id);
+        $_SESSION["idPedido"] = $id;
+        header("Location: paginasPedido/despedida.php");
     }
 }

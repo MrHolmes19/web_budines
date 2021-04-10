@@ -21,11 +21,15 @@
 
     <?php
 
-    $id = $_GET["id"];
+    $id = $_SESSION["idPedido"];
 
     ?>
     <!----------------- Encabezado ------------------>
     <section id="wrap" class="wrap2">
+
+    <form id="formID" action="../admin/imprimirPedidoPDF.php" method="post">
+    <input type="hidden" name="id" value="<?= $_SESSION["idPedido"] ?>">
+    </form>
 
         <article class="nombre">
             <h2 class="tituloDespedida">¡COMPRA EXITOSA!</h2>
@@ -34,7 +38,7 @@
             <div class="despedida">
                 <button onclick="window.location.replace('../../index.html')">Volver al inicio</button>
                 <button onclick="window.location.replace('forma.php')">Pedir otro budin</button>
-                <button onclick="window.open('../admin/imprimirPedidoPDF.php?id=<?= $id ?>')">Imprimir comprobante</button>
+                <button type="submit" form="formID">Imprimir comprobante</button>
             </div>
         </article>
 
@@ -46,7 +50,7 @@
     </section>
 
     <!----------------- Javascript------------------->
-    <script src="js/footer.js"></script>
+    <script src="../../js/footer.js"></script>
     <!-- -->
 </body>
 
