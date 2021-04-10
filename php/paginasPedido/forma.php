@@ -68,9 +68,9 @@
     </section>
 
     <!----------------- Javascript------------------->
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/footer.js"></script>
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/footer.js"></script>
 
     <!-- -->
 </body>
