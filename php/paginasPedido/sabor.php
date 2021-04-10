@@ -109,7 +109,7 @@
         </footer>
         </form>
     </section>
-    <!----------------- Ventana emergente------------------->
+    <!----------------- Ventana emergente POP UP------------------->
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
             <a href='#' id="btn-cerrar-popup" class="btn-cerrar-popup"> <span class="icon-cross"></span> <i class="fas fa-times"> </i> </a>

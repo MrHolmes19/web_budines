@@ -11,6 +11,7 @@ header{
     margin:0px auto;  
     position:fixed;  /*Para que quede fijo al scrollear*/
     top:0;  /*Para posicionarlo arriba de todo*/
+    z-index: 100;
 }
 
 header nav{    
