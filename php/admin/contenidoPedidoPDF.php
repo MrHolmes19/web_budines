@@ -1,9 +1,11 @@
 <?php include("../conexion.php"); ?>
 <?php include("metodos.php"); ?>
 <?php
-if (isset($_GET["id"])) {
-    $id = $_GET["id"];
+if (isset($_POST["id"])) {
+    $id = $_POST["id"];
 }
+
+
 $row = traerFila($id, "pedidos");
 ?>
 <!DOCTYPE html>
