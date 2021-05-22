@@ -1,3 +1,5 @@
+<!-- Modulo que aparece al pulsar en "editar" en la interfaz de administrador -->
+
 <?php include("metodos.php"); ?>
 
 <!DOCTYPE html>

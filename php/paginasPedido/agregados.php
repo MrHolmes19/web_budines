@@ -41,7 +41,7 @@
 
             <!----------------- Tabla de Agregados------------------->
             <h3>Agregados</h3>
-            <form action="../guarda_eleccion.php" method="get">
+            <form action="guarda_eleccion.php" method="get">
                 <table id="agregados">
                     <?php
                     $sql = "SELECT * from preciosagregados";

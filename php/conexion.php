@@ -1,3 +1,6 @@
+<!--Conexion a BBDD -->
+
+
 <?php
 
 //cambiar el valor de la variable baseDeDatos para elegir una u otra.

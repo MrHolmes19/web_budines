@@ -1,3 +1,5 @@
+<!--Guarda en la BD los datos del nuevo producto cargado-->
+
 <?php
 include("../conexion.php");
 
@@ -8,7 +10,7 @@ if (isset($_POST["agregar"])) {
     $disponible = $_POST["disponible"];
 
 
-    /*----------------- Codigo para efectuar el guardado de la imagen cargada en cargar_bd.php-----------------*/
+    /*------ Codigo para efectuar el guardado de la imagen cargada en cargar_bd.php------*/
 
     // Se reciben los datos de la imagen
     $nombre_imagen=$_FILES ['imagen']['name']; //FILES es una variable/array superglobal. Almacena varios datos y propiedades de la imagen
@@ -20,11 +22,10 @@ if (isset($_POST["agregar"])) {
         if($tipo_imagen="image/jpg" || $tipo_imagen="image/jpeg" || $tipo_imagen="image/png"){
     
     //Se le indica la ruta donde se guardará la imagen en servidor
-    $carpeta_destino=$_SERVER ['DOCUMENT_ROOT'].'/web_budines/imagenes/img_subidas/'; //server es otra variable superglobal.
+            $carpeta_destino=$_SERVER ['DOCUMENT_ROOT'].'/web_budines/imagenes/img_subidas/'; //server es otra variable superglobal.
     
     //Se mueve la imagen desde el directorio temporal al directorio escogido
-    move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta_destino.$nombre_imagen); //tmp_name es la para colocar el nombre de la carpeta de guardado temporal
-    
+            move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta_destino.$nombre_imagen); //tmp_name es la para colocar el nombre de la carpeta de guardado temporal
         }
         else{
             echo "No se permite este tipo de archivo. Suba imagenes .JPEG, .JPG o .PNG";
@@ -55,7 +56,7 @@ if (isset($_POST["agregar"])) {
 
     if($result){
         $_SESSION["alerta"] = true;
-        $_SESSION["alertaTipo"] = "agregar";
+        $_SESSION["alertaTipo"] = "agregar"; //A futuro para modificar color segun alerta
         $_SESSION["mensaje"] = "Elemento agregado con exito";
     }
 

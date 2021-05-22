@@ -1,3 +1,5 @@
+<!-- Desactiva las opciones radio cuando no lo permite el tipo de budin -->
+
 <script>
 //en caso de que el budin no admita cobertura la pagina de agregados salta al 
 //total, pero todavia se podia volver con la flecha para atras. con esto vuelve, pero queda todo bloqueado.

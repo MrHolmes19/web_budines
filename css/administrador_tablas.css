@@ -16,7 +16,7 @@ body {
 section {
   border: 2px solid rgba(39, 82, 38, 0.8);
   background-color: rgba(39, 82, 38, 0.15);
-  border-radius: 5px;
+  border-radius: 25px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 

@@ -1,10 +1,12 @@
-<?php include("conexion.php");
+<!-- Codigo para guardar datos del pedido a la BBDD y notificacion e-mail -->
+
+<?php 
+include("../conexion.php");
 
 //guardo todo lo que viene del formulario en session
 if (isset($_GET["nombre"])) {
 
-    $_SESSION["pago"] = "aprovado";
-
+    $_SESSION["pago"] = "aprobado";
     $_SESSION["nombre"] = $_GET["nombre"];
     $_SESSION["telefono"] = $_GET["telefono"];
     $_SESSION["email"] = $_GET["email"];
@@ -24,7 +26,7 @@ if (isset($_GET["nombre"])) {
     }
 }
 
-//envia el pedido a la BD si la forma de pago no es MP (efectivo o transferencia) o el pago a MP esta aprovado.
+//envia el pedido a la BD si la forma de pago no es MP (efectivo o transferencia) o el pago a MP esta aprobado.
 if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
 
 
@@ -73,14 +75,15 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
     $result = mysqli_query($conexion, $query);
     if (!$result) {
         //die("query fallida");
-        header("Location: ../error.php?error=error al cargar pedido");
+        header("Location: error.php?error=error al cargar pedido");
     }
     if ($result) {
         //echo "Query exitosa ". $nombre;
         $id = mysqli_insert_id($conexion); //me devulve con que id guardo el pedido, esto lo mando a la pag. despedida para imprimir el comprobante
     }
-    /*
-    //manda mail cuando se hace un pedido, no funciona en heliohost ya que outlook(no se Gmail) lo tiene blockeado(ni al spam llegan).
+    
+    // Envio de mail con la notificacion del pedido
+    //manda mail cuando se hace un pedido, no funciona en heliohost ya que outlook(no se Gmail) lo tiene bloqueado(ni al spam llegan).
     $asuntoMail = $nombre . " te ha pedido un budin";
     $textoMail = $nombre . " ha realizado un pedido para el dia " . $fechaEntrega;
     $destinatario = "lmarquez@mgl-ingenieria.com.ar";
@@ -96,11 +99,11 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
         echo "error de mail";
         die;
     }
-*/
-    //manda a pagina de despedida
+
+    //Dirige a pagina de despedida
 
     if ($result) {
         $_SESSION["idPedido"] = $id;
-        header("Location: paginasPedido/despedida.php");
+        header("Location: despedida.php");
     }
 }

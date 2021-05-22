@@ -1,3 +1,5 @@
+<!-- Interfaz para la creacion de un nuevo producto -->
+
 <?php include("metodos.php"); ?>
 
 <!DOCTYPE html>

@@ -1,9 +1,12 @@
+<!--Mecanismo de seguridad-->
+
 <?php include("../conexion.php");
 if (!isset($_SESSION["admin"])) {
     header("Location: ../../index.html");
 }
-
 ?>
+
+<!--Pagina de administrador-->
 
 <!DOCTYPE html>
 <html lang="en">

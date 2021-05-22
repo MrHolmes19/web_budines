@@ -1,3 +1,5 @@
+<!-- Desactiva las opciones check cuando se llega al limite -->
+
 <script>
 //guarda el limite de agregados que me trae la sesion segun el sabor
 var max = <?= $_SESSION["lim_agregados"] ?>;

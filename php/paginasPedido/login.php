@@ -31,7 +31,7 @@
         <article class="nombre">
 
             
-            <form class="formLogin" action="../guarda_eleccion.php">
+            <form class="formLogin" action="guarda_eleccion.php">
                 <h2>Antes de empezar, decime tu nombre</h2>
                 <input type="text" name="nombre">
                 <button name="enviar" value="nombre"> Siguente </button>

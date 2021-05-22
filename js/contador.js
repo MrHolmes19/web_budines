@@ -1,7 +1,7 @@
 //funciones para el input de cantidad de budines
-var inputCantidad = document.querySelector(".cantidad input");
+var inputCantidad = document.querySelector(".cantidad input"); //Toma la cantidad de budines
 var precioFinal = document.querySelector("#PrecioFinal strong"); //Se pone "Strong" para seleccionar dentro de la etiqueta
-var precioUnitario = precioFinal.innerHTML;
+var precioUnitario = precioFinal.innerHTML; //
 
 function btnMenos() {
   if (inputCantidad.value > 1) { //minimo 1 budin
@@ -22,5 +22,5 @@ function btnMas() {
 //manda a guarda_eleccion los datos
 function seguir(){
     var Precio = precioFinal.innerHTML.substr(1);
-    window.location.replace("../guarda_eleccion.php?cant="+ inputCantidad.value +"&pTotal="+ Precio +"&enviar=total", " ");
+    window.location.replace("../paginasPedido/guarda_eleccion.php?cant="+ inputCantidad.value +"&pTotal="+ Precio +"&enviar=total", " ");
 }

@@ -1,3 +1,5 @@
+<!--Plantilla para posterior impresion en PDF (Comprobante)-->
+
 <?php include("../conexion.php"); ?>
 <?php include("metodos.php"); ?>
 <?php
@@ -5,9 +7,9 @@ if (isset($_POST["id"])) {
     $id = $_POST["id"];
 }
 
-
 $row = traerFila($id, "pedidos");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,16 +21,14 @@ $row = traerFila($id, "pedidos");
 
 <body>
 
-    <?php
+    <?php /*Se carga imagen desde PHP, porque la liberia no soporta desde el HTML*/
     $path = '../../imagenes/logopg.jpg';
     $type = pathinfo($path, PATHINFO_EXTENSION);
     $data = file_get_contents($path);
     $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
     ?>
 
-
     <table>
-
         <tr>
             <td colspan="2"> <img src="<?php echo $base64 ?>" alt=""> </td>
         </tr>
@@ -101,9 +101,9 @@ $row = traerFila($id, "pedidos");
             <td> <?= $row['comentarios'] ?> </td>
         </tr>
 
-
     </table>
-    <style>
+    
+    <style> /*Estilo - La libreria no soporte CSS externo*/
         table {
             border: 1px solid black;
             text-align: center;

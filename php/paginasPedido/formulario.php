@@ -39,7 +39,7 @@
         <article>
             <h2><?= $_SESSION["nombre"] ?>, ya casi tenes tu budin:</h2>
             <!----------------- Formulario ------------------->
-            <form action="../enviarPedido.php" id="formulario" class="datos">
+            <form action="enviarPedido.php" id="formulario" class="datos">
 
                 <label for="nombre"> Nombre*
                     <input type="text" name="nombre" id="nombre" placeholder="Ej.: Juan" value="<?= $_SESSION["nombre"] ?>" required> </label>

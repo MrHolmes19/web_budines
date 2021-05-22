@@ -1,3 +1,5 @@
+<!-- Recibe los datos y los actualiza en la BBDD: Tabla pedidos -->
+
 <?php
 include("../conexion.php");
 
@@ -20,14 +22,7 @@ if (isset($_POST["editar"])) {
     $comentarios = $_POST["comentario"];
     $estado = $_POST["estado"];
 
-    echo $id;
-    echo $precioT;
-    echo $precioU;
-    echo $formaPago;
-    echo $comentarios;
-
-
-    
+        
     $query = "update pedidos set fechapedido = '$fechaPedido', fecha = '$fechaEntrega', nombre = '$nombre',
         sabor = '$sabor', extra1 = '$agregado1', extra2 = '$agregado2', extra3 = '$agregado3', cobertura = '$cobertura',
         preciounitario = '$precioU', cantidad = '$cantidad', preciototal = '$precioT', formapago = '$formaPago',

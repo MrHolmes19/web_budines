@@ -1,11 +1,16 @@
+<!--Pantalla de administracion de fotos y logica-->
+
+<!--LOGICA-->
+
 <?php
 
+// Trae links y nombre de imagenes de la carpeta
 $lista = null;
 $dir = opendir("../../imagenes/img_subidas");
-$img[] = null;
-$link[] = null;
+$img[] = null;   //De la carpeta
+$link[] = null; //de la BD
 while ($elem = readdir($dir)) {
-    if ($elem != '.' && $elem != '..') {
+    if ($elem != '.' && $elem != '..') { //Lee los elementos del directorio exceptuando el directorio mismo (.) y el directorio padre (..)
         if (is_dir("../../imagenes/img_subidas/" . $elem)) {
             $lista .= "<li><a href='../../imagenes/img_subidas/$elem' target='_blank'>$elem/ </a><a href='#'>X</a></li>";
         } else {
@@ -14,9 +19,12 @@ while ($elem = readdir($dir)) {
         }
     }
 }
+
+// Trae nombre de imagenes de la base de datos
+
 $fotos = null;
 include("../conexion.php");
-//union con sabores especiales para que busque los sabores en ambas tablas.
+//union con sabores especiales y agregados y cobeturas para que busque los sabores en todas las tablas.
 $sql = "SELECT Foto FROM sabores_clasicos union SELECT Foto FROM sabores_especiales union SELECT Foto FROM preciosagregados union SELECT Foto FROM precioscoberturas";
 $res = mysqli_query($conexion, $sql);
 
@@ -25,6 +33,7 @@ while ($row = mysqli_fetch_array($res)) {
     $link[] = $row["Foto"];
 }
 
+// Comparador entre fotos disponibles en la carpeta y fotos usadas
 
 $fotosEnUso = null;
 $fotosSinUso = null;
@@ -40,21 +49,19 @@ foreach ($img as $im) {
 }
 
 $fotosSinUso = array_diff($img, $feu);
-$fotosSinUsoGET = null;
-/*
-unlink('../../imagenes/img_subidas/pendientes.txt');
-*/
-
-
-
+$fotosSinUsoGET = null; //????
 ?>
+
+
+<!--Parte visual HTML-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estiloGestorImg.css">
+    <link rel="stylesheet" href="../../css/estiloGestorImg.css">
     <title>Document</title>
 </head>
 

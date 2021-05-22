@@ -46,7 +46,7 @@
                     <h3>Rectangular, si sos mas clasic@</h3> </div>
 
                     <div class="comentario">
-                    <a href="../guarda_eleccion.php?forma=circular&enviar=forma" class="forma">
+                    <a href="guarda_eleccion.php?forma=circular&enviar=forma" class="forma">
                     <img src="../../imagenes/formas/formacircular.jpg" alt=""></a>
                     <h3>Redondo, si te sentis atrevid@</h3> </div>
                 </div>

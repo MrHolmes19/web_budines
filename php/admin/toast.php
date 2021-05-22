@@ -1,3 +1,5 @@
+<!--Componente del toast (ventana emergente) -->
+
 <?php
 
 if (!isset($_SESSION["alerta"])) {

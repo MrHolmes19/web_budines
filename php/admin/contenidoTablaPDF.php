@@ -1,3 +1,5 @@
+<!--Plantilla para posterior impresion en PDF (Tabla entero de pedidos)-->
+
 <?php include("../conexion.php");
 
 $tabla_seleccionada = $_GET["tabla"];
@@ -13,8 +15,6 @@ $tabla_seleccionada = $_GET["tabla"];
 </head>
 
 <body>
-
-
     <div class="contenedor-tabla">
         <table id="dinamica">
             <caption> Tabla de <?php echo $tabla_seleccionada ?></caption>
@@ -58,11 +58,7 @@ $tabla_seleccionada = $_GET["tabla"];
         </table>
     </div>
 
-    <style>
-
-
-/*------------------------- Tabla ---------------------------*/
-
+    <style>  /*Estilo - La libreria no soporte CSS externo*/
 
 table caption {
     font-weight: bold;
@@ -106,9 +102,8 @@ table caption {
     /*Cambiar al nombre de clase de cada columna*/
     width: 55%;
   }
-
-
-    </style>
+  
+  </style>
 
 </body>
 

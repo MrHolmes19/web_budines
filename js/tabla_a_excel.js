@@ -1,4 +1,5 @@
-//codigo copiado de github, mi unico aporte es en el nombre de archivo
+/* Tabla de excel exportada. */
+
 var tableToExcel = (function () {
   var uri = "data:application/vnd.ms-excel;base64,",
     template =
@@ -15,10 +16,12 @@ var tableToExcel = (function () {
     if (!table.nodeType) table = document.getElementById(table);
     var ctx = { worksheet: "reporte" || "Worksheet", table: table.innerHTML };
     var link = document.createElement("a");
+    
     //tomo el titulo de la tabla y la fecha actual
     var fecha = new Date;
     var tituloTabla = document.querySelector("#lista #dinamica caption").innerHTML;
     var tabla = tituloTabla.split(" ");
+    
     //le doy nombre al archivo
     link.download = tabla[tabla.length-1]+ " "+fecha.toLocaleDateString()+".xls";
     link.href = uri + base64(format(template, ctx));

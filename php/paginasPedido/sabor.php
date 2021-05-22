@@ -42,7 +42,7 @@
 
             <!----------------- Tabla sabores clasicos------------------->
             <h3>Sabores clásicos</h3>
-            <form action="../guarda_eleccion.php" method="get">
+            <form action="guarda_eleccion.php" method="get">
                 <table id="clasicos">
                     <?php
                     $sql = "SELECT * from sabores_clasicos";

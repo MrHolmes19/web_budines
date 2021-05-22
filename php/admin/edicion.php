@@ -1,3 +1,5 @@
+<!-- Recibe los datos y los actualiza en la BBD: tablas de productos -->
+
 <?php
 include("../conexion.php");
 

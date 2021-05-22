@@ -1,3 +1,4 @@
+/* setea la selección de los radiobutton disponibilidad y cobertura segun info del registro de la bd */
 
 var radioSi = document.querySelector("#dispSi");
 var radioNo = document.querySelector("#dispNo");

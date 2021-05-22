@@ -10,7 +10,7 @@ var mes = fecha.getMonth() + 1;
 if (mes < 10) {
   mes = "0" + mes;
 }
-//el ano es mas facil(desaconsejan la Ñ por cuestiones de charset)
+//el año es mas facil(desaconsejan la Ñ por cuestiones de charset)
 var ano = fecha.getFullYear();
 
 //pongo la fecha de hoy como minimo(formato yyyy-mm-dd)
@@ -22,7 +22,7 @@ var diaMaximo = diaActual + 7;
 fecha.setDate(diaMaximo);
 
 
-//idem antes
+//idem anterior pero para fecha maxima
 var dia1 = fecha.getDate();
 if (dia1 < 10) {
   dia1 = "0" + dia1;
@@ -36,5 +36,3 @@ var ano1 = fecha.getFullYear();
 //pongo la fecha de hoy + 7 como maximo(formato yyyy-mm-dd)
 var fechaM = ano1 + "-" + mes1 + "-" + dia1;
 document.getElementById("fechaEntrega").max = fechaM;
-
-//averiguar si hay formas mas faciles de manejar fechas en JS.

@@ -1,3 +1,5 @@
+/* ---- Gestiona el menu hamburguesa de la pagina principal ----*/
+
 const hamburger = document.querySelector(".header .nav-bar .nav-list .hamburger");
 const movileMenu = document.querySelector(".header .nav-bar .nav-list ul");
 const menuItem = document.querySelectorAll('.header .nav-bar .nav-list ul li a');

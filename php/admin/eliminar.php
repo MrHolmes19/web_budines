@@ -1,3 +1,5 @@
+<!-- Comando que elimina registro de la tabla. Se activa a través del botón eliminar -->
+
 <?php
 
 include("../conexion.php");

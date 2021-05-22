@@ -1,8 +1,10 @@
+<!-- Código para traer los precios de los items elegidos por el usuario -->
+
 <?php
 //funcion que le pasas el producto y en que tabla esta y te trae el precio.
 function traerPrecio($producto, $tabla)
 {
-    include("conexion.php");
+include("../conexion.php");
 //union con sabores especiales para que busque los sabores en ambas tablas.
     $sql = "SELECT Precio FROM `$tabla` WHERE Producto = '$producto' union select Precio from sabores_especiales where Producto = '$producto'";
     $res = mysqli_query($conexion, $sql);

@@ -1,8 +1,8 @@
+<!--Comando para eliminar las imagenes no utilizadas en los productos -->
+
 <?php
 
 $fotos = $_GET["fotos"];
-
-echo $fotos;
 
 $borrar = explode("/", $fotos);
 

@@ -1,3 +1,5 @@
+<!--Comando para creacion de PDF de todos los pedidos -->
+
 <?php
 require "../../vendor/autoload.php";
 use Dompdf\Dompdf;
