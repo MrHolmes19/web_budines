@@ -57,7 +57,14 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
         $Agregado3 = $_SESSION["agregado1"];
     }
 
-    $cobertura = $_SESSION["cobertura"];
+    if (isset($_SESSION["cobertura"])) {
+        $cobertura = $_SESSION["cobertura"];
+    }
+    else{
+        $cobertura = "no";
+    }
+    
+   
     $cantidad = $_SESSION["cantidad"];
     $precioTotal = $_SESSION["precioTotal"];
     $precioUnitario = $precioTotal / $cantidad;
@@ -82,6 +89,7 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
         $id = mysqli_insert_id($conexion); //me devulve con que id guardo el pedido, esto lo mando a la pag. despedida para imprimir el comprobante
     }
     
+    /*
     // Envio de mail con la notificacion del pedido
     //manda mail cuando se hace un pedido, no funciona en heliohost ya que outlook(no se Gmail) lo tiene bloqueado(ni al spam llegan).
     $asuntoMail = $nombre . " te ha pedido un budin";
@@ -99,6 +107,7 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
         echo "error de mail";
         die;
     }
+    */
 
     //Dirige a pagina de despedida
 

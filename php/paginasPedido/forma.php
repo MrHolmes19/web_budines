@@ -41,7 +41,7 @@
 
                 <div class="imagen">
                 <div class="comentario">
-                    <a href="../guarda_eleccion.php?forma=rectangular&enviar=forma" class="forma">
+                    <a href="guarda_eleccion.php?forma=rectangular&enviar=forma" class="forma">
                     <img src="../../imagenes/formas/formarectangular.jpg" alt=""></a>
                     <h3>Rectangular, si sos mas clasic@</h3> </div>
 

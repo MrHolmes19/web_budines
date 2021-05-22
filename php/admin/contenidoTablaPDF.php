@@ -11,7 +11,6 @@ $tabla_seleccionada = $_GET["tabla"];
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="a.css">
 </head>
 
 <body>

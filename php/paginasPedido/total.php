@@ -1,5 +1,5 @@
 <?php include("../conexion.php");
-include("../traerPrecio.php"); ?>
+include("traerPrecio.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -16,7 +16,7 @@ $row = traerFila($id, "pedidos");
 <head>
     <meta charset="UTF-8">
     <title>Pedido n° <?= $id ?> <?= $row['fechapedido'] ?> </title>
-    <link rel="stylesheet" href="estilo_pedidoPDF.css">
+    <link rel="stylesheet" href="../../css/estiloPDF_pedidos.css">
 </head>
 
 <body>

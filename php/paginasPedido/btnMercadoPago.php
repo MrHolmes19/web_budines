@@ -21,10 +21,10 @@ $precioU = $precioT / $cantidad;
     //usuario2(vendedor): {"id":688245007,"nickname":"TETE6653982","password":"qatest1519","site_status":"active","email":"test_user_49750911@testuser.com"}
 
 // SDK de Mercado Pago
-require __DIR__ .  '../../vendor/autoload.php';
+require __DIR__ .  '/../../vendor/autoload.php';
 
 // Agrega credenciales de vendedor
-MercadoPago\SDK::setAccessToken('APP_USR-1862746880528926-121613-159b155b6704728ac0b049f99740e4ba-688245007');
+MercadoPago\SDK::setAccessToken('APP_USR-376455656503130-121115-e1b8a468b29323fed7ec3e3afdfa3707-257158044');
 
 // Crea un objeto de preferencia
 $preference = new MercadoPago\Preference();
