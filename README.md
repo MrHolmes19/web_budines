@@ -1,20 +1,33 @@
 # El rincon de los budines
 
+**Indice de la documentación**
+
+- [El rincon de los budines](#el-rincon-de-los-budines)
+    + [Resumen del proyecto](#resumen-del-proyecto)
+      - [Tecnologías utilizadas](#tecnolog-as-utilizadas)
+      - [Autores](#autores)
+    + [Módulo de pedido de budines](#m-dulo-de-pedido-de-budines)
+      - [Estructura](#estructura)
+    + [Módulo de administrador](#m-dulo-de-administrador)
+      - [Estructura](#estructura-1)
+    + [Estructuración del codigo](#estructuraci-n-del-codigo)
+      - [Carpeta CSS](#carpeta-css)
+      - [Carpeta js](#carpeta-js)
+      - [Carpeta php](#carpeta-php)
+        * [Subcarpeta admin](#subcarpeta-admin)
+        * [Subcarpeta paginasPedido](#subcarpeta-paginaspedido)
+      - [Carpeta vendor](#carpeta-vendor)
+	  
 ### Resumen del proyecto
 
 El Rincon de los Budines es una aplicación web para pedir budines, la cual parte de una página principal tipo "One Page" y contiene además un módulo de administrador que permite gestionar las variables del proceso de pedido (nombre de productos, foto, precio, etc.) así como descargar la base de datos de pedidos realizados. Es Absolutamente "Responsive designed".
 
 [Acceder a la página](http://sensei.heliohost.us/index.php)
 
-
-*Indice de la documentación*
-
-[TOC]
-
-##### Tecnologías utilizadas
+#### Tecnologías utilizadas
 La parte Front-end de todo el proyecto se ha realizado con HTML, CSS y Javascript puro. Para la parte lógica o Back-end se ha utilizado PHP y algunas librerías específicas.
 
-##### Autores
+#### Autores
 - Leandro Márquez (lnmarquez@gmail.com)
 - Hernan Monsalvo (monsalvo.h@gmail.com)
 
@@ -155,7 +168,7 @@ El código está organizado de la siguiente manera:
 | traerPrecio.php:  | Código para traer los precios de los items elegidos por el usuario, y que aparecerán en la página "total" |
 
 
-##### Carpeta vendor
+#### Carpeta vendor
 
 Se almacenan aquí, todas las librerías que usamos
 
