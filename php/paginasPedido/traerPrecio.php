@@ -1,6 +1,5 @@
-<!-- Código para traer los precios de los items elegidos por el usuario -->
-
 <?php
+//Código para traer los precios de los items elegidos por el usuario
 //funcion que le pasas el producto y en que tabla esta y te trae el precio.
 function traerPrecio($producto, $tabla)
 {

@@ -1,6 +1,5 @@
-<!-- Recibe los datos y los actualiza en la BBD: tablas de productos -->
-
 <?php
+// Recibe los datos y los actualiza en la BBD: tablas de productos
 include("../conexion.php");
 
 if (isset($_POST["editar"])) {

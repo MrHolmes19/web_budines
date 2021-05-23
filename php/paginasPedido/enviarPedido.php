@@ -1,6 +1,5 @@
-<!-- Codigo para guardar datos del pedido a la BBDD y notificacion e-mail -->
-
 <?php 
+// Codigo para guardar datos del pedido a la BBDD y notificacion e-mail
 include("../conexion.php");
 
 //guardo todo lo que viene del formulario en session

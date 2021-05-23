@@ -1,6 +1,5 @@
-<!-- Codigo que llama a la API de MercadoPago al pulsar el boton siguiente -->
-
 <?php
+//Codigo que llama a la API de MercadoPago al pulsar el boton siguiente
 include("../conexion.php");
 
 $sabor = $_SESSION["sabor"];

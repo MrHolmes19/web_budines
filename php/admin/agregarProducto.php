@@ -1,6 +1,5 @@
-<!--Guarda en la BD los datos del nuevo producto cargado-->
-
 <?php
+// Guarda en la BD los datos del nuevo producto cargado
 include("../conexion.php");
 
 if (isset($_POST["agregar"])) {

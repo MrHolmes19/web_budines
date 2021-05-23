@@ -1,6 +1,5 @@
-<!-- Recibe los datos y los actualiza en la BBDD: Tabla pedidos -->
-
 <?php
+// Recibe los datos y los actualiza en la BBDD: Tabla pedidos
 include("../conexion.php");
 
 if (isset($_POST["editar"])) {

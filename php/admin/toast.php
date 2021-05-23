@@ -1,6 +1,5 @@
-<!--Componente del toast (ventana emergente) -->
-
 <?php
+//Componente toast (ventana emergente)
 
 if (!isset($_SESSION["alerta"])) {
     $_SESSION["alerta"] = false;

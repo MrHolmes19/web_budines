@@ -1,16 +1,16 @@
-<!--Mecanismo de seguridad-->
-
-<?php include("../conexion.php");
+<?php
+// Mecanismo de seguridad
+include("../conexion.php");
 if (!isset($_SESSION["admin"])) {
     header("Location: ../../index.html");
 }
 ?>
 
-<!--Pagina de administrador-->
+
 
 <!DOCTYPE html>
 <html lang="en">
-
+<!--Pagina de administrador-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

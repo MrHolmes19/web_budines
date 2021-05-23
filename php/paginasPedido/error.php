@@ -30,7 +30,7 @@
             <img class="warning" src="imagenes/error.png" />
             <div class="error">
                 <h2> <?= $error ?> </h2>
-                <button onclick="window.location.replace('index.html')">Volver al inicio</button>
+                <button onclick="window.location.replace('../../index.html')">Volver al inicio</button>
                 <button onclick="window.location.replace('forma.php')">Pedir otro budin</button>
             </div>
         </article>

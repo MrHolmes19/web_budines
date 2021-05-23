@@ -1,8 +1,6 @@
-<!--Pantalla de administracion de fotos y logica-->
-
-<!--LOGICA-->
-
 <?php
+
+//Pantalla de administracion de fotos y logica
 
 // Trae links y nombre de imagenes de la carpeta
 $lista = null;
@@ -53,11 +51,10 @@ $fotosSinUsoGET = null; //????
 ?>
 
 
-<!--Parte visual HTML-->
 
 <!DOCTYPE html>
 <html lang="en">
-
+<!--Parte visual HTML-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,6 +63,7 @@ $fotosSinUsoGET = null; //????
 </head>
 
 <body>
+
     <section>
         <div>
             <div class="lista">

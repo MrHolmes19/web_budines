@@ -1,6 +1,6 @@
-<!-- Interfaz para la creacion de un nuevo producto -->
-
-<?php include("metodos.php"); ?>
+<?php
+//Interfaz para la creacion de un nuevo producto
+include("metodos.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,6 +1,5 @@
-<!-- Habilitacion de ingreso al menu administrador y logout -->
-
 <?php
+// Habilitacion de ingreso al menu administrador y logout
 //si existe una peticion post[login] guarda user y pass
 if (isset($_POST["login"])) {
 

@@ -1,7 +1,5 @@
-<!-- Comando que elimina registro de la tabla. Se activa a través del botón eliminar -->
-
 <?php
-
+// Comando que elimina registro de la tabla. Se activa a través del botón eliminar
 include("../conexion.php");
 
 $tabla = $_GET["tabla"];

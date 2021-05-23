@@ -1,6 +1,5 @@
-<!-- Administra persistencia de datos del usuario y el ruteo a la pagina correspondiente -->
-
 <?php 
+// Administra persistencia de datos del usuario y el ruteo a la pagina correspondiente
 include("../conexion.php");
 
 //si viene de nombre lo guarda en session y va a FORMA

@@ -1,6 +1,5 @@
-<!--Comando para eliminar las imagenes no utilizadas en los productos -->
-
 <?php
+// Comando para eliminar las imagenes no utilizadas en los productos
 
 $fotos = $_GET["fotos"];
 

@@ -176,7 +176,7 @@ table#total {
 
 table#total tr {
   border-bottom: 0.5px solid rgb(247, 159, 159);
-  line-height: 38px;
+  line-height: 30px;
 }
 
 .cantidad {
