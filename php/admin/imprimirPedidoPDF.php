@@ -1,6 +1,5 @@
-<!--Comando para creacion de PDF del pedido individual -->
-
 <?php
+// Comando para creacion de PDF del pedido individual
 require "../../vendor/autoload.php";
 use Dompdf\Dompdf;
 $pdf = new Dompdf();

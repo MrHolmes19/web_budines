@@ -1,6 +1,6 @@
-<!--Plantilla para posterior impresion en PDF (Tabla entero de pedidos)-->
-
-<?php include("../conexion.php");
+<?php
+// Plantilla para posterior impresion en PDF (Tabla entero de pedidos)
+include("../conexion.php");
 
 $tabla_seleccionada = $_GET["tabla"];
 ?>

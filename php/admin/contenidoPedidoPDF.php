@@ -1,6 +1,6 @@
-<!--Plantilla para posterior impresion en PDF (Comprobante)-->
-
-<?php include("../conexion.php"); ?>
+<?php
+// Plantilla para posterior impresion en PDF (Comprobante)
+include("../conexion.php"); ?>
 <?php include("metodos.php"); ?>
 <?php
 if (isset($_POST["id"])) {
