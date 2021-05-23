@@ -1,5 +1,6 @@
 # El rincon de los budines
-![](https://github.com/MrHolmes19/web_budines/blob/master/imagenes/facebook_icon.png?raw=true)
+![](https://github.com/MrHolmes19/web_budines/blob/master/imagenes/logo.png?raw=true)
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/logo.png?raw=true" width="100">
 
 **Indice de la documentación**
 
