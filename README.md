@@ -30,7 +30,7 @@ El Rincon de los Budines es una aplicación web para pedir budines, la cual part
 La parte Front-end de todo el proyecto se ha realizado con HTML, CSS y Javascript puro. Para la parte lógica o Back-end se ha utilizado PHP y algunas librerías específicas.
 
 #### Autores
-- Leandro Márquez (lnmarquez@gmail.com)
+- Leandro Márquez (lnmarquez19@gmail.com)
 - Hernan Monsalvo (monsalvo.h@gmail.com)
 
 ### Módulo de pedido de budines
