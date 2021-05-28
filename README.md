@@ -170,7 +170,7 @@ El código está organizado de la siguiente manera:
 | traerPrecio.php:  | Código para traer los precios de los items elegidos por el usuario, y que aparecerán en la página "total" |
 
 
-#### Carpeta vendor
+#### Carpeta vendor 
 
 Se almacenan aquí, todas las librerías que usamos
 
