@@ -1,5 +1,5 @@
 # El rincon de los budines
-![](https://github.com/MrHolmes19/web_budines/blob/master/imagenes/logo.png?raw=true)
+![](https://github.com/MrHolmes19/web_budines/blob/master/imagenes/logopg.png?raw=true)
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/logo.png?raw=true" width="100">
 
 **Indice de la documentación**
@@ -24,7 +24,7 @@
 
 El Rincon de los Budines es una aplicación web para pedir budines, la cual parte de una página principal tipo "One Page" y contiene además un módulo de administrador que permite gestionar las variables del proceso de pedido (nombre de productos, foto, precio, etc.) así como descargar la base de datos de pedidos realizados. Es Absolutamente "Responsive designed".
 
-[Acceder a la página](http://sensei.heliohost.us/index.php)
+[Acceder a la página](http://sensei.heliohost.us/index.html)
 
 #### Tecnologías utilizadas
 La parte Front-end de todo el proyecto se ha realizado con HTML, CSS y Javascript puro. Para la parte lógica o Back-end se ha utilizado PHP y algunas librerías específicas.
