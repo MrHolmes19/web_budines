@@ -70,7 +70,7 @@
                     <a href="#"> <img src="../../imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
                 <div class=flecha_siguiente>
-                    <button type="submit" onclick="enviarFormulario()" form="formulario" name="enviar" value="final"> <img src="../../imagenes/flechas/flecha-rosa-siguiente.png" alt="flecha atras"> </button>
+                    <button type="submit" onclick="enviarFormulario()" form="formulario" name="enviar" value="final"> <img src="../../imagenes/flechas/flecha-rosa-ordenar.png" alt="flecha ordenar"> </button>
                 </div>
             </div>
 

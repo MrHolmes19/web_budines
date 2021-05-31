@@ -1,7 +1,7 @@
 <?php
 // Conexion a BBDD
 //cambiar el valor de la variable baseDeDatos para elegir una u otra.
-$baseDeDatos = "remoto";
+$baseDeDatos = "local";
 $conexion;
 
 if ($baseDeDatos == "remoto") {

@@ -25,10 +25,10 @@ if (isset($_POST["login"])) {
     if ($cant > 0) {
         $_SESSION["admin"] = true;
         header("Location: administrador.php");
-
+        
         //sino vuelve a index
     } else {
-        header("Location: ../../index.html");
+       header("Location: ../../index.html");
     }
 }
 

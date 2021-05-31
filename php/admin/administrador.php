@@ -45,22 +45,22 @@ if (!isset($_SESSION["admin"])) {
                 <?php
                 if (isset($_POST["formTabla"])) {
                     $item_seleccionado = $_POST["tablas"]; //quitar
-                    $listaTablas = array('', 'sabores_clasicos', 'sabores_especiales', 'preciosagregados', 'precioscoberturas', 'Pedidos');
+                    $listaTablas = array('', 'sabores_clasicos', 'sabores_especiales', 'preciosagregados', 'precioscoberturas', 'pedidos');
                     $tabla_seleccionada = $listaTablas[$_POST['tablas']];
                     $_SESSION["tablaSeleccionada"] = $tabla_seleccionada;
                 } else {
                     if (isset($_SESSION["tablaSeleccionada"])) {
                         $tabla_seleccionada = $_SESSION["tablaSeleccionada"];
                     } else {
-                        $tabla_seleccionada = "Pedidos";
+                        $tabla_seleccionada = "pedidos";
                     }
                 }
                 ?>
 
-                <!-----Tabla dinamica----->
+                
 
                 <div class="contenedor-tabla">
-                    <table id="dinamica">
+                    <table id="dinamica"><!-----Tabla dinamica----->
 
 
                         <caption> Tabla de <?php echo $tabla_seleccionada ?></caption>
