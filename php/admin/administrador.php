@@ -124,7 +124,7 @@ if (!isset($_SESSION["admin"])) {
                     <?php if ($tabla_seleccionada != "Pedidos") { ?>
                         <div class="boton"> <input type="submit" class="" id="btn-nuevo" value="Nuevo Producto" onclick="window.location.replace('nuevoProducto.php?tabla=<?php echo $tabla_seleccionada ?>')"> </div>
                     <?php }
-                    if ($tabla_seleccionada == "Pedidos") { ?>
+                    if ($tabla_seleccionada == "pedidos") { ?>
                         <div class="boton"> <input type="submit" class="" id="btn-reportepdf" value="Reporte PDF" onclick="window.open('imprimirTablaPDF.php?tabla=<?php echo $tabla_seleccionada ?>', '_blank')"> </div>
                         <div class="boton"> <input type="submit" class="" id="btn-reporteecxel" onclick="tableToExcel('dinamica')" value="Reporte Excel"> </div>
                     <?php } ?>

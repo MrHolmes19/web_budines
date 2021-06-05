@@ -106,11 +106,6 @@ table {
   overflow: auto;
 }
 
-table tr.fijo {
-  /*   position: fixed;
-  top: 150px; */
-}
-
 table tr th {
   padding: 2px 2px;
   text-align: center; /*Igual se centran solas*/
@@ -123,11 +118,6 @@ table tr td {
   padding: 2px 2px;
   text-align: center;
   border: 1px solid #000;
-}
-
-table thead tr {
-  /*position: relative;
-  display: block;*/
 }
 
 table tbody {

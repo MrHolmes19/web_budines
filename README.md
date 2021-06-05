@@ -6,13 +6,13 @@
 
 - [El rincon de los budines](#el-rincon-de-los-budines)
     + [Resumen del proyecto](#resumen-del-proyecto)
-      - [Tecnologías utilizadas](#tecnolog-as-utilizadas)
+      - [Tecnologias utilizadas](#tecnologias-utilizadas)
       - [Autores](#autores)
-    + [Módulo de pedido de budines](#m-dulo-de-pedido-de-budines)
-      - [Estructura](#estructura)
-    + [Módulo de administrador](#m-dulo-de-administrador)
-      - [Estructura](#estructura-1)
-    + [Estructuración del codigo](#estructuraci-n-del-codigo)
+    + [Modulo de pedido de budines](#modulo-de-pedido-de-budines)
+      - [Estructura visual](#estructura-visual)
+    + [Modulo de administrador](#modulo-de-administrador)
+      - [Estructura visual](#estructura-visual1)
+    + [Estructuracion del codigo y archivos](#estructuracion-del-codigo)
       - [Carpeta CSS](#carpeta-css)
       - [Carpeta js](#carpeta-js)
       - [Carpeta php](#carpeta-php)
@@ -33,13 +33,13 @@ La parte Front-end de todo el proyecto se ha realizado con HTML, CSS y Javascrip
 - Leandro Márquez (lnmarquez19@gmail.com)
 - Hernan Monsalvo (monsalvo.h@gmail.com)
 
-### Módulo de pedido de budines
+### Modulo de pedido de budines
 
 Este módulo permite realizar un pedido personalizado del producto. Se accede al mismo desde la página principal, presionando el botón "Hace tu pedido", que figura en el encabezado.
 
 
 
-#### Estructura
+#### Estructura visual
 
 El módulo de pedido de budines consta de las siguientes etapas (O páginas), resumidas en un menú:
 
@@ -56,11 +56,11 @@ El módulo de pedido de budines consta de las siguientes etapas (O páginas), re
 
 En todo momento el usuario puede, desde el menú, volver a cualquier página hacia atrás para modificar su elección. Solo puede ir hacia adelante si previamente completó los pasos intermedios.
 
-### Módulo de administrador
+### Modulo de administrador
 
 Este módulo, de uso exclusivo para el propietario del sitio, permite gestionar la información que se muestra en el módulo de pedido, como asi tambien sacar reportes. Se accede al mismo desde la página principal, yendo hacia abajo de todo y presionando el botón "Ingresar como administrador" (Las credenciales de ingreso aparecen completas por defecto).
 
-#### Estructura
+#### Estructura visual
 
 Este módulo tiene una pantalla principal que permite seleccionar cualquiera de las siguientes tablas:
 
@@ -81,7 +81,7 @@ Además, en función de la tabla elegida, aparecen botones con distintas opcione
 Las opciones de agregar o modificar, permiten interactuar con los atributos del producto: nombre, precio y foto. En el caso particular de "Sabor" permite adicionalmente indicar cantidad de agregados permitidos, si admite cobertura y si está disponible.
 
 
-### Estructuración del codigo
+### Estructuracion del codigo y archivos
 
 El código está organizado de la siguiente manera:
 
