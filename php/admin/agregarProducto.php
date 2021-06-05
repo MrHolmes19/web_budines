@@ -17,7 +17,7 @@ if (isset($_POST["agregar"])) {
     $tamaño_imagen=$_FILES ['imagen']['size']; //Tamaño de la imagen
     
     //Se colocan las limitaciones de los archivos que se suben
-    if($tamaño_imagen<=2000000){    // = a 2 mb
+    if($tamaño_imagen<=5000000){    // = a 5 mb
         if($tipo_imagen="image/jpg" || $tipo_imagen="image/jpeg" || $tipo_imagen="image/png"){
     
     //Se le indica la ruta donde se guardará la imagen en servidor

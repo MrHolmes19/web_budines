@@ -50,10 +50,10 @@ if ($_SESSION["formaPago"] != "Mercado Pago" or isset($_GET["status"])) {
         $Agregado1 = $_SESSION["agregado1"];
     }
     if ($n > 1) {
-        $Agregado2 = $_SESSION["agregado1"];
+        $Agregado2 = $_SESSION["agregado2"];
     }
     if ($n > 2) {
-        $Agregado3 = $_SESSION["agregado1"];
+        $Agregado3 = $_SESSION["agregado3"];
     }
 
     if (isset($_SESSION["cobertura"])) {

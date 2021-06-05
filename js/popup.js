@@ -10,14 +10,16 @@ var btnAbrirPopup2 = document.getElementById('btn-abrir-popup'),
     margenWrap = document.getElementById('wrap'),
     imagen = document.querySelector('#img-popup'),
     titulo = document.querySelector('#titulo-popup');
+    var titulo_foto;
     
 // Funcion para abrir ventana emergente (Es llamada por cada botón, y pasa los respectivos parametros)
 function abrirPopup(nombre_foto, titulo_foto, e){
     e = e || window.event; //capturo el evento
     e.preventDefault(); //evita que envie el formulario
+    this.titulo_foto = titulo_foto;
     imagen.setAttribute('src','../../imagenes/img_subidas/'+nombre_foto); //Modifica la url de la img para que tome la que se mandó como atributo 
-    //titulo.innerHTML = 'Budin de '+titulo_foto; //Cambia el titulo de la imagen (Funciona)
-    titulo.textContent = 'Budin de '+titulo_foto; //Cambia el titulo de la imagen (Otra forma de hacerlo)
+    //titulo.innerHTML = titulo_foto; //Cambia el titulo de la imagen (Funciona)
+    titulo.textContent = titulo_foto; //Cambia el titulo de la imagen (Otra forma de hacerlo)
     overlay.classList.add('active');
     popup.classList.add('active');
     if(mediaQuery.matches) {         //Si se produce la media query min-width 1028
@@ -25,15 +27,21 @@ function abrirPopup(nombre_foto, titulo_foto, e){
     } else{       
     }
     // Funcion para marcar el radiobutton activo (Dentro de la funcion abrir popup para que aproveche el parametro titulo_foto)
-    btnElegir.addEventListener('click',function(){
-        var titulo_foto2 = titulo_foto.replaceAll(' ','_'); //Para que matchee con el ID de cada radiobutton cuando hay palabras espaciadas
-        document.querySelector('#'+titulo_foto2).checked = true; //selecciona el check de ese sabor
-        overlay.classList.remove('active'); //Cierra la ventana emergente luego de seleccionar
-        popup.classList.remove('active');    
-        margenWrap.classList.remove('wrapConPopup'); //remueve la clase wrapConPopup para que devuelva el article al medio
-    });
+    
+    btnElegir.removeEventListener('click', seleccionarItem); // quita el evento anterior para no acumular eventlistener
+
+    btnElegir.addEventListener('click', seleccionarItem); //agrega el evento para seleccionar item
     
 };
+
+//funcion para elegir el item de la vista previa actual
+function seleccionarItem(){
+    let titulo_foto2 = titulo_foto.replaceAll(' ','_'); //Para que matchee con el ID de cada radiobutton cuando hay palabras espaciadas
+    document.querySelector('#'+titulo_foto2).checked = true; //selecciona el check de ese sabor
+    overlay.classList.remove('active'); //Cierra la ventana emergente luego de seleccionar
+    popup.classList.remove('active');    
+    margenWrap.classList.remove('wrapConPopup'); //remueve la clase wrapConPopup para que devuelva el article al medio
+}
 
 // Funcion para cerrar ventana emergente
 btnCerrarPopup.addEventListener('click',function(){
