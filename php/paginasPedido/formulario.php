@@ -67,10 +67,10 @@
         <footer>
             <div class="flechas">
                 <div class=flecha_atras>
-                    <a href="#"> <img src="../../imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
+                    <a href="#"> <img src="../../imagenes/flechas/Flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
                 <div class=flecha_siguiente>
-                    <button type="submit" onclick="enviarFormulario()" form="formulario" name="enviar" value="final"> <img src="../../imagenes/flechas/flecha-rosa-ordenar.png" alt="flecha ordenar"> </button>
+                    <button type="submit" onclick="enviarFormulario()" form="formulario" name="enviar" value="final"> <img src="../../imagenes/flechas/Flecha-rosa-ordenar.png" alt="flecha ordenar"> </button>
                 </div>
             </div>
 

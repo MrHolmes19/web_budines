@@ -95,7 +95,7 @@
         <footer>
             <div class="flechas">
                 <div class=flecha_atras>
-                    <a href="#"> <img src="../../imagenes/flechas/flecha-rosa-atras.png" alt="flecha atras"> </a>
+                    <a href="#"> <img src="../../imagenes/flechas/Flecha-rosa-atras.png" alt="flecha atras"> </a>
                 </div>
 
                 <div class=flecha_siguiente>
