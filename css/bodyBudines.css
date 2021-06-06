@@ -46,7 +46,7 @@ h3 {
 /*-------------------Nombre----------------------*/
 article.nombre {
   min-height: calc(100vh - 43px);
-  background-image: url("../imagenes/fondos/Ventana2.png");
+  background-image: url("../imagenes/Fondos/Ventana2.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
