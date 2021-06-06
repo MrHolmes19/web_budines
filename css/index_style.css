@@ -230,7 +230,7 @@ p {
 
 /*Coloca la foto de fondo y la centra*/
 #hero {
-  background-image: url(../imagenes/Fondos/fondo.jpg);
+  background-image: url(../imagenes/fondos/fondo.jpg);
   background-size: cover;
   background-position: top center;
   position: relative;

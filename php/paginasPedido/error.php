@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../css/bodyBudines.css">
     <link rel="stylesheet" href="../../css/footerBudines.css">
     <link rel="stylesheet" href="../../fonts.css">
-    <link rel="icon" href="../../Imagenes/icono.png" type="image/png">
+    <link rel="icon" href="../../imagenes/icono.png" type="image/png">
 
 </head>
 
