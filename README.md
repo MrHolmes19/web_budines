@@ -74,7 +74,7 @@ En todo momento el usuario puede, desde el menú, volver a cualquier página hac
 
 En las secciones de selección de sabores, agregados y coberturas, es posible ver una vista previa de los productos y seleccionarlos desde allí:
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPrevia.png?raw=true" width="600"> <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPreviaMobile.png?raw=true" width="220">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPrevia.png?raw=true" width="600"> <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPreviaMobile.png?raw=true" width="210">
 
 #### Opciones de pago
 
@@ -103,7 +103,7 @@ El mismo se imprime en pdf y se abre automáticamente
 Este módulo, de uso exclusivo para el propietario del sitio, permite gestionar la información que se muestra en el módulo de pedido, como asi tambien sacar reportes. 
 Se accede al mismo desde la página principal, yendo hacia abajo de todo y presionando el botón "Ingresar como administrador" (Las credenciales de ingreso aparecen completas por defecto).
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/accesoAdmin.png?raw=true" width="800">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/accesoAdmin.png?raw=true" width="500">
 
 #### Estructura visual
 
