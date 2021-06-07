@@ -47,7 +47,7 @@ Esta aplicación web fue pensado "First mobile" para el módulo de pedido y "fir
 
 ### Modulo de pedido de budines
 
-Este módulo permite realizar un pedido personalizado del producto. Se accede al mismo desde la página principal, presionando el botón "Hace tu pedido", que figura en el encabezado.
+Este módulo permite realizar un pedido personalizado del producto. Se accede al mismo desde la página principal, presionando el botón "Hace tu pedido", que figura en el encabezado. [**ACCEDER AL MODULO PEDIDOS**](https://web-budines.herokuapp.com/php/paginasPedido/login.php)
 
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/AccesoPedidos.png?raw=true" width="800">
 
