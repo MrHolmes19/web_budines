@@ -11,9 +11,9 @@
       - [Criterio de diseño](#criterio-de-dise-o)
     + [Modulo de pedido de budines](#modulo-de-pedido-de-budines)
       - [Estructura visual](#estructura-visual)
-        * [Vista previa](#vista-previa)
-        * [Opciones de pago](#opciones-de-pago)
-        * [Impresion de comprobante](#impresion-de-comprobante)
+      - [Vista previa](#vista-previa)
+      - [Opciones de pago](#opciones-de-pago)
+      - [Impresion de comprobante](#impresion-de-comprobante)
     + [Modulo de administrador](#modulo-de-administrador)
       - [Estructura visual](#estructura-visual-1)
     + [Estructuracion del codigo y archivos](#estructuracion-del-codigo-y-archivos)
@@ -28,8 +28,8 @@
 
 El Rincon de los Budines es una aplicación web para pedir budines, la cual parte de una página principal tipo "One Page" y contiene además un módulo de administrador que permite gestionar las variables del proceso de pedido (nombre de productos, foto, precio, etc.) así como descargar la base de datos de pedidos realizados. 
 
-<p align="center" font-size="500"> 
->>>>>>>>>> [Acceder a la página](https://web-budines.herokuapp.com/) <<<<<<<<<<< </p>
+<p align="center"> 
+**>>>>>>>> [ACCEDER A LA APLICACION](https://web-budines.herokuapp.com/)** </p>
 
 #### Autores
 - Leandro Márquez (lnmarquez19@gmail.com)
@@ -48,11 +48,11 @@ Esta aplicación web fue pensado "First mobile" para el módulo de pedido y "fir
 
 Este módulo permite realizar un pedido personalizado del producto. Se accede al mismo desde la página principal, presionando el botón "Hace tu pedido", que figura en el encabezado.
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/AccesoPedidos.png?raw=true" width="600">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/AccesoPedidos.png?raw=true" width="800">
 
 #### Estructura visual
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/Ventana_Inicio.png?raw=true" width="500">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/Ventana_Inicio.png?raw=true" width="800">
 
 El módulo de pedido de budines consta de las siguientes etapas (O páginas), resumidas en un menú:
 
@@ -69,32 +69,32 @@ El módulo de pedido de budines consta de las siguientes etapas (O páginas), re
 
 En todo momento el usuario puede, desde el menú, volver a cualquier página hacia atrás para modificar su elección. Solo puede ir hacia adelante si previamente completó los pasos intermedios.
 
-##### Vista previa
+#### Vista previa
 
 En las secciones de selección de sabores, agregados y coberturas, es posible ver una vista previa de los productos y seleccionarlos desde allí:
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPrevia.png?raw=true" width="400"> <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPreviaMobile.png?raw=true" width="200">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPrevia.png?raw=true" width="600"> <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPreviaMobile.png?raw=true" width="200">
 
-##### Opciones de pago
+#### Opciones de pago
 
 En la sección de "Datos", es posible elegir 3 formas de pago distintas: Efectivo, transferencia bancaria o mercado pago.
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/Ventana_formulario.png?raw=true" width="500">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/Ventana_formulario.png?raw=true" width="800">
 
 Al seleccionar mercado pago, la aplicacion redirige al módulo de pago de esta plataforma.
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/Ventana_mercadopago.png?raw=true" width="500">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/Ventana_mercadopago.png?raw=true" width="800">
 
 
-##### Impresion de comprobante
+#### Impresion de comprobante
 
 En la ventana de despedida, tras seleccionar la opcion correspondinte, es posible obtener un comprobante de compra.
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/ventana_despedida.png?raw=true" width="500">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/ventana_despedida.png?raw=true" width="800">
 
 El mismo se imprime en pdf y se abre automáticamente
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/pdf_comprobante.png?raw=true" width="500">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/pdf_comprobante.png?raw=true" width="800">
 
 
 ### Modulo de administrador
@@ -102,7 +102,7 @@ El mismo se imprime en pdf y se abre automáticamente
 Este módulo, de uso exclusivo para el propietario del sitio, permite gestionar la información que se muestra en el módulo de pedido, como asi tambien sacar reportes. 
 Se accede al mismo desde la página principal, yendo hacia abajo de todo y presionando el botón "Ingresar como administrador" (Las credenciales de ingreso aparecen completas por defecto).
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/accesoAdmin.png?raw=true" width="400">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/accesoAdmin.png?raw=true" width="800">
 
 #### Estructura visual
 
@@ -115,7 +115,7 @@ Este módulo tiene una pantalla principal que permite seleccionar cualquiera de 
 
 Al final de cada fila de cada tabla hay 2 iconos, que permiten ya sea editar la información o eliminar el registro completo.
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/admin_boton_editar.png?raw=true" width="400">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/admin_boton_editar.png?raw=true" width="800">
 
 Además, en función de la tabla elegida, aparecen botones con distintas opciones, a saber:
 
@@ -124,12 +124,12 @@ Además, en función de la tabla elegida, aparecen botones con distintas opcione
 + Agregar línea
 + Modificar
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/administrador_pedidos.png?raw=true" width="400">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/administrador_pedidos.png?raw=true" width="800">
 
 
 Las opciones de agregar o modificar, permiten interactuar con los atributos del producto: nombre, precio y foto. En el caso particular de "Sabor" permite adicionalmente indicar cantidad de agregados permitidos, si admite cobertura y si está disponible.
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/edicionAdministrador.png?raw=true" width="400">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/edicionAdministrador.png?raw=true" width="800">
 
 
 ### Estructuracion del codigo y archivos
