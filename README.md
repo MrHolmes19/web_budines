@@ -28,7 +28,9 @@
 
 El Rincon de los Budines es una aplicación web para pedir budines, la cual parte de una página principal tipo "One Page" y contiene además un módulo de administrador que permite gestionar las variables del proceso de pedido (nombre de productos, foto, precio, etc.) así como descargar la base de datos de pedidos realizados. 
 
+--------------------------------------------------------------------
 [**ACCEDER A LA APLICACION**](https://web-budines.herokuapp.com/)
+--------------------------------------------------------------------
 
 #### Autores
 - Leandro Márquez (lnmarquez19@gmail.com)
