@@ -1,6 +1,6 @@
 # El rincon de los budines
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/logo.png?raw=true" width="150" align="center">
+<p align="center"> <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/logo.png?raw=true" width="150" align="center"> </p>
 
 **Indice de la documentación**
 
@@ -74,7 +74,7 @@ En todo momento el usuario puede, desde el menú, volver a cualquier página hac
 
 En las secciones de selección de sabores, agregados y coberturas, es posible ver una vista previa de los productos y seleccionarlos desde allí:
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPrevia.png?raw=true" width="600"> <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPreviaMobile.png?raw=true" width="200">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPrevia.png?raw=true" width="600"> <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPreviaMobile.png?raw=true" width="220">
 
 #### Opciones de pago
 
