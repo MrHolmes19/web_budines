@@ -1,6 +1,6 @@
 # El rincon de los budines
 
-<p align="center"> <img src="https://github.com/MrHolmes19/web_puddings/blob/master/imagenes/logo.png?raw=true" width="150" align="center"> </p>
+<p align="center"> <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/logo.png?raw=true" width="150" align="center"> </p>
 
 **Documentation index**
 
@@ -48,7 +48,7 @@ This web application was designed "First mobile" for the order module and "first
 
 This module allows you to place a custom order for the product. It is accessed from the main page, by pressing the "Place your order" button, which appears in the header. [**ACCESS THE ORDERS MODULE**](https://web-budines.herokuapp.com/php/paginasPedido/login.php)
 
-<img src="https://github.com/MrHolmes19/web_puddings/blob/master/imagenes/readme/AccesoPedidos.png?raw=true" width="800">
+<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/AccesoPedidos.png?raw=true" width="800">
 
 #### Visual structure
 
