@@ -33,7 +33,7 @@ El Rincon de los Budines is a web application for ordering puddings, which start
 
 #### Authors
 - Leandro Marquez (lnmarquez19@gmail.com)
--Hernan Monsalvo (monsalvo.h@hotmail.com)
+- Hernan Monsalvo (monsalvo.h@hotmail.com)
 
 #### Used technology
 The Front-end part of the whole project has been made with HTML, CSS and pure Javascript. For the logical part or Back-end, PHP and some specific libraries have been used.
