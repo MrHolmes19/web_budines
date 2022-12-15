@@ -1,234 +1,233 @@
 # El rincon de los budines
 
-<p align="center"> <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/logo.png?raw=true" width="150" align="center"> </p>
+<p align="center"> <img src="https://github.com/MrHolmes19/web_puddings/blob/master/imagenes/logo.png?raw=true" width="150" align="center"> </p>
 
-**Indice de la documentación**
+**Documentation index**
 
 - [El rincon de los budines](#el-rincon-de-los-budines)
-    + [Resumen del proyecto](#resumen-del-proyecto)
-      - [Autores](#autores)
-      - [Tecnologías utilizadas](#tecnolog-as-utilizadas)
-      - [Criterio de diseño](#criterio-de-dise-o)
-    + [Modulo de pedido de budines](#modulo-de-pedido-de-budines)
-      - [Estructura visual](#estructura-visual)
-      - [Vista previa](#vista-previa)
-      - [Opciones de pago](#opciones-de-pago)
-      - [Impresion de comprobante](#impresion-de-comprobante)
-    + [Modulo de administrador](#modulo-de-administrador)
-      - [Estructura visual](#estructura-visual-1)
+    + [Project summary](#resumen-del-proyecto)
+      - [Authors](#autores)
+      - [Technologies used](#tecnolog-as-utilizadas)
+      - [Design criteria](#criterio-de-dise-o)
+    + [Puddings order module](#modulo-de-pedido-de-budines)
+      - [Layout](#estructura-visual)
+      - [Preview](#vista-previa)
+      - [Payment options](#opciones-de-pago)
+      - [Print receipt](#impresion-de-comprobante)
+    + [Admin dashboard](#modulo-de-administrador)
+      - [Layout](#estructura-visual-1)
     + [Estructuracion del codigo y archivos](#estructuracion-del-codigo-y-archivos)
-      - [Carpeta CSS](#carpeta-css)
-      - [Carpeta js](#carpeta-js)
-      - [Carpeta php](#carpeta-php)
-        * [Subcarpeta admin](#subcarpeta-admin)
-        * [Subcarpeta paginasPedido](#subcarpeta-paginaspedido)
-      - [Carpeta vendor](#carpeta-vendor)
+      - [Styles folder (CSS)](#carpeta-css)
+      - [Interaction folder (JS)](#carpeta-js)
+      - [Logic folder (PHP)](#carpeta-php)
+        * [admin subfolder](#subcarpeta-admin)
+        * [order pages subfolder](#subcarpeta-paginaspedido)
+      - [vendor folder](#carpeta-vendor)
 
 ### Resumen del proyecto
 
-El Rincon de los Budines es una aplicación web para pedir budines, la cual parte de una página principal tipo "One Page" y contiene además un módulo de administrador que permite gestionar las variables del proceso de pedido (nombre de productos, foto, precio, etc.) así como descargar la base de datos de pedidos realizados. 
-
+El Rincon de los Budines is a web application for ordering puddings, which starts from a "One Page" main page and also contains an administrator module that allows you to manage the variables of the ordering process (name of products, photo, price, etc.) as well as download the database of orders placed.
 --------------------------------------------------------------------
-[**ACCEDER A LA APLICACION**](https://web-budines.herokuapp.com/)
+[**ACCESS THE APPLICATION**](https://web-budines.herokuapp.com/)   (momentaneously down)
 --------------------------------------------------------------------
 
-#### Autores
-- Leandro Márquez (lnmarquez19@gmail.com)
-- Hernan Monsalvo (monsalvo.h@hotmail.com)
+#### Authors
+- Leandro Marquez (lnmarquez19@gmail.com)
+-Hernan Monsalvo (monsalvo.h@hotmail.com)
 
-#### Tecnologías utilizadas
-La parte Front-end de todo el proyecto se ha realizado con HTML, CSS y Javascript puro. Para la parte lógica o Back-end se ha utilizado PHP y algunas librerías específicas.
+#### Used technology
+The Front-end part of the whole project has been made with HTML, CSS and pure Javascript. For the logical part or Back-end, PHP and some specific libraries have been used.
 
-#### Criterio de diseño
-Esta aplicación web fue pensado "First mobile" para el módulo de pedido y "first desktop" para el módulo de administrador, aunque ambas son "responsive designed"
+#### Design criteria
+This web application was designed "First mobile" for the order module and "first desktop" for the administrator module, although both are "responsive designed"
 
 ![](https://github.com/MrHolmes19/web_budines/blob/master/imagenes/indexDesktop.png?raw=true) <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/indexMobile.png?raw=true" width="200">
 
 
-### Modulo de pedido de budines
+### Pudding order module
 
-Este módulo permite realizar un pedido personalizado del producto. Se accede al mismo desde la página principal, presionando el botón "Hace tu pedido", que figura en el encabezado. [**ACCEDER AL MODULO PEDIDOS**](https://web-budines.herokuapp.com/php/paginasPedido/login.php)
+This module allows you to place a custom order for the product. It is accessed from the main page, by pressing the "Place your order" button, which appears in the header. [**ACCESS THE ORDERS MODULE**](https://web-budines.herokuapp.com/php/paginasPedido/login.php)
 
-<img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/AccesoPedidos.png?raw=true" width="800">
+<img src="https://github.com/MrHolmes19/web_puddings/blob/master/imagenes/readme/AccesoPedidos.png?raw=true" width="800">
 
-#### Estructura visual
+#### Visual structure
 
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/Ventana_Inicio.png?raw=true" width="800">
 
-El módulo de pedido de budines consta de las siguientes etapas (O páginas), resumidas en un menú:
+The pudding order module consists of the following stages (or pages), summarized in a menu:
 
-| Páginas  | Función |
+| Pages | Function |
 | ------------- | ------------- |
-| Login  | Pide al usuario que introduzca su nombre |
-| Forma  | Consulta al usuario la presentación de su budín (Rectangular o circular) |
-| sabor  | Permite al usuario que elija un solo sabor de la lista, y tiene la opción de mostrar una vista previa con información de cada uno (foto y descripción)  |
-| Agregados  | Permite al usuario elegir agregados extra para el relleno del budín. La cantidad es limitada y depende del sabor del budín elegido previamente. También cuenta con vista previa.  |
-| Cobertura  | Permite al usuario elegir una cobertura sobre el budín. Solo se permita una, aunque algunos sabores no lo permiten y saltean este paso. También cuenta con vista previa |
-| Resumen del pedido  | Muestra al usuario el resumen de su elección, asi como el precio total, y da la posibilidad de pedir más de 1 unidad.   |
-| Formulario de datos  | Solicita al usuario información para realizar el envío: Que fecha lo requiere, cual es la dirección de entrega, con que medios de pago desea abonar (incorpora mercado pago), y un campo de comentarios para expresarse libremente.  |
-| Ventana despedida  | Agradece la compra y permite al usuario volver al inicio para pedir otro budín, volver a la pagina principal o descargar su comprobante de compra. |
+| login | Asks the user to enter her name |
+| Shape | Ask the user the presentation of his pudding (Rectangular or circular) |
+| taste | Allows the user to choose a single flavor from the list, and has the option to show a preview with information for each one (photo and description) |
+| Aggregates | Allows the user to choose extra additions for the pudding filling. The quantity is limited and depends on the flavor of the previously chosen pudding. It also has a preview. |
+| Coverage | Allows the user to choose a topping on the pudding. Only one is allowed, although some flavors do not allow it and skip this step. Also features preview |
+| Order Summary | It shows the user the summary of his choice, as well as the total price, and gives the possibility of ordering more than 1 unit. |
+| Data form | It asks the user for information to make the shipment: What date is required, what is the delivery address, what means of payment do you want to pay with (incorporates payment market), and a comment field to express yourself freely. |
+| Fired window | It thanks the purchase and allows the user to return to the beginning to order another pudding, return to the main page or download their proof of purchase. |
 
-En todo momento el usuario puede, desde el menú, volver a cualquier página hacia atrás para modificar su elección. Solo puede ir hacia adelante si previamente completó los pasos intermedios.
+At any time the user can, from the menu, go back to any page to modify his choice. You can only go forward if you have previously completed the intermediate steps.
 
-#### Vista previa
+#### Preview
 
-En las secciones de selección de sabores, agregados y coberturas, es posible ver una vista previa de los productos y seleccionarlos desde allí:
+In the sections for selecting flavors, aggregates and toppings, it is possible to see a preview of the products and select them from there:
 
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPrevia.png?raw=true" width="600"> <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/vistaPreviaMobile.png?raw=true" width="210">
 
-#### Opciones de pago
+#### Payment options
 
-En la sección de "Datos", es posible elegir 3 formas de pago distintas: Efectivo, transferencia bancaria o mercado pago.
+In the "Data" section, it is possible to choose 3 different forms of payment: Cash, bank transfer or market payment.
 
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/Ventana_formulario.png?raw=true" width="800">
 
-Al seleccionar mercado pago, la aplicacion redirige al módulo de pago de esta plataforma.
+When selecting payment market, the application redirects to the payment module of this platform.
 
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/Ventana_mercadopago.png?raw=true" width="800">
 
 
-#### Impresion de comprobante
+#### Print receipt
 
-En la ventana de despedida, tras seleccionar la opcion correspondinte, es posible obtener un comprobante de compra.
+In the farewell window, after selecting the corresponding option, it is possible to obtain a proof of purchase.
 
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/ventana_despedida.png?raw=true" width="800">
 
-El mismo se imprime en pdf y se abre automáticamente
+It is printed in pdf and opens automatically
 
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/pdf_comprobante.png?raw=true" width="800">
 
 
-### Modulo de administrador
+### Admin module
 
-Este módulo, de uso exclusivo para el propietario del sitio, permite gestionar la información que se muestra en el módulo de pedido, como asi tambien sacar reportes. 
-Se accede al mismo desde la página principal, yendo hacia abajo de todo y presionando el botón "Ingresar como administrador" (Las credenciales de ingreso aparecen completas por defecto).
+This module, for the exclusive use of the site owner, allows managing the information displayed in the order module, as well as getting reports.
+It is accessed from the main page, by going to the bottom of everything and pressing the "Login as administrator" button (Login credentials appear complete by default).
 
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/accesoAdmin.png?raw=true" width="500">
 
-#### Estructura visual
+#### Layout
 
-Este módulo tiene una pantalla principal que permite seleccionar cualquiera de las siguientes tablas:
+This module has a main screen that allows you to select any of the following tables:
 
-+ Sabores de budín
-+ Agregados extra
-+ Coberturas
-+ Pedidos
++ Pudding flavors
++ extra additions
++ Coverage
++ Orders
 
-Al final de cada fila de cada tabla hay 2 iconos, que permiten ya sea editar la información o eliminar el registro completo.
+At the end of each row of each table there are 2 icons, which allow you to either edit the information or delete the entire record.
 
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/admin_boton_editar.png?raw=true" width="800">
 
-Además, en función de la tabla elegida, aparecen botones con distintas opciones, a saber:
+In addition, depending on the chosen table, buttons with different options appear, namely:
 
-+ Generar reporte Pdf
-+ Generar reporte en Excel
-+ Agregar línea
-+ Modificar
++ Generate Pdf report
++ Generate report in Excel
++ add line
++ modify
 
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/administrador_pedidos.png?raw=true" width="800">
 
 
-Las opciones de agregar o modificar, permiten interactuar con los atributos del producto: nombre, precio y foto. En el caso particular de "Sabor" permite adicionalmente indicar cantidad de agregados permitidos, si admite cobertura y si está disponible.
+The options to add or modify, allow you to interact with the attributes of the product: name, price and photo. In the particular case of "Flavor" it also allows the indication of the quantity of aggregates allowed, if it admits coverage and if it is available.
 
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/edicionAdministrador.png?raw=true" width="800">
 
 
-### Estructuracion del codigo y archivos
+### Structuring the code and files
 
-El código está organizado de la siguiente manera:
+The code is organized as follows:
 
-#### Carpeta CSS
+#### CSS Folder
 
-| Archivo  | Funcionalidad |
+| Archive | Functionality |
 | -------------: | ------------- |
-| administrador_tablas.css:  | Pide al usuario que introduzca su nombre |
-| animaciones.css:  | Contiene el código para las distintas animaciones (Menú administrador, botones de vista previa, ventana de despedida) |
-| bodyBudines.css:  | Contiene el estilo del cuerpo de cada página del módulo de pedido |
-| estiloPDF_pedidos.css  | Estilo del pdf que se puede imprimir desde el botón “reporte en pdf” desde el módulo de administrador. |
-| footerBudines.css:   | Contiene las flechas y el pie de página de cada página del módulo de pedido |
-| headerBudines.css: | Contiene el estilo del menú de cada página del módulo de pedido |
-| index_style.css: | Contiene el estilo de la página principal |
-| estiloGestorImg.css: | Estilos de archivos.php, que es el gestor de imágenes dentro de administracion |
+| administrador_tablas.css: | Asks the user to enter her name |
+| animaciones.css: | Contains the code for the different animations (Administrator menu, preview buttons, goodbye window) |
+| bodyBudines.css: | Contains the style of the body of each page of the order module |
+| estiloPDF_pedidos.css | PDF style that can be printed from the "pdf report" button from the administrator module. |
+| footerBudines.css: | Contains the arrows and the footer of each page of the order module |
+| headerBudines.css: | Contains the style of the menu for each page of the order module |
+| index_style.css: | Contains the style of the main page |
+| estiloGestorImg.css: | File styles.php, which is the image manager within administration |
 
 
-#### Carpeta js
+#### js folder
 
-| Archivo  | Funcionalidad |
+| File | Functionality |
 | -------------: | ------------- |
-| contador.js:  | Contiene la lógica de suma y resta de cantidad de budines en la pagina "total.php". Además redirecciona a guarda_eleccion.php enviándole la cantidad y precio total para que lo almacene |
-| eliminar.js:  | Configuración de la ventana de alerta, que aparece luego de intentar eliminar un registro, desde la ventana de administrador |
-| fechas.js:  | Contiene la lógica para establecer fecha mínima y máxima de entrega en la página formulario.php |
-| flechaAtras.js:  | Obtiene la ruta a donde se tiene que dirigir luego de pulsar el botón de volver, en cualquier de las paginas de Pedido. Se centralizó en este archivo para simplificar código, al no replicarlo en cada página y hacerlo más fácilmente mantenible |
-| footer.js:  | Modifica el texto del copyright ajustándolo según el ancho de la pantalla del dispositivo |
-| Index.js:  | Da funcionalidad al menú tipo hamburguesa de la página principal (index.php), permitiendo: 1) desplazar la pantalla al cliquear sobre él o sobre alguno de los enlaces, 2) manteniendo el encabezado fijo al scrollear |
-| Jquery-3.5.1.min.js:  | Se descarga esta versión de Jquery, para tenerlo fijo |
-| listaDesplegable.js:  | Envía la selección de la lista desplegable, en el menú de administrador, para que posteriormente cargue la tabla correspondiente a esa selección |
-| menu.js:  | Da funcionalidad al menú del modulo de pedido, logrando que 1) se desplace la pantalla mostrando u ocultando las opciones, 2) eliminando el estilo de hamburguesa cuando el tamaño de pantalla es de escritorio. Utiliza JQuery |
-| nMax.php:  | Lógica para desactivar las opciones check de la página de Agregados, luego de haber seleccionado el límite máximo permitido. Utiliza JQuery  |
-| NoCobertura.php:  | Idem anterior, pero para las opciones de la página cobertura, cuando el tipo de budín no lo permite. Utiliza JQuery |
-| popup.js:  | Otorga la funcionalidad de la ventana emergente, tras presionar el botón de vista previa en las paginas de Sabor, Agregados y Cobertura. 1) Abrir ventana emergente y mostrar datos. 2) Cerrar la ventana al presionar en cualquier lado. 3) Seleccionar el ítem desde esta ventana |
-| radioB_editar.js:  | Es llamada desde editar.php (Modulo administrador). Configura la selección de radiobuttons según la info de cada registro (Disponibilidad de budín y cobertura) |
-| radioB_editarPedido.js:  | Es llamada desde editarPedido. Idem anterior pero para la selección de estado de entrega |
-| sweetalert2.js:  | Librería para ventana emergente de alerta |
-| Tabla_a_excel.js:  | Codigo que permite exportar una tabla de Excel con la información de los pedidos. |
+| contador.js: | Contains the logic for adding and subtracting the amount of puddings in the "total.php" page. It also redirects to guarda_eleccion.php sending the amount and total price to store it |
+| eliminar.js: | Configuring the alert window, which appears after trying to delete a record, from the administrator window |
+| fechas.js: | Contains the logic to set the minimum and maximum delivery date in the form page.php |
+| flechaAtras.js: | Obtains the route where you have to go after clicking the return button, in any of the Order pages. Centralized in this file to simplify code by not replicating it on every page and making it more easily maintainable |
+| footer.js: | Modifies the copyright text by adjusting it according to the width of the device screen |
+| Index.js: | Gives functionality to the hamburger menu of the main page (index.php), allowing: 1) to scroll the screen when clicking on it or on any of the links, 2) keeping the header fixed when scrolling |
+| jquery-3.5.1.min.js: | This version of Jquery is downloaded, to have it fixed |
+| listaDesplegable.js: | Send the selection from the drop-down list, in the administrator menu, so that it can later load the table corresponding to that selection |
+| menu.js: | Gives functionality to the order module menu, making it 1) scroll the screen showing or hiding the options, 2) removing the hamburger style when the screen size is desktop. Use JQuery |
+| nMax.php: | Logic to deactivate the check options of the Aggregates page, after having selected the maximum limit allowed. Use JQuery |
+| NoCobertura.php: | Idem above, but for the coverage page options, when the type of pudding does not allow it. Use JQuery |
+| popup.js: | Grants the functionality of the popup window, after pressing the preview button on the Flavor, Added and Topping pages. 1) Open popup window and show data. 2) Close the window by pressing anywhere. 3) Select the item from this window |
+| radioB_editar.js: | It is called from edit.php (administrator module). Configure the selection of radiobuttons according to the information of each record (Availability of pudding and coverage) |
+| radioB_editarPedido.js: | It is called from editOrder. Idem above but for the selection of delivery status |
+| sweetalert2.js: | Alert Popup Library |
+| Tabla_a_excel.js: | Code that allows exporting an Excel table with order information. |
 
 
-#### Carpeta php
+#### php folder
 
-| Archivo  | Funcionalidad |
+| File | Functionality |
 | -------------: | ------------- |
-|conexion.php:  | Módulo de conexión a Base de datos. Contiene conexión tanto a BBDD local (en etapa de prueba) como a BBDD remota (Producción) |
+|conexion.php: | Database connection module. Contains connection to both local databases (in test stage) and remote databases (Production) |
 
 
-##### Subcarpeta admin
+##### admin subfolder
 
-| Archivo  | Funcionalidad |
+| File | Functionality |
 | -------------: | ------------- |
-| administrador.php:  | Pagina principal del menú administrador. Contiene una tabla dinámica, que varía en función de la selección del menú desplegable. Además, contiene botones con funcionalidades |
-| agregarProducto.php:  | descripcion |
-| archivos.php:  | Toma los valores tipeados por el administrador y los guarda en la base de datos en el registro del nuevo producto |
-| contador.php:  | Contiene la pantalla de administración de fotos y su lógica. (Se accede desde el botón que esta en el menú de administrador). La lógica es la de buscar y mostrar el nombre de las fotos subidas en la carpeta del servidor, y por otro lado las que están cargadas en la base de datos. Permite compararlas para hallar las fotos que están en uso y las que están en desuso, asignando un botón para eliminarlas |
-| contenidoPedidoPDF.php:  | Es una plantilla para posterior impresión en PDF, que toma los datos del pedido seleccionado. Se utiliza para cargar la información en el reporte PDF desde el administrador y en el comprobante de pedido al final del proceso de pedido del budín |
-| contenidoTablaPDF.php:  | Idem anterior, pero para el listado completo de pedidos |
-| edicion.php:  | Idem a "agregarProducto", pero en lugar de agregar en la BBDD, modifica los valores existentes (Tablas de productos) |
-| edicionPedido.php:  | Idem a "agregarProducto", pero en lugar de agregar en la BBDD, modifica los valores existentes (Tablas de pedidos) |
-| editar.php:  | Módulo que aparece al pulsar en "editar" en la interfaz de administrador. Trae los valores existentes del producto, permite seleccionar cobertura y disponibilidad, y cambiar la imagen. Incorpora vista previa de dicha imagen |
-| editarPedido.php:  | Idem "editar.php" pero trae la info de la base de datos de "pedidos"|
-| eliminar.php:  | Comando que elimina registro de la tabla. Se activa a través del botón eliminar |
-| imprimirPedidoPDF.php:  | Comando para la creación del reporte pdf del pedido individual, tomando la plantilla "contenidoPedidoPDF.php" y utilizando la librería Dompdf |
-| imprimirTablaPDF.php:  | Comando para la creación del reporte pdf de todos los pedidos, tomando la plantilla "contenidoTablaPDF.php" y utilizando la librería Dompdf |
-| limpiarImagenes.php:  | Comando para eliminar las imagenes no utilizadas en los productos |
-| login.php:  | Habilitación de ingreso al menu administrador, comparando usuario y contraseña, utilizando un cifrado de seguridad. Ademas contiene el comando de deslogueo |
-| metodos.php:  | Trae la fila de una tabla en función de su ID. A esta función se la llama desde varios archivos |
-| nuevoProducto.php:  | Interfaz para la creacion de un nuevo producto. Es idéntico a editar.php, pero no autocompleto los campos por ser un producto nuevo |
-| toast.php:  | Componente del toast (ventana emergente), incluye los estilos embebidos |
+| administrador.php: | Main page of the administrator menu. Contains a pivot table, which varies based on the dropdown selection. In addition, it contains buttons with functionalities |
+| agregarProducto.php: | description |
+| archivos.php: | Takes the values typed by the administrator and saves them to the database in the new product record |
+| contador.php: | Contains the photo management screen and its logic. (It is accessed from the button that is in the administrator menu). The logic is to search and show the name of the photos uploaded in the server folder, and on the other hand those that are uploaded in the database. Allows you to compare them to find the photos that are in use and those that are not in use, assigning a button to delete them |
+| contenidoPedidoPDF.php: | It is a template for subsequent printing in PDF, which takes the data of the selected order. It is used to load the information in the PDF report from the administrator and in the order slip at the end of the pudding order process |
+| contenidoTablaPDF.php: | Idem above, but for the complete list of orders |
+| edicion.php: | Idem to "agregarProducto", but instead of adding to the database, it modifies the existing values (Product tables) |
+| editarPedido.php: | Idem to "agregarProducto", but instead of adding to the database, modify the existing values (order tables) |
+| editar.php: | Module that appears when clicking on "edit" in the administrator interface. Brings the existing values of the product, allows you to select coverage and availability, and change the image. Includes preview of said image |
+| editarPedido.php: | Idem "edit.php" but brings the info from the "orders" database |
+| eliminar.php: | Command that removes a record from the table. It is activated through the delete button |
+| imprimirPedidoPDF.php: | Command for the creation of the pdf report of the individual order, taking the template "contenidoPedidoPDF.php" and using the Dompdf |
+| imprimirTablaPDF.php: | Command to create the pdf report of all orders, taking the template "contenidoTablaPDF.php" and using the Dompdf |
+| limpiarImagenes.php: | Command to remove unused images in products |
+| login.php: | Enabling entry to the administrator menu, comparing username and password, using security encryption. It also contains the logon command |
+| metodos.php: | Gets the row from a table based on its ID. This function is called from multiple files |
+| nuevoProducto.php: | Interface for the creation of a new product. It is identical to edit.php, but it does not autocomplete the fields because it is a new product |
+| toast.php: | Toast (popup) component, includes embedded styles |
 
 ##### Subcarpeta paginasPedido
 
 | Archivo  | Funcionalidad |
 | -------------: | ------------- |
-| agregados.php:  | Interfaz de la pagina "agregados" |
-| cobertura.php:  | Interfaz de la pagina "cobertura" |
-| despedida.php:  | Interfaz de la pagina "despedida" |
-| forma.php:  | Interfaz de la pagina "forma" |
-| formulario.php:  | Interfaz de la pagina "formulario" |
-| login.php:  | Interfaz de la pagina "login" |
-| navbar.php:  | Pedazo de interfaz o componente de la barra de navegación (Incluye menu hamburguesa) |
-| sabor.php:  | Interfaz de la pagina "sabor" |
-| total.php:  | Interfaz de la pagina "total" |
-| btnMercadoPago.php:  | Codigo que llama a la API de Mercado Pago al pulsar el boton siguiente,  previamente habiendo elegido la opción "Pagar con Mercado Pago". En este código se acciona el botón que "pagar" que viene por defecto con la API, desde el botón Siguiente de la pagina "Formulario" |
-| enviarPedido.php:  | Código para guardar datos del pedido a la BBDD y enviar notificación e-mail |
-| guarda_eleccion.php:  | Administra la persistencia de datos (guarda información del usuario), y redirige (rutea) según lógica del proceso de selección (Si el budín permite o no agregados, si lleva cobertura, etc) |
-| traerPrecio.php:  | Código para traer los precios de los items elegidos por el usuario, y que aparecerán en la página "total" |
+| agregados.php:  | interface of "agregados" |
+| cobertura.php:  | interface of "cobertura" |
+| despedida.php:  | interface of "despedida" |
+| forma.php:  | interface of "forma" |
+| formulario.php:  | interface of "formulario" |
+| login.php:  | interface of "login" |
+| navbar.php:  | Piece of interface or navigation bar component (Include hamburguer menu) |
+| sabor.php:  | interface of "sabor" |
+| total.php:  | interface of "total" |
+| btnMercadoPago.php: | Code that calls the Mercado Pago API by pressing the next button, having previously chosen the option "Pay with Mercado Pago". In this code, the "pay" button that comes by default with the API is activated, from the Next button of the "Form" page |
+| enviarPedido.php:  | Code to save order data to the database and send e-mail notification |
+| guarda_eleccion.php:  | Manages data persistence (saves user information), and redirects (routes) according to the logic of the selection process (whether or not the pudding allows additions, if it has coverage, etc.) |
+| traerPrecio.php:  | Code to bring the prices of the items chosen by the user, and that will appear on the "total" page |
 
 
-#### Carpeta vendor 
+#### Vendor Folder
 
-Se almacenan aquí, todas las librerías que usamos
+All the libraries we use are stored here
 
-| Carpeta/archivo  | Funcionalidad |
+| Folder/file | Functionality |
 | -------------: | ------------- |
-| Composer:  | Gestor de librerias |
-| MercadoPago:  | Carpeta de MercadoPago para realizar el pago de los budines |
-| Resto de las carpetas:  | Interfaz de la pagina "despedida" |
-| Autoload.php:  | archivo mediador o integrador, útil para consultar librerías|
+| Composer: | Library manager |
+| MercadoPago: | MercadoPago folder to make the payment of the puddings |
+| Rest of the folders: | "farewell" page interface |
+| autoload.php: | mediator or integrator file, useful for consulting libraries |
