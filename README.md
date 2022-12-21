@@ -5,28 +5,29 @@
 **Documentation index**
 
 - [El rincon de los budines](#el-rincon-de-los-budines)
-    + [Project summary](#resumen-del-proyecto)
-      - [Authors](#autores)
-      - [Technologies used](#tecnolog-as-utilizadas)
-      - [Design criteria](#criterio-de-dise-o)
-    + [Puddings order module](#modulo-de-pedido-de-budines)
-      - [Layout](#estructura-visual)
-      - [Preview](#vista-previa)
-      - [Payment options](#opciones-de-pago)
-      - [Print receipt](#impresion-de-comprobante)
-    + [Admin dashboard](#modulo-de-administrador)
-      - [Layout](#estructura-visual-1)
-    + [Estructuracion del codigo y archivos](#estructuracion-del-codigo-y-archivos)
-      - [Styles folder (CSS)](#carpeta-css)
-      - [Interaction folder (JS)](#carpeta-js)
-      - [Logic folder (PHP)](#carpeta-php)
-        * [admin subfolder](#subcarpeta-admin)
-        * [order pages subfolder](#subcarpeta-paginaspedido)
-      - [vendor folder](#carpeta-vendor)
+    + [Project summary](#brief)
+      - [Authors](#authors)
+      - [Technologies used](#used-technology)
+      - [Design criteria](#design-criteria)
+    + [Puddings order module](#pudding-order-module)
+      - [Layout](#layout)
+      - [Preview](#preview)
+      - [Payment options](#payment-options)
+      - [Print receipt](#print-receipt)
+    + [Admin dashboard](#admin-dashboard)
+      - [Layout](#layout)
+    + [Estructuracion del codigo y archivos](#structure-of-code-and-files)
+      - [Styles folder (CSS)](#css-folder)
+      - [Interaction folder (JS)](#js-folder)
+      - [Logic folder (PHP)](#php-folder)
+        * [admin subfolder](#admin-subfolder)
+        * [order pages subfolder](#paginaspedido-subfolder)
+      - [vendor folder](#vendor-folder)
 
-### Resumen del proyecto
+### Brief
 
 El Rincon de los Budines is a web application for ordering puddings, which starts from a "One Page" main page and also contains an administrator module that allows you to manage the variables of the ordering process (name of products, photo, price, etc.) as well as download the database of orders placed.
+
 --------------------------------------------------------------------
 [**ACCESS THE APPLICATION**](https://web-budines.herokuapp.com/)   (momentaneously down)
 --------------------------------------------------------------------
@@ -132,7 +133,7 @@ The options to add or modify, allow you to interact with the attributes of the p
 <img src="https://github.com/MrHolmes19/web_budines/blob/master/imagenes/readme/edicionAdministrador.png?raw=true" width="800">
 
 
-### Structuring the code and files
+### Structure of code and files
 
 The code is organized as follows:
 
@@ -202,7 +203,7 @@ The code is organized as follows:
 | nuevoProducto.php: | Interface for the creation of a new product. It is identical to edit.php, but it does not autocomplete the fields because it is a new product |
 | toast.php: | Toast (popup) component, includes embedded styles |
 
-##### Subcarpeta paginasPedido
+##### paginasPedido subfolder
 
 | Archivo  | Funcionalidad |
 | -------------: | ------------- |
