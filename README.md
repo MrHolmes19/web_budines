@@ -16,7 +16,7 @@
       - [Print receipt](#print-receipt)
     + [Admin dashboard](#admin-dashboard)
       - [Layout](#layout)
-    + [Estructuracion del codigo y archivos](#structure-of-code-and-files)
+    + [Structure of code and files](#structure-of-code-and-files)
       - [Styles folder (CSS)](#css-folder)
       - [Interaction folder (JS)](#js-folder)
       - [Logic folder (PHP)](#php-folder)
